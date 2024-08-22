@@ -6,18 +6,22 @@
   },
   "extends": "nx/presets/npm.json",
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "nxCloudAccessToken": "MWVhYjc4YTYtZGNjZi00NmM5LTkzMjYtYzYzZTQwMDQ1Njc3fHJlYWQtd3JpdGU=",
   "namedInputs": {
     "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
   },
   "targetDefaults": {
     "@nx/js:tsc": {
-      "cache": true,
+      "cache": false,
       "dependsOn": ["^build"],
       "inputs": ["default", "^default"]
     },
     "@nx/vite:test": {
       "cache": true,
+      "inputs": ["default", "^default"]
+    },
+    "@nx/vite:build": {
+      "cache": true,
+      "dependsOn": ["^build"],
       "inputs": ["default", "^default"]
     }
   },
@@ -26,6 +30,16 @@
       "plugin": "@nx/eslint/plugin",
       "options": {
         "targetName": "lint"
+      }
+    },
+    {
+      "plugin": "@nx/vite/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "testTargetName": "test",
+        "serveTargetName": "serve",
+        "previewTargetName": "preview",
+        "serveStaticTargetName": "serve-static"
       }
     }
   ]
