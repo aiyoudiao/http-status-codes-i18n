@@ -1,0 +1,15 @@
+{
+  "git": {
+    "commitMessage": "🔖 chore: release ${version}",
+    "tagName": "v${version}"
+  },
+  "npm": {
+    "publish": false
+  },
+  "github": {
+    "release": false
+  },
+  "hooks": {
+    "before:git:bump": "yarn changelog"
+  }
+}

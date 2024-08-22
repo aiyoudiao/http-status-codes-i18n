@@ -1,0 +1,19 @@
+{
+  "name": "childrenA",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/childrenA/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/childrenA",
+        "main": "packages/childrenA/src/index.ts",
+        "tsConfig": "packages/childrenA/tsconfig.lib.json",
+        "assets": ["packages/childrenA/*.md"]
+      }
+    }
+  }
+}

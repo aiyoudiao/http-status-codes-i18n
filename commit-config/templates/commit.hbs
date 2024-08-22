@@ -1,0 +1,36 @@
+*{{#if scope}} **{{scope}}:**
+{{~/if}} {{#if subject}}
+  {{~subject}}
+{{~else}}
+  {{~header}}
+{{~/if}}
+
+{{~!-- commit link --}} {{#if @root.linkReferences~}}
+  。| [Review:({{shortHash}})](
+  {{~#if @root.repository}}
+    {{~#if @root.host}}
+      {{~@root.host}}/
+    {{~/if}}
+    {{~#if @root.owner}}
+      {{~@root.owner}}/
+    {{~/if}}
+    {{~@root.repository}}
+  {{~else}}
+    {{~@root.repoUrl}}
+  {{~/if}}/commit/{{hash}}?view=parallel)
+{{~else}}
+  {{~shortHash}}
+{{~/if}}
+{{~!-- commit references --}}
+{{~#if references~}}
+  . |
+  {{~#each references}} {{#if @root.linkReferences~}}
+    [Lark:#{{this.issue}}]({{~this.larkUrl}}{{this.issue}})
+  {{~else}}
+    {{~#if this.owner}}
+      {{~this.owner}}/
+    {{~/if}}
+    {{~this.repository}}#{{this.issue}}
+  {{~/if}}{{/each}}
+{{~/if}}
+

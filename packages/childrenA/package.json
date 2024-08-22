@@ -1,0 +1,15 @@
+{
+  "name": "@http-status-codes-i18n/childrenA",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "nx build",
+    "test": "nx test"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "main": "./index.js",
+  "module": "./index.mjs",
+  "typings": "./index.d.ts",
+  "private": true
+}
