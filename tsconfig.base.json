@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@http-status-codes-i18n/childrenA": ["packages/childrenA/src/index.ts"]
+      "@http-status-codes-i18n/en": ["packages/en/src/index.ts"],
+      "@http-status-codes-i18n/zh": ["packages/zh/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

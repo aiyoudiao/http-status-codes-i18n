@@ -1,0 +1,8 @@
+{
+  "name": "@http-status-codes-i18n/zh",
+  "version": "0.0.1",
+  "dependencies": {},
+  "main": "./index.cjs",
+  "module": "./index.js",
+  "private": true
+}
