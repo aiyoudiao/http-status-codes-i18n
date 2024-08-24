@@ -103,3 +103,14 @@ const STATUS_CODES = {
   511: 'Network Authentication Required', // RFC 6585 6
 };
 ```
+
+## RFC Tables
+
+
+
+
+## References
+
+https://github.com/nodejs/node/blob/main/lib/_http_server.js
+
+https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#1xx_informational_response
