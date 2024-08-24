@@ -8,7 +8,6 @@
     "version": "conventional-changelog --config ./templates/commit-config/changelog-config.js -p angular -i -o CHANGELOG.md  -r 0 && git add CHANGELOG.md",
     "release": "release-it"
   },
-  "private": true,
   "dependencies": {
     "tslib": "^2.3.0"
   },
