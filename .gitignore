@@ -174,4 +174,5 @@ Thumbs.db
 .nx/workspace-data
 
 scripts/http-data-sanitization
-scripts/markdown
+# scripts/markdown
+# scripts/typescript
