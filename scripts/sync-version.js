@@ -10,6 +10,7 @@ const keysToSync = [
   'description',
   'author',
   'license',
+  'keywords',
   'repository',
   'bugs',
   'homepage',
