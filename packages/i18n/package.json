@@ -1,6 +1,6 @@
 {
   "name": "@http-status-codes/i18n",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "./index.cjs",
   "module": "./index.esm.js",
   "description": "HTTP status codes i18n",
@@ -13,5 +13,33 @@
   "bugs": {
     "url": "https://github.com/aiyoudiao/http-status-codes-i18n/issues"
   },
-  "homepage": "https://github.com/aiyoudiao/http-status-codes-i18n#readme"
+  "homepage": "https://github.com/aiyoudiao/http-status-codes-i18n#readme",
+  "keywords": [
+    "node",
+    "http",
+    "status",
+    "codes",
+    "descriptions",
+    "status codes",
+    "HTTP status",
+    "HTTP codes",
+    "HTTP status codes",
+    "apache",
+    "HttpStatus",
+    "client",
+    "map",
+    "code",
+    "constants",
+    "javascript",
+    "typescript",
+    "developer tools",
+    "web development",
+    "API",
+    "error handling",
+    "API response",
+    "methods",
+    "headers",
+    "data",
+    "JSON"
+  ]
 }

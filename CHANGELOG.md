@@ -1,3 +1,18 @@
+# 1.1.0 (2024-08-25)
+
+
+### ✨ Features | 新功能
+
+* add keywords to package.json 。| [Review:(f61f361)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/f61f3612ea0bd190992198a6c69c77d4158131b5?view=parallel)
+
+
+### 🎫 Chores | 其他更新
+
+* update npm dependencies and add terser plugin for rollup.config.js files 。| [Review:(816cbe7)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/816cbe7a7c828159ecd529318f727cbc59452e4e?view=parallel)
+* update release-it hooks. 。| [Review:(d82363f)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/d82363fb209c23f79342d7de9dd42195bb9692a8?view=parallel)
+
+
+
 # 1.0.0 (2024-08-25)
 
 
@@ -15,6 +30,7 @@
 ### 🎫 Chores | 其他更新
 
 * add publish process 。| [Review:(e0dba44)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/e0dba4449815f240768377976ba2b371287f5b90?view=parallel)
+* release 1.0.0 。| [Review:(aff0057)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/aff0057a6ba503d4452677abb7281399b0a1bbbb?view=parallel)
 * remove private flag from package.json files 。| [Review:(6225c15)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/6225c15e81ebee134ef9f29e74cd296935691522?view=parallel)
 * sync package.json version 。| [Review:(e9615fb)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/e9615fb76a80096c57d07e9606036fcb91a9d95a?view=parallel)
 * update npm script to use npm instead of yarn 。| [Review:(c65f49d)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/c65f49d7abb3897b30efa7a31eef8246d9572d4e?view=parallel)
