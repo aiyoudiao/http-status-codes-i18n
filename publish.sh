@@ -14,7 +14,7 @@ SCRIPT_DIR=$(cd $(dirname $0); pwd)
 
 # 遍历指定的项目
 for project in "${projects[@]}"; do
-  PROJECT_DIR="$SCRIPT_DIR/packages/$project"
+  PROJECT_DIR="$SCRIPT_DIR/dist/packages/$project"
   PACKAGE_JSON="$PROJECT_DIR/package.json"
 
   # 检查 package.json 文件是否存在
