@@ -5,5 +5,16 @@
   "projectType": "library",
   "tags": [],
   "// targets": "to see all targets run: nx show project i18n-en --web",
-  "targets": {}
+  "targets": {
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "syncVersions": true,
+        "skipRootChangelog": true,
+        "skipProjectChangelog": true,
+        "push": false,
+        "commitMessageFormat": "🔖 chore: release ${version}"
+      }
+    }
+  }
 }

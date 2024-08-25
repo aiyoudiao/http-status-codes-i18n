@@ -1,17 +1,20 @@
 {
   "name": "@http-status-codes/i18n",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
+    "check": "nx affected -t lint test build",
+    "sync:version": "nx run-many --target=version --all",
     "commit": "git-cz",
-    "changelog": "conventional-changelog --config ./templates/commit-config/changelog-config.js -p  -i -o CHANGELOG.md -r 0",
-    "version": "conventional-changelog --config ./templates/commit-config/changelog-config.js -p angular -i -o CHANGELOG.md  -r 0 && git add CHANGELOG.md",
+    "changelog": "conventional-changelog --config ./commit-config/changelog-config.js -p  -i -o CHANGELOG.md -r 0",
+    "version": "conventional-changelog --config ./commit-config/changelog-config.js -p angular -i -o CHANGELOG.md  -r 0 && git add CHANGELOG.md",
     "release": "release-it"
   },
   "dependencies": {
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@jscutlery/semver": "^5.3.1",
     "@nx/esbuild": "19.6.2",
     "@nx/eslint": "19.6.2",
     "@nx/eslint-plugin": "19.6.2",
