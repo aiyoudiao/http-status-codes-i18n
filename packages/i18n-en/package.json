@@ -1,6 +1,6 @@
 {
   "name": "@http-status-codes/i18n-en",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "./index.cjs",
   "module": "./index.esm.js",
   "description": "HTTP status codes i18n",
@@ -8,7 +8,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aiyoudiao/http-status-codes-i18n.git"
+    "url": "git+https://github.com/aiyoudiao/http-status-codes-i18n.git"
   },
   "bugs": {
     "url": "https://github.com/aiyoudiao/http-status-codes-i18n/issues"

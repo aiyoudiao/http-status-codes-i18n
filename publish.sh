@@ -4,7 +4,7 @@
 chmod +x "$0"
 
 # 登录 npm
-npm login
+# npm login
 
 # 指定要发布的项目名称列表
 projects=("i18n-en" "i18n-zh")

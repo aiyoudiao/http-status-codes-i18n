@@ -9,7 +9,7 @@
     "commit": "git-cz",
     "changelog": "conventional-changelog --config ./commit-config/changelog-config.js -p  -i -o CHANGELOG.md -r 0",
     "version": "conventional-changelog --config ./commit-config/changelog-config.js -p angular -i -o CHANGELOG.md  -r 0 && git add CHANGELOG.md",
-    "release": "release-it && sync:version && npm run task && ./publish"
+    "release": "release-it && ./publish.sh"
   },
   "dependencies": {
     "tslib": "^2.3.0"
