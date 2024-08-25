@@ -1,20 +1,20 @@
 {
   "name": "@http-status-codes/i18n",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "license": "MIT",
+  "description": "HTTP status codes i18n",
   "scripts": {
-    "check": "nx affected -t lint test build",
-    "sync:version": "nx run-many --target=version --all",
+    "task": "nx affected -t lint test build",
+    "sync:version": "node ./scripts/sync-version.js",
     "commit": "git-cz",
     "changelog": "conventional-changelog --config ./commit-config/changelog-config.js -p  -i -o CHANGELOG.md -r 0",
     "version": "conventional-changelog --config ./commit-config/changelog-config.js -p angular -i -o CHANGELOG.md  -r 0 && git add CHANGELOG.md",
-    "release": "release-it"
+    "release": "release-it && sync:version && npm run task && ./publish"
   },
   "dependencies": {
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@jscutlery/semver": "^5.3.1",
     "@nx/esbuild": "19.6.2",
     "@nx/eslint": "19.6.2",
     "@nx/eslint-plugin": "19.6.2",
@@ -62,5 +62,14 @@
       "path": "node_modules/cz-git",
       "czConfig": "./commit-config/cz-config.js"
     }
-  }
+  },
+  "author": "哎哟迪奥",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aiyoudiao/http-status-codes-i18n.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aiyoudiao/http-status-codes-i18n/issues"
+  },
+  "homepage": "https://github.com/aiyoudiao/http-status-codes-i18n#readme"
 }

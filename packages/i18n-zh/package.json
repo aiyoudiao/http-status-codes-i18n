@@ -2,5 +2,16 @@
   "name": "@http-status-codes/i18n-zh",
   "version": "0.0.1",
   "main": "./index.cjs",
-  "module": "./index.js"
+  "module": "./index.esm.js",
+  "description": "HTTP status codes i18n",
+  "author": "哎哟迪奥",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aiyoudiao/http-status-codes-i18n.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aiyoudiao/http-status-codes-i18n/issues"
+  },
+  "homepage": "https://github.com/aiyoudiao/http-status-codes-i18n#readme"
 }
