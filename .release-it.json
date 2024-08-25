@@ -10,6 +10,6 @@
     "release": false
   },
   "hooks": {
-    "before:git:bump": "yarn changelog"
+    "before:git:bump": "npm run changelog"
   }
 }
