@@ -1,3 +1,18 @@
+# 1.2.0 (2024-08-26)
+
+
+### ♻️ Code Refactoring | 代码重构
+
+* update status code to status text mapping function names and tests 。| [Review:(ec70d9b)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/ec70d9bf90b464f56391aebb3e73278fe5f6bb6a?view=parallel)
+
+
+### ✨ Features | 新功能
+
+* update getStatusInfo and getStatusMessage function names and docs 。| [Review:(3f8d783)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/3f8d7839fced09ff72fd66498be041f312fd9dbf?view=parallel)
+* update HTTP status code and text enums 。| [Review:(923cc6b)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/923cc6b3728b727736673625798837e7b9df5779?view=parallel)
+
+
+
 # 1.1.0 (2024-08-25)
 
 
@@ -8,6 +23,7 @@
 
 ### 🎫 Chores | 其他更新
 
+* release 1.1.0 。| [Review:(9a677f3)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/9a677f3715958468d9515d9a0372cfae8eeb52a4?view=parallel)
 * update npm dependencies and add terser plugin for rollup.config.js files 。| [Review:(816cbe7)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/816cbe7a7c828159ecd529318f727cbc59452e4e?view=parallel)
 * update release-it hooks. 。| [Review:(d82363f)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/d82363fb209c23f79342d7de9dd42195bb9692a8?view=parallel)
 
