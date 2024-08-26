@@ -1,4 +1,19 @@
+# 1.3.0 (2024-08-26)
+
+
+### ♻️ Code Refactoring | 代码重构
+
+* Update getSimpleStatusMessage function to split the message at '：' and update docs 。| [Review:(9626cb1)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/9626cb176c40cfcbaaabd0180aa2258c1848e6d8?view=parallel)
+* Update RFC table headings in README.md 。| [Review:(d528abd)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/d528abd2d3023e73dd6cf6b4d4ade3f886c9a8a0?view=parallel)
+
+
+
 ## 1.2.1 (2024-08-26)
+
+
+### 🎫 Chores | 其他更新
+
+* release 1.2.1 。| [Review:(d5bb5bc)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/d5bb5bc203ce04d7175958cc2864a5542d835f44?view=parallel)
 
 
 ### 📝 Documentation | 文档
