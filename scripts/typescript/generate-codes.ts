@@ -474,6 +474,44 @@ isStatusSuccessful('Bad request') -> false
       ],
     },
     {
+      name: 'getSimpleStatusMessage',
+      returnType: 'string',
+      parameters: [
+        {
+          name: 'codeOrText',
+          type: 'HTTPStatusCode | HTTPStatusText',
+        },
+      ],
+      statements: [
+        `const statusInfo = getStatusInfo(codeOrText)
+        return \`\${statusInfo.code} \${statusInfo.message.split('：')[0]}\`;
+        `,
+      ],
+      isExported: true,
+      docs: [
+        {
+          description:
+            'Returns a string containing the provided status code and simple message.',
+          tags: [
+            {
+              tagName: 'example',
+              text: `getSimpleStatusMessage(200) -> 200 OK
+getSimpleStatusMessage('OK') -> 200 OK
+`,
+            },
+            {
+              tagName: 'param',
+              text: 'codeOrText: HTTPStatusCode | HTTPStatusText',
+            },
+            {
+              tagName: 'returns',
+              text: 'simpleStatusMessage: string',
+            },
+          ],
+        },
+      ],
+    },
+    {
       name: 'getStatusMessage',
       returnType: 'string',
       parameters: [

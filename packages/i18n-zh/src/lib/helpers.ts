@@ -409,6 +409,20 @@ export function isStatusSuccessful(codeOrText: HTTPStatusCode | HTTPStatusText):
 }
 
 /**
+ * Returns a string containing the provided status code and simple message.
+ * @example getSimpleStatusMessage(200) -> 200 OK
+ * getSimpleStatusMessage('OK') -> 200 OK
+ *
+ * @param codeOrText: HTTPStatusCode | HTTPStatusText
+ * @returns simpleStatusMessage: string
+ */
+export function getSimpleStatusMessage(codeOrText: HTTPStatusCode | HTTPStatusText): string {
+  const statusInfo = getStatusInfo(codeOrText)
+  return `${statusInfo.code} ${statusInfo.message.split('：')[0]}`;
+
+}
+
+/**
  * Returns a string containing the provided status code and message.
  * @example getStatusMessage(200) -> 200 OK：The standard response for successful HTTP requests.
  * getStatusMessage('OK') -> 200 OK：The standard response for successful HTTP requests.
