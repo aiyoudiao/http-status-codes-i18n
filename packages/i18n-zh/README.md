@@ -9,19 +9,6 @@ Since the http-status-codes library itself does not support internationalization
 ### ES Module
 
 ```typescript
-import {
-  getStatusMessage,
-  getStatusText,
-  getStatusInfo,
-  getStatusText,
-  getStatusCode,
-  isStatusSuccessful,
-  isCodeOrTextValid,
-  HttpStatusCode,
-  HttpStatusDescription,
-  HttpStatusText,
-} from "@http-status-codes/i18n-en";
-
 // import {
 //   getStatusMessage,
 //   getStatusText,
@@ -33,7 +20,20 @@ import {
 //   HttpStatusCode,
 //   HttpStatusDescription,
 //   HttpStatusText,
-// } from "@http-status-codes/i18n-zh";
+// } from "@http-status-codes/i18n-en";
+
+import {
+  getStatusMessage,
+  getStatusText,
+  getStatusInfo,
+  getStatusText,
+  getStatusCode,
+  isStatusSuccessful,
+  isCodeOrTextValid,
+  HttpStatusCode,
+  HttpStatusDescription,
+  HttpStatusText,
+} from "@http-status-codes/i18n-zh";
 
 
 console.log(HttpStatusCode.CONTINUE); // 100
@@ -42,21 +42,21 @@ console.log(HttpStatusCode.OK); // 100
 console.log(HttpStatusText.CONTINUE); // 'Continue'
 console.log(HttpStatusText.OK); // 'OK'
 
-console.log(HttpStatusDescription.CONTINUE); // 'Continue：The server has received the request headers, and that the client should proceed to send the request body.'
-console.log(HttpStatusDescription.OK); // 'OK：The standard response for successful HTTP requests.'
+console.log(HttpStatusDescription.CONTINUE); // '继续：服务器已经收到请求头，客户端应继续发送请求主体。'
+console.log(HttpStatusDescription.OK); // '成功：标准的成功 HTTP 请求响应。'
 
 
 /**
- * getStatusMessage(200) -> 200 OK：The standard response for successful HTTP requests.
- * getStatusMessage('OK') -> 200 OK：The standard response for successful HTTP requests.
+ * getStatusMessage(200) -> 200 成功：标准的成功 HTTP 请求响应。
+ * getStatusMessage('OK') -> 200 成功：标准的成功 HTTP 请求响应。
  */
 console.log(getStatusMessage(HttpStatusCode.OK));
 console.log(getStatusMessage(HttpStatusText.OK));
 
 
 /**
- * getStatusInfo(200) -> { code: 200, message: 'OK：The standard response for successful HTTP requests.', success: true}
- * getStatusInfo('OK') -> { code: 200, message: 'OK：The standard response for successful HTTP requests.', success: true}
+ * getStatusInfo(200) -> { code: 200, message: '成功：标准的成功 HTTP 请求响应。', success: true}
+ * getStatusInfo('OK') -> { code: 200, message: '成功：标准的成功 HTTP 请求响应。', success: true}
  */
 console.log(getStatusInfo(HttpStatusCode.OK));
 console.log(getStatusInfo(HttpStatusText.OK));
@@ -82,8 +82,8 @@ console.log(isCodeOrTextValid(HttpStatusText.OK)) // true
 
 
 /**
- * getStatusMessage(200) -> 200 OK：The standard response for successful HTTP requests.
- * getStatusMessage('OK') -> 200 OK：The standard response for successful HTTP requests.
+ * getStatusMessage(200) -> 200 成功：标准的成功 HTTP 请求响应。
+ * getStatusMessage('OK') -> 200 成功：标准的成功 HTTP 请求响应。
  */
 console.log(getStatusMessage(HttpStatusCode.OK))
 console.log(getStatusMessage(HttpStatusText.OK))
@@ -97,18 +97,6 @@ console.log(getStatusCode('OK')) // getStatusCode('OK') -> 200
 ### CommonJS
 
 ```javascript
-const {
-  getStatusMessage,
-  getStatusText,
-  getStatusInfo,
-  getStatusText,
-  getStatusCode,
-  isStatusSuccessful,
-  isCodeOrTextValid,
-  HttpStatusCode,
-  HttpStatusDescription,
-  HttpStatusText } = require('@http-status-codes/i18n-en')
-
 // const {
 //   getStatusMessage,
 //   getStatusText,
@@ -119,7 +107,19 @@ const {
 //   isCodeOrTextValid,
 //   HttpStatusCode,
 //   HttpStatusDescription,
-//   HttpStatusText } = require('@http-status-codes/i18n-zh')
+//   HttpStatusText } = require('@http-status-codes/i18n-en')
+
+const {
+  getStatusMessage,
+  getStatusText,
+  getStatusInfo,
+  getStatusText,
+  getStatusCode,
+  isStatusSuccessful,
+  isCodeOrTextValid,
+  HttpStatusCode,
+  HttpStatusDescription,
+  HttpStatusText } = require('@http-status-codes/i18n-zh')
 
 
 console.log(HttpStatusCode.CONTINUE); // 100
@@ -128,21 +128,21 @@ console.log(HttpStatusCode.OK); // 100
 console.log(HttpStatusText.CONTINUE); // 'Continue'
 console.log(HttpStatusText.OK); // 'OK'
 
-console.log(HttpStatusDescription.CONTINUE); // 'Continue：The server has received the request headers, and that the client should proceed to send the request body.'
-console.log(HttpStatusDescription.OK); // 'OK：The standard response for successful HTTP requests.'
+console.log(HttpStatusDescription.CONTINUE); // '继续：服务器已经收到请求头，客户端应继续发送请求主体。'
+console.log(HttpStatusDescription.OK); // '成功：标准的成功 HTTP 请求响应。'
 
 
 /**
- * getStatusMessage(200) -> 200 OK：The standard response for successful HTTP requests.
- * getStatusMessage('OK') -> 200 OK：The standard response for successful HTTP requests.
+ * getStatusMessage(200) -> 200 成功：标准的成功 HTTP 请求响应。
+ * getStatusMessage('OK') -> 200 成功：标准的成功 HTTP 请求响应。
  */
 console.log(getStatusMessage(HttpStatusCode.OK));
 console.log(getStatusMessage(HttpStatusText.OK));
 
 
 /**
- * getStatusInfo(200) -> { code: 200, message: 'OK：The standard response for successful HTTP requests.', success: true}
- * getStatusInfo('OK') -> { code: 200, message: 'OK：The standard response for successful HTTP requests.', success: true}
+ * getStatusInfo(200) -> { code: 200, message: '成功：标准的成功 HTTP 请求响应。', success: true}
+ * getStatusInfo('OK') -> { code: 200, message: '成功：标准的成功 HTTP 请求响应。', success: true}
  */
 console.log(getStatusInfo(HttpStatusCode.OK));
 console.log(getStatusInfo(HttpStatusText.OK));
@@ -168,8 +168,8 @@ console.log(isCodeOrTextValid(HttpStatusText.OK)) // true
 
 
 /**
- * getStatusMessage(200) -> 200 OK：The standard response for successful HTTP requests.
- * getStatusMessage('OK') -> 200 OK：The standard response for successful HTTP requests.
+ * getStatusMessage(200) -> 200 成功：标准的成功 HTTP 请求响应。
+ * getStatusMessage('OK') -> 200 成功：标准的成功 HTTP 请求响应。
  */
 console.log(getStatusMessage(HttpStatusCode.OK))
 console.log(getStatusMessage(HttpStatusText.OK))
@@ -210,7 +210,7 @@ http://www.lingoes.net/zh/translator/langcode.htm
 
 ## Http codes
 
-超文本传输协议的查看示例: https://datatracker.ietf.org/doc/html/rfc7231#section-6.2.1
+超文本传输协议的查看示例: https://datatracker.ietf.org/doc/html/rfc7231#section-6.2.1 \
 nodejs: https://github.com/nodejs/node/blob/main/lib/_http_server.js
 
 ```javascript

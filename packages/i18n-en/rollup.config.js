@@ -7,7 +7,8 @@ module.exports = withNx(
     outputPath: '../../dist/packages/i18n-en',
     tsConfig: '../../tsconfig.lib.json',
     compiler: 'swc',
-    format: ['cjs', 'esm', 'es', 'amd', 'iife', 'umd', 'system'],
+    // format: ['cjs', 'esm', 'es', 'amd', 'iife', 'umd', 'system'],
+    format: ['cjs', 'esm'],
     assets: [{ input: '.', output: '.', glob: 'packages/i18n-en/*.md' }],
   },
   {
