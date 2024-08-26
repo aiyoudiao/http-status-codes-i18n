@@ -4,8 +4,183 @@
 
 Since the http-status-codes library itself does not support internationalization (i18n) 🌍 and only provides information related to HTTP status code messages in English 📜, I want to build a http-status-codes that supports multiple languages based on it, starting with Chinese 🇨🇳, and I'll add other languages later when I have time~💻🚀
 
+## examples
 
-## packages
+
+### ES Module
+
+```typescript
+import {
+  getStatusMessage,
+  getStatusText,
+  getStatusInfo,
+  getStatusText,
+  getStatusCode,
+  isStatusSuccessful,
+  isCodeOrTextValid,
+  HttpStatusCode,
+  HttpStatusDescription,
+  HttpStatusText,
+} from "@http-status-codes/i18n-en";
+
+// import {
+//   getStatusMessage,
+//   getStatusText,
+//   getStatusInfo,
+//   getStatusText,
+//   getStatusCode,
+//   isStatusSuccessful,
+//   isCodeOrTextValid,
+//   HttpStatusCode,
+//   HttpStatusDescription,
+//   HttpStatusText,
+// } from "@http-status-codes/i18n-zh";
+
+
+console.log(HttpStatusCode.CONTINUE); // 100
+console.log(HttpStatusCode.OK); // 100
+
+console.log(HttpStatusText.CONTINUE); // 'Continue'
+console.log(HttpStatusText.OK); // 'OK'
+
+console.log(HttpStatusDescription.CONTINUE); // 'Continue：The server has received the request headers, and that the client should proceed to send the request body.'
+console.log(HttpStatusDescription.OK); // 'OK：The standard response for successful HTTP requests.'
+
+
+/**
+ * getStatusMessage(200) -> 200 OK：The standard response for successful HTTP requests.
+ * getStatusMessage('OK') -> 200 OK：The standard response for successful HTTP requests.
+ */
+console.log(getStatusMessage(HttpStatusCode.OK));
+console.log(getStatusMessage(HttpStatusText.OK));
+
+
+/**
+ * getStatusInfo(200) -> { code: 200, message: 'OK：The standard response for successful HTTP requests.', success: true}
+ * getStatusInfo('OK') -> { code: 200, message: 'OK：The standard response for successful HTTP requests.', success: true}
+ */
+console.log(getStatusInfo(HttpStatusCode.OK));
+console.log(getStatusInfo(HttpStatusText.OK));
+
+
+/**
+ * isStatusSuccessful(200) -> true
+ * isStatusSuccessful('OK') -> true
+ */
+console.log(isStatusSuccessful(HttpStatusCode.OK))
+console.log(isStatusSuccessful(HttpStatusText.OK))
+
+
+/**
+  * isCodeOrTextValid(200) -> true
+  * isCodeOrTextValid('OK') -> true
+ */
+console.log(isCodeOrTextValid(0)) // false
+console.log(isCodeOrTextValid(true)) // false
+console.log(isCodeOrTextValid(100)) // true
+console.log(isCodeOrTextValid(HttpStatusCode.OK)) // true
+console.log(isCodeOrTextValid(HttpStatusText.OK)) // true
+
+
+/**
+ * getStatusMessage(200) -> 200 OK：The standard response for successful HTTP requests.
+ * getStatusMessage('OK') -> 200 OK：The standard response for successful HTTP requests.
+ */
+console.log(getStatusMessage(HttpStatusCode.OK))
+console.log(getStatusMessage(HttpStatusText.OK))
+
+
+console.log(getStatusText(HttpStatusCode.OK)); // getStatusCode('200') -> OK
+console.log(getStatusCode('OK')) // getStatusCode('OK') -> 200
+
+```
+
+### CommonJS
+
+```javascript
+const {
+  getStatusMessage,
+  getStatusText,
+  getStatusInfo,
+  getStatusText,
+  getStatusCode,
+  isStatusSuccessful,
+  isCodeOrTextValid,
+  HttpStatusCode,
+  HttpStatusDescription,
+  HttpStatusText } = require('@http-status-codes/i18n-en')
+
+// const {
+//   getStatusMessage,
+//   getStatusText,
+//   getStatusInfo,
+//   getStatusText,
+//   getStatusCode,
+//   isStatusSuccessful,
+//   isCodeOrTextValid,
+//   HttpStatusCode,
+//   HttpStatusDescription,
+//   HttpStatusText } = require('@http-status-codes/i18n-zh')
+
+
+console.log(HttpStatusCode.CONTINUE); // 100
+console.log(HttpStatusCode.OK); // 100
+
+console.log(HttpStatusText.CONTINUE); // 'Continue'
+console.log(HttpStatusText.OK); // 'OK'
+
+console.log(HttpStatusDescription.CONTINUE); // 'Continue：The server has received the request headers, and that the client should proceed to send the request body.'
+console.log(HttpStatusDescription.OK); // 'OK：The standard response for successful HTTP requests.'
+
+
+/**
+ * getStatusMessage(200) -> 200 OK：The standard response for successful HTTP requests.
+ * getStatusMessage('OK') -> 200 OK：The standard response for successful HTTP requests.
+ */
+console.log(getStatusMessage(HttpStatusCode.OK));
+console.log(getStatusMessage(HttpStatusText.OK));
+
+
+/**
+ * getStatusInfo(200) -> { code: 200, message: 'OK：The standard response for successful HTTP requests.', success: true}
+ * getStatusInfo('OK') -> { code: 200, message: 'OK：The standard response for successful HTTP requests.', success: true}
+ */
+console.log(getStatusInfo(HttpStatusCode.OK));
+console.log(getStatusInfo(HttpStatusText.OK));
+
+
+/**
+ * isStatusSuccessful(200) -> true
+ * isStatusSuccessful('OK') -> true
+ */
+console.log(isStatusSuccessful(HttpStatusCode.OK))
+console.log(isStatusSuccessful(HttpStatusText.OK))
+
+
+/**
+  * isCodeOrTextValid(200) -> true
+  * isCodeOrTextValid('OK') -> true
+ */
+console.log(isCodeOrTextValid(0)) // false
+console.log(isCodeOrTextValid(true)) // false
+console.log(isCodeOrTextValid(100)) // true
+console.log(isCodeOrTextValid(HttpStatusCode.OK)) // true
+console.log(isCodeOrTextValid(HttpStatusText.OK)) // true
+
+
+/**
+ * getStatusMessage(200) -> 200 OK：The standard response for successful HTTP requests.
+ * getStatusMessage('OK') -> 200 OK：The standard response for successful HTTP requests.
+ */
+console.log(getStatusMessage(HttpStatusCode.OK))
+console.log(getStatusMessage(HttpStatusText.OK))
+
+
+console.log(getStatusText(HttpStatusCode.OK)); // getStatusCode('200') -> OK
+console.log(getStatusCode('OK')) // getStatusCode('OK') -> 200
+```
+
+## Packages
 
 http://www.lingoes.net/zh/translator/langcode.htm
 
@@ -34,9 +209,10 @@ http://www.lingoes.net/zh/translator/langcode.htm
 | hu      | 匈牙利语             | packages/i18n-hu | @http-status-codes/i18n-hu |
 
 
-## Codes
+## Http codes
 
 超文本传输协议的查看示例: https://datatracker.ietf.org/doc/html/rfc7231#section-6.2.1
+nodejs: https://github.com/nodejs/node/blob/main/lib/_http_server.js
 
 ```javascript
 const STATUS_CODES = {

@@ -366,7 +366,7 @@ export function isCodeOrTextValid(codeOrText: HTTPStatusCode | HTTPStatusText): 
 /**
  * Returns an object containing information about the provided status code or status text.
  * @example getStatusInfo(200) -> { code: 200, message: 'OK：The standard response for successful HTTP requests.', success: true}
- * isCodeOrTextValid('OK') -> { code: 200, message: 'OK：The standard response for successful HTTP requests.', success: true}
+ * getStatusInfo('OK') -> { code: 200, message: 'OK：The standard response for successful HTTP requests.', success: true}
  *
  * @param codeOrText: HTTPStatusCode | HTTPStatusText
  * @returns StatusInfo: { code: number, message: string, success: boolean}
@@ -410,8 +410,8 @@ export function isStatusSuccessful(codeOrText: HTTPStatusCode | HTTPStatusText):
 
 /**
  * Returns a string containing the provided status code and message.
- * @example isStatusSuccessful(200) -> 200 OK：The standard response for successful HTTP requests.
- * isStatusSuccessful('OK') -> 200 OK：The standard response for successful HTTP requests.
+ * @example getStatusMessage(200) -> 200 OK：The standard response for successful HTTP requests.
+ * getStatusMessage('OK') -> 200 OK：The standard response for successful HTTP requests.
  *
  * @param codeOrText: HTTPStatusCode | HTTPStatusText
  * @returns statusMessage: string
