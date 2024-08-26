@@ -27,10 +27,10 @@ const updateReadmeRfcTable = (filePath) => {
     ),
   ]);
 
-  const readmeRegex = /## RFC Tables([\w\W]+)## References/gm;
+  const readmeRegex = /## 📋 RFC Tables([\w\W]+)## 📖 References/gm;
   readmeFile = readmeFile.replace(
     readmeRegex,
-    `## RFC Tables\n\n${table}\n\n## References`
+    `## 📋 RFC Tables\n\n${table}\n\n## 📖 References`
   );
 
   fs.writeFile(filePath, readmeFile, (err) => {
