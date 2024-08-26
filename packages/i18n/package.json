@@ -1,6 +1,6 @@
 {
   "name": "@http-status-codes/i18n",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "./index.cjs",
   "module": "./index.esm.js",
   "description": "HTTP status codes i18n",

@@ -1,3 +1,12 @@
+## 1.2.1 (2024-08-26)
+
+
+### 📝 Documentation | 文档
+
+* update rollup config and README.md 。| [Review:(7b45337)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/7b45337c866d41cf03b44d8912a3f7e728805a1d?view=parallel)
+
+
+
 # 1.2.0 (2024-08-26)
 
 
@@ -10,6 +19,11 @@
 
 * update getStatusInfo and getStatusMessage function names and docs 。| [Review:(3f8d783)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/3f8d7839fced09ff72fd66498be041f312fd9dbf?view=parallel)
 * update HTTP status code and text enums 。| [Review:(923cc6b)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/923cc6b3728b727736673625798837e7b9df5779?view=parallel)
+
+
+### 🎫 Chores | 其他更新
+
+* release 1.2.0 。| [Review:(0501609)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/0501609e577c55a058774babab69f9fc8ec32e82?view=parallel)
 
 
 
