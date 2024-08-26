@@ -111,7 +111,7 @@ const generatedMemberFiles = (
       statements: [
         {
           kind: StructureKind.Enum,
-          name: 'StatusText',
+          name: 'HttpStatusText',
           isExported: true,
           members: statusTextMembers,
         },
@@ -127,7 +127,7 @@ const generatedMemberFiles = (
       statements: [
         {
           kind: StructureKind.Enum,
-          name: 'statusCode',
+          name: 'HttpStatusCode',
           isExported: true,
           members: statusCodeMembers,
         },
@@ -143,7 +143,7 @@ const generatedMemberFiles = (
       statements: [
         {
           kind: StructureKind.Enum,
-          name: 'statusDescription',
+          name: 'HttpStatusDescription',
           isExported: true,
           members: statusDescriptionMembers,
         },
@@ -252,7 +252,7 @@ const generatedHelperFiles = (
           ],
           declarations: [
             {
-              name: 'statusCodeToStatusText',
+              name: 'statusCodeToStatusTextMap',
               type: 'Record<number, string>',
               initializer: Writers.object(
                 statusCodeToStatusText(httpStatusCodesInfos)
@@ -272,7 +272,7 @@ const generatedHelperFiles = (
           ],
           declarations: [
             {
-              name: 'statusCodeToStatusDescription',
+              name: 'statusCodeToStatusDescriptionMap',
               type: 'Record<number, string>',
               initializer: Writers.object(
                 statusCodeToStatusDescription(httpStatusCodesInfos)
@@ -292,7 +292,7 @@ const generatedHelperFiles = (
           ],
           declarations: [
             {
-              name: 'statusTextToStatusCode',
+              name: 'statusTextToStatusCodeMap',
               type: 'Record<string, number>',
               initializer: Writers.object(
                 statusTextToStatusCode(httpStatusCodesInfos)
@@ -312,7 +312,7 @@ const generatedHelperFiles = (
           ],
           declarations: [
             {
-              name: 'statusTextToStatusDescription',
+              name: 'statusTextToStatusDescriptionMap',
               type: 'Record<string, string>',
               initializer: Writers.object(
                 statusTextToStatusDescription(httpStatusCodesInfos)
@@ -330,12 +330,12 @@ const generatedHelperFiles = (
   helpersFile.addTypeAlias({
     isExported: true,
     name: 'HTTPStatusCode',
-    type: 'keyof typeof statusCodeToStatusText',
+    type: 'keyof typeof statusCodeToStatusTextMap',
   });
   helpersFile.addTypeAlias({
     isExported: true,
     name: 'HTTPStatusText',
-    type: 'keyof typeof statusTextToStatusCode',
+    type: 'keyof typeof statusTextToStatusCodeMap',
   });
   helpersFile.addTypeAlias({
     isExported: true,
@@ -354,7 +354,7 @@ const generatedHelperFiles = (
         },
       ],
       statements: [
-        `return codeOrText in statusCodeToStatusText || codeOrText in statusTextToStatusCode;`,
+        `return codeOrText in statusCodeToStatusTextMap || codeOrText in statusTextToStatusCodeMap;`,
       ],
       isExported: true,
       docs: [
@@ -396,8 +396,8 @@ isCodeOrTextValid('OK') -> true
         }
 
         const [code, message] = [
-          statusTextToStatusCode[codeOrText] || codeOrText as number,
-          statusCodeToStatusDescription[codeOrText as number] || statusTextToStatusDescription[codeOrText]
+          statusTextToStatusCodeMap[codeOrText] || codeOrText as number,
+          statusCodeToStatusDescriptionMap[codeOrText as number] || statusTextToStatusDescriptionMap[codeOrText]
         ]
 
         return {
@@ -521,7 +521,7 @@ isStatusSuccessful('OK') -> 200 OK：The standard response for successful HTTP r
         },
       ],
       statements: [
-        ` const code = statusTextToStatusCode[\`\${text}\`]
+        ` const code = statusTextToStatusCodeMap[\`\${text}\`]
           if (!code) {
             throw new Error(\`\${text} is not a known HTTP status text.\`);
           }
@@ -559,7 +559,7 @@ If the given http status text does not exist, undefined is returned.`,
         },
       ],
       statements: [
-        ` const text = statusCodeToStatusText[\`\${code}\`]
+        ` const text = statusCodeToStatusTextMap[\`\${code}\`]
           if (!text) {
             throw new Error(\`\${code} is not a known HTTP status code.\`);
           }

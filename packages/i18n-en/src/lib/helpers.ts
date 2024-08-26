@@ -15,7 +15,7 @@
  */
 
 /** Key-value mapping of HTTP status codes and HTTP status texts. */
-export const statusCodeToStatusText: Record<number, string> = {
+export const statusCodeToStatusTextMap: Record<number, string> = {
   100: "Continue",
   101: "Switching Protocols",
   102: "Processing",
@@ -98,7 +98,7 @@ export const statusCodeToStatusText: Record<number, string> = {
   527: "Railgun Error (CloudFlare)"
 };
 /** Key-value mapping of HTTP status codes and HTTP status descriptions. */
-export const statusCodeToStatusDescription: Record<number, string> = {
+export const statusCodeToStatusDescriptionMap: Record<number, string> = {
   100: "Continue：The server has received the request headers, and that the client should proceed to send the request body.",
   101: "Switching protocols：The requester has asked the server to switch protocols and the server is acknowledging that it will do so.",
   102: "Processing：The server has received and is processing the request, but no response is available yet.",
@@ -181,7 +181,7 @@ export const statusCodeToStatusDescription: Record<number, string> = {
   527: "Railgun Error (CloudFlare)：The request timed out or failed after the WAN connection has been established."
 };
 /** Key-value mapping of HTTP status texts and HTTP status codes. */
-export const statusTextToStatusCode: Record<string, number> = {
+export const statusTextToStatusCodeMap: Record<string, number> = {
   "Continue": 100,
   "Switching Protocols": 101,
   "Processing": 102,
@@ -264,7 +264,7 @@ export const statusTextToStatusCode: Record<string, number> = {
   "Railgun Error (CloudFlare)": 527
 };
 /** Key-value mapping of HTTP status texts and HTTP status descriptions. */
-export const statusTextToStatusDescription: Record<string, string> = {
+export const statusTextToStatusDescriptionMap: Record<string, string> = {
   "Continue": "Continue：The server has received the request headers, and that the client should proceed to send the request body.",
   "Switching Protocols": "Switching protocols：The requester has asked the server to switch protocols and the server is acknowledging that it will do so.",
   "Processing": "Processing：The server has received and is processing the request, but no response is available yet.",
@@ -347,8 +347,8 @@ export const statusTextToStatusDescription: Record<string, string> = {
   "Railgun Error (CloudFlare)": "Railgun Error (CloudFlare)：The request timed out or failed after the WAN connection has been established."
 };
 
-export type HTTPStatusCode = keyof typeof statusCodeToStatusText;
-export type HTTPStatusText = keyof typeof statusTextToStatusCode;
+export type HTTPStatusCode = keyof typeof statusCodeToStatusTextMap;
+export type HTTPStatusText = keyof typeof statusTextToStatusCodeMap;
 export type StatusInfo = { code: number, message: string, success: boolean };
 
 /**
@@ -360,7 +360,7 @@ export type StatusInfo = { code: number, message: string, success: boolean };
  * @returns yesOrNo: boolean
  */
 export function isCodeOrTextValid(codeOrText: HTTPStatusCode | HTTPStatusText): boolean {
-  return codeOrText in statusCodeToStatusText || codeOrText in statusTextToStatusCode;
+  return codeOrText in statusCodeToStatusTextMap || codeOrText in statusTextToStatusCodeMap;
 }
 
 /**
@@ -378,8 +378,8 @@ export function getStatusInfo(codeOrText: HTTPStatusCode | HTTPStatusText): Stat
   }
 
   const [code, message] = [
-    statusTextToStatusCode[codeOrText] || codeOrText as number,
-    statusCodeToStatusDescription[codeOrText as number] || statusTextToStatusDescription[codeOrText]
+    statusTextToStatusCodeMap[codeOrText] || codeOrText as number,
+    statusCodeToStatusDescriptionMap[codeOrText as number] || statusTextToStatusDescriptionMap[codeOrText]
   ]
 
   return {
@@ -430,7 +430,7 @@ export function getStatusMessage(codeOrText: HTTPStatusCode | HTTPStatusText): s
  * @returns statusCode: HTTPStatusCode
  */
 export function getStatusCode(text: HTTPStatusText): HTTPStatusCode {
-  const code = statusTextToStatusCode[`${text}`]
+  const code = statusTextToStatusCodeMap[`${text}`]
   if (!code) {
     throw new Error(`${text} is not a known HTTP status text.`);
   }
@@ -445,7 +445,7 @@ export function getStatusCode(text: HTTPStatusText): HTTPStatusCode {
  * @returns statusText: HTTPStatusText
  */
 export function getStatusText(code: HTTPStatusCode): HTTPStatusText {
-  const text = statusCodeToStatusText[`${code}`]
+  const text = statusCodeToStatusTextMap[`${code}`]
   if (!text) {
     throw new Error(`${code} is not a known HTTP status code.`);
   }

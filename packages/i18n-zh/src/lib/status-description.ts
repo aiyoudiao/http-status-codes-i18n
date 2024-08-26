@@ -14,7 +14,7 @@
 * 祝你编程愉快！记住，代码是诗歌，前端是艺术。 ツ
 */
 
-export enum statusDescription {
+export enum HttpStatusDescription {
   /**
    * CONTINUE: RFC 7231 6.2.1
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.2.1

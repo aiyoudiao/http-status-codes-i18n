@@ -14,7 +14,7 @@
  * Happy coding! Remember, code is poetry, and front-end is art. ツ
  */
 
-export enum statusDescription {
+export enum HttpStatusDescription {
   /**
    * CONTINUE: RFC 7231 6.2.1
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.2.1

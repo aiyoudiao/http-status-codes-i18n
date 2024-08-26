@@ -15,7 +15,7 @@
 */
 
 /** Key-value mapping of HTTP status codes and HTTP status texts. */
-export const statusCodeToStatusText: Record<number, string> = {
+export const statusCodeToStatusTextMap: Record<number, string> = {
   100: "Continue",
   101: "Switching Protocols",
   102: "Processing",
@@ -98,7 +98,7 @@ export const statusCodeToStatusText: Record<number, string> = {
   527: "Railgun Error (CloudFlare)"
 };
 /** Key-value mapping of HTTP status codes and HTTP status descriptions. */
-export const statusCodeToStatusDescription: Record<number, string> = {
+export const statusCodeToStatusDescriptionMap: Record<number, string> = {
   100: "继续：服务器已经收到请求头，客户端应继续发送请求主体。",
   101: "切换协议：请求者已要求服务器切换协议，服务器确认它将进行切换。",
   102: "处理中：服务器已收到请求并正在处理，但尚无可用的响应。",
@@ -181,7 +181,7 @@ export const statusCodeToStatusDescription: Record<number, string> = {
   527: "Railgun 错误（CloudFlare）：在建立 WAN 连接后，请求超时或失败。"
 };
 /** Key-value mapping of HTTP status texts and HTTP status codes. */
-export const statusTextToStatusCode: Record<string, number> = {
+export const statusTextToStatusCodeMap: Record<string, number> = {
   "Continue": 100,
   "Switching Protocols": 101,
   "Processing": 102,
@@ -264,7 +264,7 @@ export const statusTextToStatusCode: Record<string, number> = {
   "Railgun Error (CloudFlare)": 527
 };
 /** Key-value mapping of HTTP status texts and HTTP status descriptions. */
-export const statusTextToStatusDescription: Record<string, string> = {
+export const statusTextToStatusDescriptionMap: Record<string, string> = {
   "Continue": "继续：服务器已经收到请求头，客户端应继续发送请求主体。",
   "Switching Protocols": "切换协议：请求者已要求服务器切换协议，服务器确认它将进行切换。",
   "Processing": "处理中：服务器已收到请求并正在处理，但尚无可用的响应。",
@@ -347,8 +347,8 @@ export const statusTextToStatusDescription: Record<string, string> = {
   "Railgun Error (CloudFlare)": "Railgun 错误（CloudFlare）：在建立 WAN 连接后，请求超时或失败。"
 };
 
-export type HTTPStatusCode = keyof typeof statusCodeToStatusText;
-export type HTTPStatusText = keyof typeof statusTextToStatusCode;
+export type HTTPStatusCode = keyof typeof statusCodeToStatusTextMap;
+export type HTTPStatusText = keyof typeof statusTextToStatusCodeMap;
 export type StatusInfo = { code: number, message: string, success: boolean };
 
 /**
@@ -360,7 +360,7 @@ export type StatusInfo = { code: number, message: string, success: boolean };
  * @returns yesOrNo: boolean
  */
 export function isCodeOrTextValid(codeOrText: HTTPStatusCode | HTTPStatusText): boolean {
-  return codeOrText in statusCodeToStatusText || codeOrText in statusTextToStatusCode;
+  return codeOrText in statusCodeToStatusTextMap || codeOrText in statusTextToStatusCodeMap;
 }
 
 /**
@@ -378,8 +378,8 @@ export function getStatusInfo(codeOrText: HTTPStatusCode | HTTPStatusText): Stat
   }
 
   const [code, message] = [
-    statusTextToStatusCode[codeOrText] || codeOrText as number,
-    statusCodeToStatusDescription[codeOrText as number] || statusTextToStatusDescription[codeOrText]
+    statusTextToStatusCodeMap[codeOrText] || codeOrText as number,
+    statusCodeToStatusDescriptionMap[codeOrText as number] || statusTextToStatusDescriptionMap[codeOrText]
   ]
 
   return {
@@ -430,7 +430,7 @@ export function getStatusMessage(codeOrText: HTTPStatusCode | HTTPStatusText): s
  * @returns statusCode: HTTPStatusCode
  */
 export function getStatusCode(text: HTTPStatusText): HTTPStatusCode {
-  const code = statusTextToStatusCode[`${text}`]
+  const code = statusTextToStatusCodeMap[`${text}`]
   if (!code) {
     throw new Error(`${text} is not a known HTTP status text.`);
   }
@@ -445,7 +445,7 @@ export function getStatusCode(text: HTTPStatusText): HTTPStatusCode {
  * @returns statusText: HTTPStatusText
  */
 export function getStatusText(code: HTTPStatusCode): HTTPStatusText {
-  const text = statusCodeToStatusText[`${code}`]
+  const text = statusCodeToStatusTextMap[`${code}`]
   if (!text) {
     throw new Error(`${code} is not a known HTTP status code.`);
   }
