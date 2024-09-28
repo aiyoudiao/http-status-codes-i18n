@@ -5,11 +5,13 @@
   "description": "HTTP status codes i18n",
   "scripts": {
     "task": "nx affected -t lint test build",
+    "test": "nx affected -t test",
     "sync:version": "node ./scripts/sync-version.js",
     "commit": "git-cz",
     "changelog": "conventional-changelog --config ./commit-config/changelog-config.js -p  -i -o CHANGELOG.md -r 0",
     "version": "conventional-changelog --config ./commit-config/changelog-config.js -p angular -i -o CHANGELOG.md  -r 0 && git add CHANGELOG.md",
-    "release": "release-it && ./publish.sh"
+    "release": "release-it",
+    "release-ci": "npm run commit && release-it && ./publish.sh"
   },
   "dependencies": {
     "tslib": "^2.3.0"
