@@ -1,9 +1,23 @@
+## 1.3.2 (2024-10-02)
+
+
+### 🎫 Chores | 其他更新
+
+* **scripts:** 添加逻辑代码，自动根据模版创建 i18n 系列的项目 。| [Review:(779defd)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/779defd8dd10e546ffb09e3e0da949270230ab8f?view=parallel)
+
+
+
 ## 1.3.1 (2024-09-28)
 
 
 ### ♻️ Code Refactoring | 代码重构
 
 * **generate&zh&en:** 重构生成代码的脚本，优化功能代码 。| [Review:(bb2bf0d)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/bb2bf0df35c88aa177fe4b54c3a5a1c0ea7cfb2f?view=parallel)
+
+
+### 🎫 Chores | 其他更新
+
+* release 1.3.1 。| [Review:(8fd101e)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/8fd101e57c02f1a654f255aa6f73ffa6227cf884?view=parallel)
 
 
 
