@@ -9,12 +9,12 @@
 
 
 **🚀 サポート：**
-[x] HttpStatusText 列挙型は、英語の定数および h{ステータスコードの数値}の方式でステータスコードに対応する理由フレーズを取得できます。たとえば `HttpStatusText.OK` または `HttpStatusText.h200` です。
-[x] HttpStatusDescription 列挙型は、英語の定数および h{ステータスコードの数値}の方式でステータスコードに対応する詳細な説明を取得できます。たとえば `HttpStatusDescription.OK` または `HttpStatusDescription.h200` です。
-[x] HttpStatusCode 列挙型は、英語の定数および h{ステータスコードの数値}の方式でステータスコードに対応する数値を取得できます。たとえば `HttpStatusCode.OK` または `HttpStatusCode.h200` です。
-[x] `isCodeOrTextValid` を通じて、ステータスコード、ステータスコードの理由フレーズが有効かどうかを検証できます。たとえば `isCodeOrTextValid(200)` または `isCodeOrTextValid('OK')` はどちらも true です。
-[x] `getStatusInfo` を通じて、指定されたステータスコードまたはステータスコードの理由フレーズに対応する完全な情報、たとえばステータスコード、理由フレーズ、詳細な説明、成功かどうかなどの情報を取得できます。
-[x] `isStatusSuccessful` を通じ
+- [x] HttpStatusText 列挙型は、英語の定数および h{ステータスコードの数値}の方式でステータスコードに対応する理由フレーズを取得できます。たとえば `HttpStatusText.OK` または `HttpStatusText.h200` です。
+- [x] HttpStatusDescription 列挙型は、英語の定数および h{ステータスコードの数値}の方式でステータスコードに対応する詳細な説明を取得できます。たとえば `HttpStatusDescription.OK` または `HttpStatusDescription.h200` です。
+- [x] HttpStatusCode 列挙型は、英語の定数および h{ステータスコードの数値}の方式でステータスコードに対応する数値を取得できます。たとえば `HttpStatusCode.OK` または `HttpStatusCode.h200` です。
+- [x] `isCodeOrTextValid` を通じて、ステータスコード、ステータスコードの理由フレーズが有効かどうかを検証できます。たとえば `isCodeOrTextValid(200)` または `isCodeOrTextValid('OK')` はどちらも true です。
+- [x] `getStatusInfo` を通じて、指定されたステータスコードまたはステータスコードの理由フレーズに対応する完全な情報、たとえばステータスコード、理由フレーズ、詳細な説明、成功かどうかなどの情報を取得できます。
+- [x] `isStatusSuccessful` を通じ
 
 
 なぜそれをするのか？ 

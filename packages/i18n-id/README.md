@@ -9,16 +9,16 @@ Ini menyediakan informasi terkait pesan kode status HTTP dalam 21 bahasa negara 
 
 
 **🚀 Dukungan: **
-,[x] Enumerasi HttpStatusText, mendukung cara untuk mendapatkan frase alasan kode status yang sesuai dengan konstanta bahasa Inggris dan h{nilai kode status}. Seperti `HttpStatusText.OK` atau `HttpStatusText.h200`. 
-,[x] Enumerasi HttpStatusDescription, mendukung cara untuk mendapatkan deskripsi rinci kode status yang sesuai dengan konstanta bahasa Inggris dan h{nilai kode status}. Seperti `HttpStatusDescription.OK` atau `HttpStatusDescription.h200`. 
-,[x] Enumerasi HttpStatusCode, mendukung cara untuk mendapatkan nilai kode status yang sesuai dengan konstanta bahasa Inggris dan h{nilai kode status}. Seperti `HttpStatusCode.OK` atau `HttpStatusCode.h200`. 
-,[x] Mendukung untuk memverifikasi apakah kode status, frase alasan kode status valid atau tidak melalui `isCodeOrTextValid`. Seperti `isCodeOrTextValid(200)` atau `isCodeOrTextValid('OK')` keduanya benar. 
-,[x] Mendukung untuk mendapatkan informasi lengkap yang sesuai dengan kode status tertentu atau frase alasan kode status melalui `getStatusInfo`. Seperti informasi seperti kode status, frase alasan dan deskripsi rinci, apakah berhasil, dll. 
-,[x] Mendukung untuk mendapatkan langsung apakah kode status saat ini normal melalui `isStatusSuccessful`. 
-,[x] Mendukung untuk mendapatkan pesan status sederhana melalui metode `getSimpleStatusMessage`, seperti `200 OK`. 
-,[x] Mendukung untuk mendapatkan informasi sederhana dari kode status tertentu melalui metode `getStatusMessage`, seperti `200 OK: The standard response for successful HTTP requests.` 
-,[x] Mendukung untuk mendapatkan informasi sederhana dari kode status tertentu melalui metode `getStatusCode`, seperti `getStatusCode('OK') -> 200` 
-,[x] Mendukung untuk mendapatkan frase alasan kode status tertentu melalui metode `getStatusText`, seperti `getStatusText(200) -> 'OK'` 
+- [x] Enumerasi HttpStatusText, mendukung cara untuk mendapatkan frase alasan kode status yang sesuai dengan konstanta bahasa Inggris dan h{nilai kode status}. Seperti `HttpStatusText.OK` atau `HttpStatusText.h200`. 
+- [x] Enumerasi HttpStatusDescription, mendukung cara untuk mendapatkan deskripsi rinci kode status yang sesuai dengan konstanta bahasa Inggris dan h{nilai kode status}. Seperti `HttpStatusDescription.OK` atau `HttpStatusDescription.h200`. 
+- [x] Enumerasi HttpStatusCode, mendukung cara untuk mendapatkan nilai kode status yang sesuai dengan konstanta bahasa Inggris dan h{nilai kode status}. Seperti `HttpStatusCode.OK` atau `HttpStatusCode.h200`. 
+- [x] Mendukung untuk memverifikasi apakah kode status, frase alasan kode status valid atau tidak melalui `isCodeOrTextValid`. Seperti `isCodeOrTextValid(200)` atau `isCodeOrTextValid('OK')` keduanya benar. 
+- [x] Mendukung untuk mendapatkan informasi lengkap yang sesuai dengan kode status tertentu atau frase alasan kode status melalui `getStatusInfo`. Seperti informasi seperti kode status, frase alasan dan deskripsi rinci, apakah berhasil, dll. 
+- [x] Mendukung untuk mendapatkan langsung apakah kode status saat ini normal melalui `isStatusSuccessful`. 
+- [x] Mendukung untuk mendapatkan pesan status sederhana melalui metode `getSimpleStatusMessage`, seperti `200 OK`. 
+- [x] Mendukung untuk mendapatkan informasi sederhana dari kode status tertentu melalui metode `getStatusMessage`, seperti `200 OK: The standard response for successful HTTP requests.` 
+- [x] Mendukung untuk mendapatkan informasi sederhana dari kode status tertentu melalui metode `getStatusCode`, seperti `getStatusCode('OK') -> 200` 
+- [x] Mendukung untuk mendapatkan frase alasan kode status tertentu melalui metode `getStatusText`, seperti `getStatusText(200) -> 'OK'` 
 
 
 Mengapa harus melakukannya? 

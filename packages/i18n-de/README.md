@@ -9,16 +9,16 @@ Es bietet Informationen zu HTTP-Statuscode-Meldungen in 21 Nationalsprachen📜.
 
 
 **🚀 Unterstützung: **
-[x] HttpStatusText-Enumeration, unterstützt die Ermittlung der Gründephrasen für Statuscodes mittels englischer Konstanten und h{Zahl des Statuscodes}. Beispielsweise `HttpStatusText.OK` oder `HttpStatusText.h200`.
-[x] HttpStatusDescription-Enumeration, unterstützt die Ermittlung der detaillierten Beschreibungen für Statuscodes mittels englischer Konstanten und h{Zahl des Statuscodes}. Beispielsweise `HttpStatusDescription.OK` oder `HttpStatusDescription.h200`.
-[x] HttpStatusCode-Enumeration, unterstützt die Ermittlung der Zahlenwerte von Statuscodes mittels englischer Konstanten und h{Zahl des Statuscodes}. Beispielsweise `HttpStatusCode.OK` oder `HttpStatusCode.h200`.
-[x] Unterstützt die Validierung von Statuscodes und Statuscode-Gründephrasen mittels `isCodeOrTextValid`. Beispielsweise `isCodeOrTextValid(200)` oder `isCodeOrTextValid('OK')` sind beide true.
-[x] Unterstützt die Ermittlung der vollständigen Informationen zu einem bestimmten Statuscode oder einer Statuscode-Gründephrase mittels `getStatusInfo`. Beispielsweise Statuscode, Grundphrase, detaillierte Beschreibung und Erfolgstatus.
-[x] Unterstützt die direkte Ermittlung, ob der aktuelle Statuscode normal ist, mittels `isStatusSuccessful`.
-[x] Unterstützt die Ermittlung einfacher Statuscode-Informationen mittels `getSimpleStatusMessage`. Beispielsweise `200 OK`.
-[x] Unterstützt die Ermittlung einfacher Informationen für einen bestimmten Statuscode mittels `getStatusMessage`. Beispielsweise `200 OK: Die Standardantwort für erfolgreiche HTTP-Anfragen.`
-[x] Unterstützt die Ermittlung einfacher Informationen eines bestimmten Statuscodes mittels `getStatusCode`. Beispielsweise `getStatusCode('OK') -> 200`.
-[x] Unterstützt die Ermittlung der Grundphrase eines bestimmten Statuscodes mittels `getStatusText`. Beispielsweise `getStatusText(200) -> 'OK'`. 
+- [x] HttpStatusText-Enumeration, unterstützt die Ermittlung der Gründephrasen für Statuscodes mittels englischer Konstanten und h{Zahl des Statuscodes}. Beispielsweise `HttpStatusText.OK` oder `HttpStatusText.h200`.
+- [x] HttpStatusDescription-Enumeration, unterstützt die Ermittlung der detaillierten Beschreibungen für Statuscodes mittels englischer Konstanten und h{Zahl des Statuscodes}. Beispielsweise `HttpStatusDescription.OK` oder `HttpStatusDescription.h200`.
+- [x] HttpStatusCode-Enumeration, unterstützt die Ermittlung der Zahlenwerte von Statuscodes mittels englischer Konstanten und h{Zahl des Statuscodes}. Beispielsweise `HttpStatusCode.OK` oder `HttpStatusCode.h200`.
+- [x] Unterstützt die Validierung von Statuscodes und Statuscode-Gründephrasen mittels `isCodeOrTextValid`. Beispielsweise `isCodeOrTextValid(200)` oder `isCodeOrTextValid('OK')` sind beide true.
+- [x] Unterstützt die Ermittlung der vollständigen Informationen zu einem bestimmten Statuscode oder einer Statuscode-Gründephrase mittels `getStatusInfo`. Beispielsweise Statuscode, Grundphrase, detaillierte Beschreibung und Erfolgstatus.
+- [x] Unterstützt die direkte Ermittlung, ob der aktuelle Statuscode normal ist, mittels `isStatusSuccessful`.
+- [x] Unterstützt die Ermittlung einfacher Statuscode-Informationen mittels `getSimpleStatusMessage`. Beispielsweise `200 OK`.
+- [x] Unterstützt die Ermittlung einfacher Informationen für einen bestimmten Statuscode mittels `getStatusMessage`. Beispielsweise `200 OK: Die Standardantwort für erfolgreiche HTTP-Anfragen.`
+- [x] Unterstützt die Ermittlung einfacher Informationen eines bestimmten Statuscodes mittels `getStatusCode`. Beispielsweise `getStatusCode('OK') -> 200`.
+- [x] Unterstützt die Ermittlung der Grundphrase eines bestimmten Statuscodes mittels `getStatusText`. Beispielsweise `getStatusText(200) -> 'OK'`. 
 
 
 Warum soll man es tun? 

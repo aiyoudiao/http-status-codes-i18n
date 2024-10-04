@@ -9,14 +9,14 @@ Ez 21 ország nyelvű HTTP állapotkód üzeneteket kapcsolatos információkat 
 
 
 **🚀 Támogatás: **
-, [x] Az HttpStatusText enumeráció, támogatja az angol konstansokat és a h{állapotkód számértékének} módon a megadott állapotkódhoz tartozó okok szövegét kapni. Például `HttpStatusText.OK` vagy `HttpStatusText.h200`. 
-, [x] Az HttpStatusDescription enumeráció, támogatja az angol konstansokat és a h{állapotkód számértékének} módon a megadott állapotkódhoz tartozó részletes leírást kapni. Például `HttpStatusDescription.OK` vagy `HttpStatusDescription.h200`. 
-, [x] Az HttpStatusCode enumeráció, támogatja az angol konstansokat és a h{állapotkód számértékének} módon a megadott állapotkódhoz tartozó számértéket kapni. Például `HttpStatusCode.OK` vagy `HttpStatusCode.h200`. 
-, [x] Támogatott az `isCodeOrTextValid` használata a állapotkódok és az állapotkódok okok szövegének érvényességének ellenőrzésére. Például `isCodeOrTextValid(200)` vagy `isCodeOrTextValid('OK')` mind true. 
-, [x] Támogatott az `getStatusInfo` használata a megadott állapotkód vagy az állapotkód okok szövegéhez tartozó teljes információkhoz, például az állapotkód, az okok szöveg és a részletes leírás, az sikeresség stb. információkhoz. 
-, [x] Támogatott az `isStatusSuccessful` használata közvetlenül megállapítani, hogy a jelenlegi állapotkód normális-e. 
-, [x] Támogatott az `getSimpleStatusMessage` metódus használata egyszerű állapotkód információkhoz kapni, például `200 OK`. 
-, [x] Támogatott az `getStatusMessage` metódus használata egy megadott állapotkód egyszerű információjához kapni, például `
+- [x] Az HttpStatusText enumeráció, támogatja az angol konstansokat és a h{állapotkód számértékének} módon a megadott állapotkódhoz tartozó okok szövegét kapni. Például `HttpStatusText.OK` vagy `HttpStatusText.h200`. 
+- [x] Az HttpStatusDescription enumeráció, támogatja az angol konstansokat és a h{állapotkód számértékének} módon a megadott állapotkódhoz tartozó részletes leírást kapni. Például `HttpStatusDescription.OK` vagy `HttpStatusDescription.h200`. 
+- [x] Az HttpStatusCode enumeráció, támogatja az angol konstansokat és a h{állapotkód számértékének} módon a megadott állapotkódhoz tartozó számértéket kapni. Például `HttpStatusCode.OK` vagy `HttpStatusCode.h200`. 
+- [x] Támogatott az `isCodeOrTextValid` használata a állapotkódok és az állapotkódok okok szövegének érvényességének ellenőrzésére. Például `isCodeOrTextValid(200)` vagy `isCodeOrTextValid('OK')` mind true. 
+- [x] Támogatott az `getStatusInfo` használata a megadott állapotkód vagy az állapotkód okok szövegéhez tartozó teljes információkhoz, például az állapotkód, az okok szöveg és a részletes leírás, az sikeresség stb. információkhoz. 
+- [x] Támogatott az `isStatusSuccessful` használata közvetlenül megállapítani, hogy a jelenlegi állapotkód normális-e. 
+- [x] Támogatott az `getSimpleStatusMessage` metódus használata egyszerű állapotkód információkhoz kapni, például `200 OK`. 
+- [x] Támogatott az `getStatusMessage` metódus használata egy megadott állapotkód egyszerű információjához kapni, például `
 
 
 ### ⚔️ Miért csináljuk? 

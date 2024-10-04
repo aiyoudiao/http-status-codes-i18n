@@ -8,16 +8,16 @@
 
 
 **🚀 支持：**
-[x] HttpStatusText 枚举，支持 英文常量 和 h{状态码数值}的方式获取状态码对应的原因短语。比如 `HttpStatusText.OK` 或 `HttpStatusText.h200`。
-[x] HttpStatusDescription 枚举，支持 英文常量 和 h{状态码数值}的方式获取状态码对应的详细描述。比如 `HttpStatusDescription.OK` 或 `HttpStatusDescription.h200`。
-[x] HttpStatusCode 枚举，支持 英文常量 和 h{状态码数值}的方式获取状态码对应的数值。 比如 `HttpStatusCode.OK` 或 `HttpStatusCode.h200`。
-[x] 支持通过 `isCodeOrTextValid` 来校验 状态码、状态码原因短语 是否有效。比如 `isCodeOrTextValid(200)` 或 `isCodeOrTextValid('OK')` 都为 true。
-[x] 支持通过 `getStatusInfo` 来获取指定状态码 或 状态码原因短语 所对应的完整 信息，比如 状态码、原因短语和详细描述、 是否成功等信息。
-[x] 支持通过 `isStatusSuccessful` 直接获取 当前状态码是否正常。
-[x] 支持通过 `getSimpleStatusMessage` 方法获取简单的状态码信息，比如 `200 OK`。
-[x] 支持通过 `getStatusMessage` 方法获取指定状态码的简单信息，比如 `200 OK：The standard response for successful HTTP requests.`。
-[x] 支持通过 `getStatusCode` 方法获取指定状态码的简单信息，比如 `getStatusCode('OK') -> 200`。
-[x] 支持通过 `getStatusText` 方法获取指定状态码的原因短语，比如 `getStatusText(200) -> 'OK'`。
+- [x] HttpStatusText 枚举，支持 英文常量 和 h{状态码数值}的方式获取状态码对应的原因短语。比如 `HttpStatusText.OK` 或 `HttpStatusText.h200`。
+- [x] HttpStatusDescription 枚举，支持 英文常量 和 h{状态码数值}的方式获取状态码对应的详细描述。比如 `HttpStatusDescription.OK` 或 `HttpStatusDescription.h200`。
+- [x] HttpStatusCode 枚举，支持 英文常量 和 h{状态码数值}的方式获取状态码对应的数值。 比如 `HttpStatusCode.OK` 或 `HttpStatusCode.h200`。
+- [x] 支持通过 `isCodeOrTextValid` 来校验 状态码、状态码原因短语 是否有效。比如 `isCodeOrTextValid(200)` 或 `isCodeOrTextValid('OK')` 都为 true。
+- [x] 支持通过 `getStatusInfo` 来获取指定状态码 或 状态码原因短语 所对应的完整 信息，比如 状态码、原因短语和详细描述、 是否成功等信息。
+- [x] 支持通过 `isStatusSuccessful` 直接获取 当前状态码是否正常。
+- [x] 支持通过 `getSimpleStatusMessage` 方法获取简单的状态码信息，比如 `200 OK`。
+- [x] 支持通过 `getStatusMessage` 方法获取指定状态码的简单信息，比如 `200 OK：The standard response for successful HTTP requests.`。
+- [x] 支持通过 `getStatusCode` 方法获取指定状态码的简单信息，比如 `getStatusCode('OK') -> 200`。
+- [x] 支持通过 `getStatusText` 方法获取指定状态码的原因短语，比如 `getStatusText(200) -> 'OK'`。
 
 
 ### ⚔️ 为什么要做它？

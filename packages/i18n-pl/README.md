@@ -9,15 +9,15 @@ Udostępnia informacje dotyczące komunikatów statusu HTTP w 21 językach krajo
 
 
 **🚀 Wsparcie: **
-,[x] Enumeracja HttpStatusText, obsługuje zarówno stałe angielskie, jak i formę h{wartość kodu statusu} w celu uzyskania odpowiedniego opisu przyczyny dla kodu statusu. Na przykład `HttpStatusText.OK` lub `HttpStatusText.h200`.
-,[x] Enumeracja HttpStatusDescription, obsługuje zarówno stałe angielskie, jak i formę h{wartość kodu statusu} w celu uzyskania szczegółowego opisu dla kodu statusu. Na przykład `HttpStatusDescription.OK` lub `HttpStatusDescription.h200`.
-,[x] Enumeracja HttpStatusCode, obsługuje zarówno stałe angielskie, jak i formę h{wartość kodu statusu} w celu uzyskania wartości kodu statusu. Na przykład `HttpStatusCode.OK` lub `HttpStatusCode.h200`.
-,[x] Obsługuje walidację kodu statusu i frazy opisującej przyczynę za pomocą `isCodeOrTextValid`. Na przykład `isCodeOrTextValid(200)` lub `isCodeOrTextValid('OK')` zwracają prawdę.
-,[x] Obsługuje pobieranie pełnej informacji dla określonego kodu statusu lub frazy opisującej przyczynę za pomocą `getStatusInfo`, np. informacji o kodzie statusu, frazie opisującej przyczynę i szczegółowym opisie oraz czy było sukcesem.
-,[x] Obsługuje bezpośrednie pobieranie informacji, czy dany kod statusu jest prawidłowy za pomocą `isStatusSuccessful`.
-,[x] Obsługuje pobieranie prostego komunikatu o kodzie statusu za pomocą metody `getSimpleStatusMessage`, np. `200 OK`.
-,[x] Obsługuje pobieranie prostego komunikatu dla określonego kodu statusu za pomocą metody `getStatusMessage`, np. `200 OK: The standard response for successful HTTP requests.`
-,[x] Obsługuje pobieranie wartości kodu statusu dla określonego kodu statusu za pomocą metody `getStatusCode`, np. `getStatusCode('
+- [x] Enumeracja HttpStatusText, obsługuje zarówno stałe angielskie, jak i formę h{wartość kodu statusu} w celu uzyskania odpowiedniego opisu przyczyny dla kodu statusu. Na przykład `HttpStatusText.OK` lub `HttpStatusText.h200`.
+- [x] Enumeracja HttpStatusDescription, obsługuje zarówno stałe angielskie, jak i formę h{wartość kodu statusu} w celu uzyskania szczegółowego opisu dla kodu statusu. Na przykład `HttpStatusDescription.OK` lub `HttpStatusDescription.h200`.
+- [x] Enumeracja HttpStatusCode, obsługuje zarówno stałe angielskie, jak i formę h{wartość kodu statusu} w celu uzyskania wartości kodu statusu. Na przykład `HttpStatusCode.OK` lub `HttpStatusCode.h200`.
+- [x] Obsługuje walidację kodu statusu i frazy opisującej przyczynę za pomocą `isCodeOrTextValid`. Na przykład `isCodeOrTextValid(200)` lub `isCodeOrTextValid('OK')` zwracają prawdę.
+- [x] Obsługuje pobieranie pełnej informacji dla określonego kodu statusu lub frazy opisującej przyczynę za pomocą `getStatusInfo`, np. informacji o kodzie statusu, frazie opisującej przyczynę i szczegółowym opisie oraz czy było sukcesem.
+- [x] Obsługuje bezpośrednie pobieranie informacji, czy dany kod statusu jest prawidłowy za pomocą `isStatusSuccessful`.
+- [x] Obsługuje pobieranie prostego komunikatu o kodzie statusu za pomocą metody `getSimpleStatusMessage`, np. `200 OK`.
+- [x] Obsługuje pobieranie prostego komunikatu dla określonego kodu statusu za pomocą metody `getStatusMessage`, np. `200 OK: The standard response for successful HTTP requests.`
+- [x] Obsługuje pobieranie wartości kodu statusu dla określonego kodu statusu za pomocą metody `getStatusCode`, np. `getStatusCode('
 
 
 ### ⚔️ Dlaczego to robić? 

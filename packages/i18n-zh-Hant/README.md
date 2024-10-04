@@ -9,16 +9,16 @@
 
 
 **🚀 支援：**
-,[x] HttpStatusText 枚舉，支援 英文常量 和 h{狀態碼數值}的方式獲取狀態碼對應的原因短語。比如 `HttpStatusText.OK` 或 `HttpStatusText.h200`。
-,[x] HttpStatusDescription 枚舉，支援 英文常量 和 h{狀態碼數值}的方式獲取狀態碼對應的詳細描述。比如 `HttpStatusDescription.OK` 或 `HttpStatusDescription.h200`。
-,[x] HttpStatusCode 枚舉，支援 英文常量 和 h{狀態碼數值}的方式獲取狀態碼對應的數值。 比如 `HttpStatusCode.OK` 或 `HttpStatusCode.h200`。
-,[x] 支援透過 `isCodeOrTextValid` 來校驗 狀態碼、狀態碼原因短語 是否有效。比如 `isCodeOrTextValid(200)` 或 `isCodeOrTextValid('OK')` 都為 true。
-,[x] 支援透過 `getStatusInfo` 來獲取指定狀態碼 或 狀態碼原因短語 所對應的完整 資訊，比如 狀態碼、原因短語和詳細描述、 是否成功等資訊。
-,[x] 支援透過 `isStatusSuccessful` 直接獲取 當前狀態碼是否正常。
-,[x] 支援透過 `getSimpleStatusMessage` 方法獲取簡單的狀態碼資訊，比如 `200 OK`。
-,[x] 支援透過 `getStatusMessage` 方法獲取指定狀態碼的簡單資訊，比如 `200 OK：The standard response for successful HTTP requests.`。
-,[x] 支援透過 `getStatusCode` 方法獲取指定狀態碼的簡單資訊，比如 `getStatusCode('OK') -> 200`。
-,[x] 支援透過 `getStatusText` 方法獲取指定狀態碼的原因短語，比如 `getStatusText(200) -> 'OK'`。 
+- [x] HttpStatusText 枚舉，支援 英文常量 和 h{狀態碼數值}的方式獲取狀態碼對應的原因短語。比如 `HttpStatusText.OK` 或 `HttpStatusText.h200`。
+- [x] HttpStatusDescription 枚舉，支援 英文常量 和 h{狀態碼數值}的方式獲取狀態碼對應的詳細描述。比如 `HttpStatusDescription.OK` 或 `HttpStatusDescription.h200`。
+- [x] HttpStatusCode 枚舉，支援 英文常量 和 h{狀態碼數值}的方式獲取狀態碼對應的數值。 比如 `HttpStatusCode.OK` 或 `HttpStatusCode.h200`。
+- [x] 支援透過 `isCodeOrTextValid` 來校驗 狀態碼、狀態碼原因短語 是否有效。比如 `isCodeOrTextValid(200)` 或 `isCodeOrTextValid('OK')` 都為 true。
+- [x] 支援透過 `getStatusInfo` 來獲取指定狀態碼 或 狀態碼原因短語 所對應的完整 資訊，比如 狀態碼、原因短語和詳細描述、 是否成功等資訊。
+- [x] 支援透過 `isStatusSuccessful` 直接獲取 當前狀態碼是否正常。
+- [x] 支援透過 `getSimpleStatusMessage` 方法獲取簡單的狀態碼資訊，比如 `200 OK`。
+- [x] 支援透過 `getStatusMessage` 方法獲取指定狀態碼的簡單資訊，比如 `200 OK：The standard response for successful HTTP requests.`。
+- [x] 支援透過 `getStatusCode` 方法獲取指定狀態碼的簡單資訊，比如 `getStatusCode('OK') -> 200`。
+- [x] 支援透過 `getStatusText` 方法獲取指定狀態碼的原因短語，比如 `getStatusText(200) -> 'OK'`。 
 
 
 ### ⚔️ 為什麼要做它？ 

@@ -9,15 +9,15 @@
 
 
 **🚀 Destekler :**
-[x] HttpStatusText  enum'u, durum kodlarının ilişkili neden ifadelerini İngilizce sabitleri ve h{durum kodu değeri} biçiminde almayı destekler. Örneğin `HttpStatusText.OK` veya `HttpStatusText.h200`.
-[x] HttpStatusDescription  enum'u, durum kodlarının ilişkili ayrıntılı açıklamalarını İngilizce sabitleri ve h{durum kodu değeri} biçiminde almayı destekler. Örneğin `HttpStatusDescription.OK` veya `HttpStatusDescription.h200`.
-[x] HttpStatusCode  enum'u, durum kodlarının ilişkili değerlerini İngilizce sabitleri ve h{durum kodu değeri} biçiminde almayı destekler. Örneğin `HttpStatusCode.OK` veya `HttpStatusCode.h200`.
-[x] `isCodeOrTextValid` aracılığıyla durum kodu veya durum kodu neden ifadelerinin geçerliliğini doğrulama desteklenir. Örneğin `isCodeOrTextValid(200)` veya `isCodeOrTextValid('OK')` her ikisi de true olur.
-[x] `getStatusInfo` aracılığıyla belirli bir durum kodu veya durum kodu neden ifadesiyle ilişkili tam  bilgileri, örneğin durum kodu, neden ifadesi ve ayrıntılı açıklama, başarılı olup olmadığı gibi bilgileri almak desteklenir.
-[x] `isStatusSuccessful` aracılığıyla mevcut durum kodunun normal olup olmadığını doğrudan almak desteklenir.
-[x] `getSimpleStatusMessage` yöntemiyle basit durum kodu bilgilerini almak desteklenir, örneğin `200 OK` gibi.
-[x] `getStatusMessage` yöntemiyle belirli bir durum kodunun basit bilgilerini almak desteklenir, örneğin `200 OK: Başarılı HTTP istekleri için standart yanıt.` gibi.
-[x] `getStatusCode` yöntemiyle belirli bir durum kodunun basit bilgilerini almak desteklenir, örneğin `getStatusCode('OK') -> 200`
+- [x] HttpStatusText  enum'u, durum kodlarının ilişkili neden ifadelerini İngilizce sabitleri ve h{durum kodu değeri} biçiminde almayı destekler. Örneğin `HttpStatusText.OK` veya `HttpStatusText.h200`.
+- [x] HttpStatusDescription  enum'u, durum kodlarının ilişkili ayrıntılı açıklamalarını İngilizce sabitleri ve h{durum kodu değeri} biçiminde almayı destekler. Örneğin `HttpStatusDescription.OK` veya `HttpStatusDescription.h200`.
+- [x] HttpStatusCode  enum'u, durum kodlarının ilişkili değerlerini İngilizce sabitleri ve h{durum kodu değeri} biçiminde almayı destekler. Örneğin `HttpStatusCode.OK` veya `HttpStatusCode.h200`.
+- [x] `isCodeOrTextValid` aracılığıyla durum kodu veya durum kodu neden ifadelerinin geçerliliğini doğrulama desteklenir. Örneğin `isCodeOrTextValid(200)` veya `isCodeOrTextValid('OK')` her ikisi de true olur.
+- [x] `getStatusInfo` aracılığıyla belirli bir durum kodu veya durum kodu neden ifadesiyle ilişkili tam  bilgileri, örneğin durum kodu, neden ifadesi ve ayrıntılı açıklama, başarılı olup olmadığı gibi bilgileri almak desteklenir.
+- [x] `isStatusSuccessful` aracılığıyla mevcut durum kodunun normal olup olmadığını doğrudan almak desteklenir.
+- [x] `getSimpleStatusMessage` yöntemiyle basit durum kodu bilgilerini almak desteklenir, örneğin `200 OK` gibi.
+- [x] `getStatusMessage` yöntemiyle belirli bir durum kodunun basit bilgilerini almak desteklenir, örneğin `200 OK: Başarılı HTTP istekleri için standart yanıt.` gibi.
+- [x] `getStatusCode` yöntemiyle belirli bir durum kodunun basit bilgilerini almak desteklenir, örneğin `getStatusCode('OK') -> 200`
 
 
 ### ⚔️ Neden yapmalı? 

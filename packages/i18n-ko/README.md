@@ -9,16 +9,16 @@
 
 
 **🚀 지원:**
-[x] HttpStatusText 열거형: 영어 상수 및 h{상태 코드 숫자} 방식으로 상태 코드에 해당하는 원인 구문을 가져올 수 있습니다. 예를 들면 `HttpStatusText.OK` 또는 `HttpStatusText.h200`.
-[x] HttpStatusDescription 열거형: 영어 상수 및 h{상태 코드 숫자} 방식으로 상태 코드에 해당하는 상세 설명을 가져올 수 있습니다. 예를 들면 `HttpStatusDescription.OK` 또는 `HttpStatusDescription.h200`.
-[x] HttpStatusCode 열거형: 영어 상수 및 h{상태 코드 숫자} 방식으로 상태 코드에 해당하는 숫자값을 가져올 수 있습니다. 예를 들면 `HttpStatusCode.OK` 또는 `HttpStatusCode.h200`.
-[x] `isCodeOrTextValid`를 통해 상태 코드, 상태 코드 원인 구문의 유효성을 검사할 수 있습니다. 예를 들면 `isCodeOrTextValid(200)` 또는 `isCodeOrTextValid('OK')` 모두 true입니다.
-[x] `getStatusInfo`를 통해 지정된 상태 코드 또는 상태 코드 원인 구문에 해당하는 완전한 정보, 예를 들면 상태 코드, 원인 구문 및 상세 설명, 성공 여부 등의 정보를 가져올 수 있습니다.
-[x] `isStatusSuccessful`를 통해 현재 상태 코드가 정상인지 직접 얻을 수 있습니다.
-[x] `getSimpleStatusMessage` 메서드를 통해 간단한 상태 코드 정보를 가져올 수 있습니다. 예를 들면 `200 OK`.
-[x] `getStatusMessage` 메서드를 통해 지정된 상태 코드의 간단한 정보를 가져올 수 있습니다. 예를 들면 `200 OK: HTTP 요청이 성공한 표준 응답.`
-[x] `getStatusCode` 메서드를 통해 지정된 상태 코드의 간단한 정보를 가져올 수 있습니다. 예를 들면 `getStatusCode('OK') -> 200`.
-[x] `getStatusText` 메서드를 통해 지정된 상태
+- [x] HttpStatusText 열거형: 영어 상수 및 h{상태 코드 숫자} 방식으로 상태 코드에 해당하는 원인 구문을 가져올 수 있습니다. 예를 들면 `HttpStatusText.OK` 또는 `HttpStatusText.h200`.
+- [x] HttpStatusDescription 열거형: 영어 상수 및 h{상태 코드 숫자} 방식으로 상태 코드에 해당하는 상세 설명을 가져올 수 있습니다. 예를 들면 `HttpStatusDescription.OK` 또는 `HttpStatusDescription.h200`.
+- [x] HttpStatusCode 열거형: 영어 상수 및 h{상태 코드 숫자} 방식으로 상태 코드에 해당하는 숫자값을 가져올 수 있습니다. 예를 들면 `HttpStatusCode.OK` 또는 `HttpStatusCode.h200`.
+- [x] `isCodeOrTextValid`를 통해 상태 코드, 상태 코드 원인 구문의 유효성을 검사할 수 있습니다. 예를 들면 `isCodeOrTextValid(200)` 또는 `isCodeOrTextValid('OK')` 모두 true입니다.
+- [x] `getStatusInfo`를 통해 지정된 상태 코드 또는 상태 코드 원인 구문에 해당하는 완전한 정보, 예를 들면 상태 코드, 원인 구문 및 상세 설명, 성공 여부 등의 정보를 가져올 수 있습니다.
+- [x] `isStatusSuccessful`를 통해 현재 상태 코드가 정상인지 직접 얻을 수 있습니다.
+- [x] `getSimpleStatusMessage` 메서드를 통해 간단한 상태 코드 정보를 가져올 수 있습니다. 예를 들면 `200 OK`.
+- [x] `getStatusMessage` 메서드를 통해 지정된 상태 코드의 간단한 정보를 가져올 수 있습니다. 예를 들면 `200 OK: HTTP 요청이 성공한 표준 응답.`
+- [x] `getStatusCode` 메서드를 통해 지정된 상태 코드의 간단한 정보를 가져올 수 있습니다. 예를 들면 `getStatusCode('OK') -> 200`.
+- [x] `getStatusText` 메서드를 통해 지정된 상태
 
 
 ### ⚔️ 왜 그것을 해야 합니까? 

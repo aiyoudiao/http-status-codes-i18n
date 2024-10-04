@@ -9,16 +9,16 @@ Ele fornece informações relacionadas às mensagens do código de status HTTP e
 
 
 **🚀 Suporte: **
-,[x] Enum HttpStatusText, suporta a obtenção da frase de motivo correspondente ao código de status por meio de constantes em inglês e h{número do código de status}. Por exemplo, `HttpStatusText.OK` ou `HttpStatusText.h200`.
-,[x] Enum HttpStatusDescription, suporta a obtenção da descrição detalhada correspondente ao código de status por meio de constantes em inglês e h{número do código de status}. Por exemplo, `HttpStatusDescription.OK` ou `HttpStatusDescription.h200`.
-,[x] Enum HttpStatusCode, suporta a obtenção do valor numérico correspondente ao código de status por meio de constantes em inglês e h{número do código de status}. Por exemplo, `HttpStatusCode.OK` ou `HttpStatusCode.h200`.
-,[x] Suporta a verificação da validade do código de status e da frase de motivo do código de status por meio de `isCodeOrTextValid`. Por exemplo, `isCodeOrTextValid(200)` ou `isCodeOrTextValid('OK')`, ambos são verdadeiros.
-,[x] Suporta a obtenção das informações completas correspondentes ao código de status especificado ou à frase de motivo do código de status por meio de `getStatusInfo`, como código de status, frase de motivo, descrição detalhada e se é bem-sucedido, etc.
-,[x] Suporta a obtenção diretamente se o código de status atual é normal por meio de `isStatusSuccessful`.
-,[x] Suporta a obtenção da mensagem simples do código de status por meio do método `getSimpleStatusMessage`, como `200 OK`.
-,[x] Suporta a obtenção da mensagem simples do código de status especificado por meio do método `getStatusMessage`, como `200 OK: A resposta padrão para solicitações HTTP bem-sucedidas.`
-,[x] Suporta a obtenção da mensagem simples do código de status especificado por meio do método `getStatusCode`, como `getStatusCode('OK') -> 200`.
-,[x] Suporta a obtenção da frase de motivo do código de status especificado por meio do método `getStatusText`, como `getStatusText(20
+- [x] Enum HttpStatusText, suporta a obtenção da frase de motivo correspondente ao código de status por meio de constantes em inglês e h{número do código de status}. Por exemplo, `HttpStatusText.OK` ou `HttpStatusText.h200`.
+- [x] Enum HttpStatusDescription, suporta a obtenção da descrição detalhada correspondente ao código de status por meio de constantes em inglês e h{número do código de status}. Por exemplo, `HttpStatusDescription.OK` ou `HttpStatusDescription.h200`.
+- [x] Enum HttpStatusCode, suporta a obtenção do valor numérico correspondente ao código de status por meio de constantes em inglês e h{número do código de status}. Por exemplo, `HttpStatusCode.OK` ou `HttpStatusCode.h200`.
+- [x] Suporta a verificação da validade do código de status e da frase de motivo do código de status por meio de `isCodeOrTextValid`. Por exemplo, `isCodeOrTextValid(200)` ou `isCodeOrTextValid('OK')`, ambos são verdadeiros.
+- [x] Suporta a obtenção das informações completas correspondentes ao código de status especificado ou à frase de motivo do código de status por meio de `getStatusInfo`, como código de status, frase de motivo, descrição detalhada e se é bem-sucedido, etc.
+- [x] Suporta a obtenção diretamente se o código de status atual é normal por meio de `isStatusSuccessful`.
+- [x] Suporta a obtenção da mensagem simples do código de status por meio do método `getSimpleStatusMessage`, como `200 OK`.
+- [x] Suporta a obtenção da mensagem simples do código de status especificado por meio do método `getStatusMessage`, como `200 OK: A resposta padrão para solicitações HTTP bem-sucedidas.`
+- [x] Suporta a obtenção da mensagem simples do código de status especificado por meio do método `getStatusCode`, como `getStatusCode('OK') -> 200`.
+- [x] Suporta a obtenção da frase de motivo do código de status especificado por meio do método `getStatusText`, como `getStatusText(20
 
 
 ### ⚔️ Por que fazer isso? 

@@ -9,16 +9,16 @@ Proporciona información relacionada con los códigos de estado HTTP en 21 idiom
 
 
 **🚀 Soporte: **
-,[x] Enumeración HttpStatusText, admite la obtención de la frase de razón correspondiente al código de estado en forma de constantes en inglés y h{valor del código de estado}. Por ejemplo, `HttpStatusText.OK` o `HttpStatusText.h200`.
-,[x] Enumeración HttpStatusDescription, admite la obtención de la descripción detallada correspondiente al código de estado en forma de constantes en inglés y h{valor del código de estado}. Por ejemplo, `HttpStatusDescription.OK` o `HttpStatusDescription.h200`.
-,[x] Enumeración HttpStatusCode, admite la obtención del valor numérico correspondiente al código de estado en forma de constantes en inglés y h{valor del código de estado}. Por ejemplo, `HttpStatusCode.OK` o `HttpStatusCode.h200`.
-,[x] Se admite la validación de si el código de estado o la frase de razón del código de estado es válido a través de `isCodeOrTextValid`. Por ejemplo, `isCodeOrTextValid(200)` o `isCodeOrTextValid('OK')` son ambos verdadero.
-,[x] Se admite la obtención de la información completa correspondiente al código de estado especificado o la frase de razón del código de estado a través de `getStatusInfo`. Por ejemplo, código de estado, frase de razón y descripción detallada, éxito o no, etc.
-,[x] Se admite la obtención directa de si el código de estado actual es normal a través de `isStatusSuccessful`.
-,[x] Se admite la obtención de la información simple del código de estado a través del método `getSimpleStatusMessage`, por ejemplo, `200 OK`.
-,[x] Se admite la obtención de la información simple específica del código de estado a través del método `getStatusMessage`, por ejemplo, `200 OK: La respuesta estándar para solicitudes HTTP exitosas.`
-,[x] Se admite la obtención de la información simple del código de estado especificado a través del método `getStatusCode`, por ejemplo, `getStatusCode('OK') -> 200`.
-,[x] Se admite la obtención de la frase de razón del código de estado especificado
+- [x] Enumeración HttpStatusText, admite la obtención de la frase de razón correspondiente al código de estado en forma de constantes en inglés y h{valor del código de estado}. Por ejemplo, `HttpStatusText.OK` o `HttpStatusText.h200`.
+- [x] Enumeración HttpStatusDescription, admite la obtención de la descripción detallada correspondiente al código de estado en forma de constantes en inglés y h{valor del código de estado}. Por ejemplo, `HttpStatusDescription.OK` o `HttpStatusDescription.h200`.
+- [x] Enumeración HttpStatusCode, admite la obtención del valor numérico correspondiente al código de estado en forma de constantes en inglés y h{valor del código de estado}. Por ejemplo, `HttpStatusCode.OK` o `HttpStatusCode.h200`.
+- [x] Se admite la validación de si el código de estado o la frase de razón del código de estado es válido a través de `isCodeOrTextValid`. Por ejemplo, `isCodeOrTextValid(200)` o `isCodeOrTextValid('OK')` son ambos verdadero.
+- [x] Se admite la obtención de la información completa correspondiente al código de estado especificado o la frase de razón del código de estado a través de `getStatusInfo`. Por ejemplo, código de estado, frase de razón y descripción detallada, éxito o no, etc.
+- [x] Se admite la obtención directa de si el código de estado actual es normal a través de `isStatusSuccessful`.
+- [x] Se admite la obtención de la información simple del código de estado a través del método `getSimpleStatusMessage`, por ejemplo, `200 OK`.
+- [x] Se admite la obtención de la información simple específica del código de estado a través del método `getStatusMessage`, por ejemplo, `200 OK: La respuesta estándar para solicitudes HTTP exitosas.`
+- [x] Se admite la obtención de la información simple del código de estado especificado a través del método `getStatusCode`, por ejemplo, `getStatusCode('OK') -> 200`.
+- [x] Se admite la obtención de la frase de razón del código de estado especificado
 
 
 ### ⚔️ ¿Por qué hacerlo? 

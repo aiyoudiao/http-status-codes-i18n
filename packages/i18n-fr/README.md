@@ -9,16 +9,16 @@ Il fournit des informations sur les messages de codes d'état HTTP en 21 langues
 
 
 🚀 Soutien :
-[x] L'énumération HttpStatusText, prend en charge l'obtention de la phrase de raison correspondant au code d'état en utilisant les constantes anglaises et le format h{valeur du code d'état}. Par exemple, `HttpStatusText.OK` ou `HttpStatusText.h200`.
-[x] L'énumération HttpStatusDescription, permet d'obtenir la description détaillée correspondant au code d'état en utilisant les constantes anglaises et le format h{valeur du code d'état}. Par exemple, `HttpStatusDescription.OK` ou `HttpStatusDescription.h200`.
-[x] L'énumération HttpStatusCode, permet d'obtenir la valeur numérique correspondant au code d'état en utilisant les constantes anglaises et le format h{valeur du code d'état}. Par exemple, `HttpStatusCode.OK` ou `HttpStatusCode.h200`.
-[x] Prise en charge de la validation de la validité du code d'état et de la phrase de raison via `isCodeOrTextValid`. Par exemple, `isCodeOrTextValid(200)` ou `isCodeOrTextValid('OK')` sont tous vrais.
-[x] Prise en charge de l'obtention des informations complètes correspondant au code d'état ou à la phrase de raison spécifiés via `getStatusInfo`, telles que le code d'état, la phrase de raison, la description détaillée, le succès, etc.
-[x] Prise en charge de l'obtention directement du statut de normalité du code d'état actuel via `isStatusSuccessful`.
-[x] Prise en charge de l'obtention des informations simples sur le code d'état via la méthode `getSimpleStatusMessage`, par exemple `200 OK`.
-[x] Prise en charge de l'obtention des informations simples du code d'état spécifié via la méthode `getStatusMessage`, par exemple `200 OK : La réponse standard pour les requêtes HTTP réussies.`
-[x] Prise en charge de l'obtention des informations simples du code d'état via la méthode `getStatusCode`, par exemple `getStatusCode('OK') -> 200`.
-[x] Prise en charge de l'obtention de la phrase de raison du code d'état spéc
+- [x] L'énumération HttpStatusText, prend en charge l'obtention de la phrase de raison correspondant au code d'état en utilisant les constantes anglaises et le format h{valeur du code d'état}. Par exemple, `HttpStatusText.OK` ou `HttpStatusText.h200`.
+- [x] L'énumération HttpStatusDescription, permet d'obtenir la description détaillée correspondant au code d'état en utilisant les constantes anglaises et le format h{valeur du code d'état}. Par exemple, `HttpStatusDescription.OK` ou `HttpStatusDescription.h200`.
+- [x] L'énumération HttpStatusCode, permet d'obtenir la valeur numérique correspondant au code d'état en utilisant les constantes anglaises et le format h{valeur du code d'état}. Par exemple, `HttpStatusCode.OK` ou `HttpStatusCode.h200`.
+- [x] Prise en charge de la validation de la validité du code d'état et de la phrase de raison via `isCodeOrTextValid`. Par exemple, `isCodeOrTextValid(200)` ou `isCodeOrTextValid('OK')` sont tous vrais.
+- [x] Prise en charge de l'obtention des informations complètes correspondant au code d'état ou à la phrase de raison spécifiés via `getStatusInfo`, telles que le code d'état, la phrase de raison, la description détaillée, le succès, etc.
+- [x] Prise en charge de l'obtention directement du statut de normalité du code d'état actuel via `isStatusSuccessful`.
+- [x] Prise en charge de l'obtention des informations simples sur le code d'état via la méthode `getSimpleStatusMessage`, par exemple `200 OK`.
+- [x] Prise en charge de l'obtention des informations simples du code d'état spécifié via la méthode `getStatusMessage`, par exemple `200 OK : La réponse standard pour les requêtes HTTP réussies.`
+- [x] Prise en charge de l'obtention des informations simples du code d'état via la méthode `getStatusCode`, par exemple `getStatusCode('OK') -> 200`.
+- [x] Prise en charge de l'obtention de la phrase de raison du code d'état spéc
 
 
 ### ⚔️ Pourquoi le faire? 

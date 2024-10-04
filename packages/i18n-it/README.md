@@ -9,16 +9,16 @@ Offre informazioni relative ai messaggi di codice di stato HTTP in 21 lingue naz
 
 
 **🚀 Supporto: **
-,[x] Enumerazione HttpStatusText, supporta il modo delle costanti in inglese e h{numero di codice di stato} per ottenere la frase di ragione corrispondente al codice di stato. Ad esempio `HttpStatusText.OK` o `HttpStatusText.h200`.
-,[x] Enumerazione HttpStatusDescription, supporta il modo delle costanti in inglese e h{numero di codice di stato} per ottenere la descrizione dettagliata corrispondente al codice di stato. Ad esempio `HttpStatusDescription.OK` o `HttpStatusDescription.h200`.
-,[x] Enumerazione HttpStatusCode, supporta il modo delle costanti in inglese e h{numero di codice di stato} per ottenere il valore numerico corrispondente al codice di stato. Ad esempio `HttpStatusCode.OK` o `HttpStatusCode.h200`.
-,[x] Supporta tramite `isCodeOrTextValid` per verificare se il codice di stato, la frase di ragione del codice di stato sono validi. Ad esempio `isCodeOrTextValid(200)` o `isCodeOrTextValid('OK')` entrambi sono true.
-,[x] Supporta tramite `getStatusInfo` per ottenere le informazioni complete corrispondenti al codice di stato specificato o alla frase di ragione del codice di stato, come il codice di stato, la frase di ragione e la descrizione dettagliata, se è un successo, ecc.
-,[x] Supporta tramite `isStatusSuccessful` per ottenere direttamente se il codice di stato corrente è normale.
-,[x] Supporta tramite il metodo `getSimpleStatusMessage` per ottenere informazioni semplici sul codice di stato, come `200 OK`.
-,[x] Supporta tramite il metodo `getStatusMessage` per ottenere informazioni semplici specifiche sul codice di stato, come `200 OK: La risposta standard per richieste HTTP di successo.`.
-,[x] Supporta tramite il metodo `getStatusCode` per ottenere informazioni semplici sul codice di stato specificato, come `getStatusCode('OK') -> 200`.
-,[x] Supporta tramite il metodo `getStatusText` per ottenere la frase di ragione del codice di stato specific
+- [x] Enumerazione HttpStatusText, supporta il modo delle costanti in inglese e h{numero di codice di stato} per ottenere la frase di ragione corrispondente al codice di stato. Ad esempio `HttpStatusText.OK` o `HttpStatusText.h200`.
+- [x] Enumerazione HttpStatusDescription, supporta il modo delle costanti in inglese e h{numero di codice di stato} per ottenere la descrizione dettagliata corrispondente al codice di stato. Ad esempio `HttpStatusDescription.OK` o `HttpStatusDescription.h200`.
+- [x] Enumerazione HttpStatusCode, supporta il modo delle costanti in inglese e h{numero di codice di stato} per ottenere il valore numerico corrispondente al codice di stato. Ad esempio `HttpStatusCode.OK` o `HttpStatusCode.h200`.
+- [x] Supporta tramite `isCodeOrTextValid` per verificare se il codice di stato, la frase di ragione del codice di stato sono validi. Ad esempio `isCodeOrTextValid(200)` o `isCodeOrTextValid('OK')` entrambi sono true.
+- [x] Supporta tramite `getStatusInfo` per ottenere le informazioni complete corrispondenti al codice di stato specificato o alla frase di ragione del codice di stato, come il codice di stato, la frase di ragione e la descrizione dettagliata, se è un successo, ecc.
+- [x] Supporta tramite `isStatusSuccessful` per ottenere direttamente se il codice di stato corrente è normale.
+- [x] Supporta tramite il metodo `getSimpleStatusMessage` per ottenere informazioni semplici sul codice di stato, come `200 OK`.
+- [x] Supporta tramite il metodo `getStatusMessage` per ottenere informazioni semplici specifiche sul codice di stato, come `200 OK: La risposta standard per richieste HTTP di successo.`.
+- [x] Supporta tramite il metodo `getStatusCode` per ottenere informazioni semplici sul codice di stato specificato, come `getStatusCode('OK') -> 200`.
+- [x] Supporta tramite il metodo `getStatusText` per ottenere la frase di ragione del codice di stato specific
 
 
 Perché farlo? 

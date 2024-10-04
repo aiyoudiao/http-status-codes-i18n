@@ -9,16 +9,16 @@ Nó cung cấp thông tin liên quan đến mã trạng thái HTTP của 21 ngô
 
 
 **🚀 Hỗ trợ: **
-[x] Enumeration HttpStatusText, hỗ trợ cách lấy cụm từ lý do trạng thái tương ứng với mã trạng thái theo hằng số tiếng Anh và h{mã số trạng thái}. Ví dụ như `HttpStatusText.OK` hoặc `HttpStatusText.h200`.
-[x] Enumeration HttpStatusDescription, hỗ trợ cách lấy mô tả chi tiết tương ứng với mã trạng thái theo hằng số tiếng Anh và h{mã số trạng thái}. Ví dụ như `HttpStatusDescription.OK` hoặc `HttpStatusDescription.h200`.
-[x] Enumeration HttpStatusCode, hỗ trợ cách lấy giá trị số tương ứng với mã trạng thái theo hằng số tiếng Anh và h{mã số trạng thái}. Ví dụ như `HttpStatusCode.OK` hoặc `HttpStatusCode.h200`.
-[x] Hỗ trợ xác minh xem mã trạng thái, cụm từ lý do trạng thái có hợp lệ hay không thông qua `isCodeOrTextValid`. Ví dụ như `isCodeOrTextValid(200)` hoặc `isCodeOrTextValid('OK')` đều là true.
-[x] Hỗ trợ lấy thông tin đầy đủ tương ứng với mã trạng thái chỉ định hoặc cụm từ lý do trạng thái thông qua `getStatusInfo`, Ví dụ như mã trạng thái, cụm từ lý do và mô tả chi tiết, có thành công hay không.
-[x] Hỗ trợ lấy trực tiếp xem mã trạng thái hiện tại có bình thường hay không thông qua `isStatusSuccessful`.
-[x] Hỗ trợ lấy thông tin trạng thái đơn giản thông qua phương thức `getSimpleStatusMessage`, Ví dụ như `200 OK`.
-[x] Hỗ trợ lấy thông tin đơn giản của mã trạng thái chỉ định thông qua phương thức `getStatusMessage`, Ví dụ như `200 OK: The standard response for successful HTTP requests.`.
-[x] Hỗ trợ lấy thông tin đơn giản của mã trạng thái chỉ định thông qua phương thức `getStatusCode`, Ví dụ như `getStatusCode('OK') -> 200`.
-[x] Hỗ trợ lấy cụm từ lý do của mã trạng thái chỉ định thông qua phương thức `getStatusText`, Ví dụ như `getStatusText(200) -> 'OK'.
+- [x] Enumeration HttpStatusText, hỗ trợ cách lấy cụm từ lý do trạng thái tương ứng với mã trạng thái theo hằng số tiếng Anh và h{mã số trạng thái}. Ví dụ như `HttpStatusText.OK` hoặc `HttpStatusText.h200`.
+- [x] Enumeration HttpStatusDescription, hỗ trợ cách lấy mô tả chi tiết tương ứng với mã trạng thái theo hằng số tiếng Anh và h{mã số trạng thái}. Ví dụ như `HttpStatusDescription.OK` hoặc `HttpStatusDescription.h200`.
+- [x] Enumeration HttpStatusCode, hỗ trợ cách lấy giá trị số tương ứng với mã trạng thái theo hằng số tiếng Anh và h{mã số trạng thái}. Ví dụ như `HttpStatusCode.OK` hoặc `HttpStatusCode.h200`.
+- [x] Hỗ trợ xác minh xem mã trạng thái, cụm từ lý do trạng thái có hợp lệ hay không thông qua `isCodeOrTextValid`. Ví dụ như `isCodeOrTextValid(200)` hoặc `isCodeOrTextValid('OK')` đều là true.
+- [x] Hỗ trợ lấy thông tin đầy đủ tương ứng với mã trạng thái chỉ định hoặc cụm từ lý do trạng thái thông qua `getStatusInfo`, Ví dụ như mã trạng thái, cụm từ lý do và mô tả chi tiết, có thành công hay không.
+- [x] Hỗ trợ lấy trực tiếp xem mã trạng thái hiện tại có bình thường hay không thông qua `isStatusSuccessful`.
+- [x] Hỗ trợ lấy thông tin trạng thái đơn giản thông qua phương thức `getSimpleStatusMessage`, Ví dụ như `200 OK`.
+- [x] Hỗ trợ lấy thông tin đơn giản của mã trạng thái chỉ định thông qua phương thức `getStatusMessage`, Ví dụ như `200 OK: The standard response for successful HTTP requests.`.
+- [x] Hỗ trợ lấy thông tin đơn giản của mã trạng thái chỉ định thông qua phương thức `getStatusCode`, Ví dụ như `getStatusCode('OK') -> 200`.
+- [x] Hỗ trợ lấy cụm từ lý do của mã trạng thái chỉ định thông qua phương thức `getStatusText`, Ví dụ như `getStatusText(200) -> 'OK'.
 
 
 Tại sao phải làm nó? 

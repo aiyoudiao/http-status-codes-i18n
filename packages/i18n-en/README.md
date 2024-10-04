@@ -8,16 +8,16 @@ It provides information related to HTTP status code messages in 21 national lang
 
 
 **🚀 Support:**
-,[x] HttpStatusText enumeration, supports obtaining the reason phrase corresponding to the status code in the form of English constants and h{status code value}. For example, `HttpStatusText.OK` or `HttpStatusText.h200`.
-,[x] HttpStatusDescription enumeration, supports obtaining the detailed description corresponding to the status code in the form of English constants and h{status code value}. For example, `HttpStatusDescription.OK` or `HttpStatusDescription.h200`.
-,[x] HttpStatusCode enumeration, supports obtaining the value corresponding to the status code in the form of English constants and h{status code value}. For example, `HttpStatusCode.OK` or `HttpStatusCode.h200`.
-,[x] Supports verifying whether the status code and status code reason phrase are valid through `isCodeOrTextValid`. For example, both `isCodeOrTextValid(200)` or `isCodeOrTextValid('OK')` are true.
-,[x] Supports obtaining the complete information corresponding to the specified status code or status code reason phrase through `getStatusInfo`, such as status code, reason phrase, detailed description, and whether it is successful.
-,[x] Supports directly obtaining whether the current status code is normal through `isStatusSuccessful`.
-,[x] Supports obtaining simple status code information through the `getSimpleStatusMessage` method, such as `200 OK`.
-,[x] Supports obtaining the simple information of the specified status code through the `getStatusMessage` method, such as `200 OK: The standard response for successful HTTP requests.`.
-,[x] Supports obtaining the simple information of the specified status code through the `getStatusCode` method, such as `getStatusCode('OK') -> 200`.
-,[x] Supports obtaining the reason phrase of the specified status code through the `getStatusText` method, such as `getStatusText(200) -> 'OK'`. 
+- [x] HttpStatusText enumeration, supports obtaining the reason phrase corresponding to the status code in the form of English constants and h{status code value}. For example, `HttpStatusText.OK` or `HttpStatusText.h200`.
+- [x] HttpStatusDescription enumeration, supports obtaining the detailed description corresponding to the status code in the form of English constants and h{status code value}. For example, `HttpStatusDescription.OK` or `HttpStatusDescription.h200`.
+- [x] HttpStatusCode enumeration, supports obtaining the value corresponding to the status code in the form of English constants and h{status code value}. For example, `HttpStatusCode.OK` or `HttpStatusCode.h200`.
+- [x] Supports verifying whether the status code and status code reason phrase are valid through `isCodeOrTextValid`. For example, both `isCodeOrTextValid(200)` or `isCodeOrTextValid('OK')` are true.
+- [x] Supports obtaining the complete information corresponding to the specified status code or status code reason phrase through `getStatusInfo`, such as status code, reason phrase, detailed description, and whether it is successful.
+- [x] Supports directly obtaining whether the current status code is normal through `isStatusSuccessful`.
+- [x] Supports obtaining simple status code information through the `getSimpleStatusMessage` method, such as `200 OK`.
+- [x] Supports obtaining the simple information of the specified status code through the `getStatusMessage` method, such as `200 OK: The standard response for successful HTTP requests.`.
+- [x] Supports obtaining the simple information of the specified status code through the `getStatusCode` method, such as `getStatusCode('OK') -> 200`.
+- [x] Supports obtaining the reason phrase of the specified status code through the `getStatusText` method, such as `getStatusText(200) -> 'OK'`. 
 
 
 ### ⚔️ Why build it? 

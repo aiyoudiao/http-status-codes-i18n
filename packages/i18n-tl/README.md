@@ -9,15 +9,15 @@ Naghatag kini ng mga impormasyon kauban ang mga mensahe sa HTTP status code sa 2
 
 
 **🚀 suportado: **
-,[x] Enum ng HttpStatusText, suportado ang paraan ng ingles na konstante at h{numero ng status code} upang makuha ang dahilan ng phrase na katumbas ng status code. Halimbawa, `HttpStatusText.OK` o `HttpStatusText.h200`.
-,[x] Enum ng HttpStatusDescription, suportado ang paraan ng ingles na konstante at h{numero ng status code} upang makuha ang detalyadong paglalarawan na katumbas ng status code. Halimbawa, `HttpStatusDescription.OK` o `HttpStatusDescription.h200`.
-,[x] Enum ng HttpStatusCode, suportado ang paraan ng ingles na konstante at h{numero ng status code} upang makuha ang numero ng status code. Halimbawa, `HttpStatusCode.OK` o `HttpStatusCode.h200`.
-,[x] Suportado ang pag-verify sa `isCodeOrTextValid` upang suriin kung ang status code at ang dahilan ng phrase ng status code ay valid. Halimbawa, `isCodeOrTextValid(200)` o `isCodeOrTextValid('OK')` ay parehong true.
-,[x] Suportado ang pagkuha ng kompletong impormasyon na katumbas ng partikular na status code o dahilan ng phrase ng status code sa pamamagitan ng `getStatusInfo`. Halimbawa, ang status code, ang dahilan ng phrase at ang detalyadong paglalarawan, at kung ito ay matagumpay o hindi.
-,[x] Suportado ang pagkuha agad ng kung ang kasalukuyang status code ay normal sa pamamagitan ng `isStatusSuccessful`.
-,[x] Suportado ang pagkuha ng simpleng impormasyon ng status code sa pamamagitan ng `getSimpleStatusMessage`, halimbawa `200 OK`.
-,[x] Suportado ang pagkuha ng simpleng impormasyon na nakatalagang para sa partikular na status code sa pamamagitan ng `getStatusMessage`, halimbawa `200 OK: The standard response for successful HTTP requests.`
-,[x] Suportado ang pagkuha ng simpleng impormasyon ng status code
+- [x] Enum ng HttpStatusText, suportado ang paraan ng ingles na konstante at h{numero ng status code} upang makuha ang dahilan ng phrase na katumbas ng status code. Halimbawa, `HttpStatusText.OK` o `HttpStatusText.h200`.
+- [x] Enum ng HttpStatusDescription, suportado ang paraan ng ingles na konstante at h{numero ng status code} upang makuha ang detalyadong paglalarawan na katumbas ng status code. Halimbawa, `HttpStatusDescription.OK` o `HttpStatusDescription.h200`.
+- [x] Enum ng HttpStatusCode, suportado ang paraan ng ingles na konstante at h{numero ng status code} upang makuha ang numero ng status code. Halimbawa, `HttpStatusCode.OK` o `HttpStatusCode.h200`.
+- [x] Suportado ang pag-verify sa `isCodeOrTextValid` upang suriin kung ang status code at ang dahilan ng phrase ng status code ay valid. Halimbawa, `isCodeOrTextValid(200)` o `isCodeOrTextValid('OK')` ay parehong true.
+- [x] Suportado ang pagkuha ng kompletong impormasyon na katumbas ng partikular na status code o dahilan ng phrase ng status code sa pamamagitan ng `getStatusInfo`. Halimbawa, ang status code, ang dahilan ng phrase at ang detalyadong paglalarawan, at kung ito ay matagumpay o hindi.
+- [x] Suportado ang pagkuha agad ng kung ang kasalukuyang status code ay normal sa pamamagitan ng `isStatusSuccessful`.
+- [x] Suportado ang pagkuha ng simpleng impormasyon ng status code sa pamamagitan ng `getSimpleStatusMessage`, halimbawa `200 OK`.
+- [x] Suportado ang pagkuha ng simpleng impormasyon na nakatalagang para sa partikular na status code sa pamamagitan ng `getStatusMessage`, halimbawa `200 OK: The standard response for successful HTTP requests.`
+- [x] Suportado ang pagkuha ng simpleng impormasyon ng status code
 
 
 Bakit gawin ito? 
