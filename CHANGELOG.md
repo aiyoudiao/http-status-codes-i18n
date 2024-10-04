@@ -1,9 +1,14 @@
-# 1.4.0 (2024-10-04)
+# 1.5.0 (2024-10-04)
 
 
 ### ✨ Features | 新功能
 
 * **package:** 完善工程化和自动化，添加21个国家的 i18n 包 。| [Review:(75e9076)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/75e9076aee9f4c5eacb8a6c8ad949258b2f36aa7?view=parallel)
+
+
+### 👷‍ Build System | 构建
+
+* 同步版本 。| [Review:(eacf822)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/eacf8220093d6c04dc916270134f9ee78fe5eaea?view=parallel)
 
 
 ### 📝 Documentation | 文档
