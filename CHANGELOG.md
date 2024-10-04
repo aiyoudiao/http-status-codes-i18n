@@ -1,4 +1,18 @@
+## 1.5.2 (2024-10-04)
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* 处理 繁体包的命名问题 。| [Review:(56c83e2)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/56c83e2043403e562b078563fd715af040f92ba5?view=parallel)
+
+
+
 ## 1.5.1 (2024-10-04)
+
+
+### 🎫 Chores | 其他更新
+
+* release 1.5.1 。| [Review:(e5a82ed)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/e5a82ed8ccf6c096527a7386db783636f14950d1?view=parallel)
 
 
 ### 📝 Documentation | 文档
