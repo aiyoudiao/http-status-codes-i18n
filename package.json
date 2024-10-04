@@ -11,7 +11,7 @@
     "changelog": "conventional-changelog --config ./commit-config/changelog-config.js -p  -i -o CHANGELOG.md -r 0",
     "version": "conventional-changelog --config ./commit-config/changelog-config.js -p angular -i -o CHANGELOG.md  -r 0 && git add CHANGELOG.md",
     "release": "release-it",
-    "release-ci": "npm run commit && release-it && ./publish.sh"
+    "release-ci": "release-it && ./publish.sh"
   },
   "dependencies": {
     "tslib": "^2.3.0"
@@ -59,7 +59,8 @@
     "typescript": "~5.5.2",
     "vite": "^5.0.0",
     "vite-plugin-dts": "~3.8.1",
-    "vitest": "^1.3.1"
+    "vitest": "^1.3.1",
+    "xlsx": "^0.18.5"
   },
   "keywords": [
     "node",

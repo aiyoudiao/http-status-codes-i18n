@@ -1,0 +1,9 @@
+{
+  "name": "i18n-hi",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/i18n-hi/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project i18n-hi --web",
+  "targets": {}
+}

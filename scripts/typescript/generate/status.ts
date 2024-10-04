@@ -13,7 +13,7 @@ import {
 } from 'ts-morph'; /* https://ts-morph.com/ */
 import { constantCase } from 'change-case';
 
-interface HttpStatusCodeInfo {
+export interface HttpStatusCodeInfo {
   statusCode: string;
   statusText: string;
   statusDescription: string;

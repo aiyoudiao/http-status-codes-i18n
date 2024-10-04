@@ -1,308 +1,113 @@
-#  🌐 @http-status-codes
 
-由于 http-status-codes 库本身并不支持国际化（i18n）🌍，它只提供了英文的 HTTP 状态码消息相关的信息📜，所以我想基于它整一个支持多国家语言的 http-status-codes，先支持中文🇨🇳，其它的后面有空再整~💻🚀
+## 🌐 @http-status-codes/i18n-template
 
-Since the http-status-codes library itself does not support internationalization (i18n) 🌍 and only provides information related to HTTP status code messages in English 📜, I want to build a http-status-codes that supports multiple languages based on it, starting with Chinese 🇨🇳, and I'll add other languages later when I have time~💻🚀
+### @http-status-codes/i18n-template 是什么？
 
-## 📚 Examples
+它提供了23种国家语言的 HTTP 状态码消息相关的信息📜，当你需要处理 HTTP 状态码相关事项的时候，可以试试它，非常简单。
 
-### 📦 ES Module
+**🚀 支持：**
+[x] HttpStatusText 枚举，支持 英文常量 和 h{状态码数值}的方式获取状态码对应的原因短语。比如 `HttpStatusText.OK` 或 `HttpStatusText.h200`。
+[x] HttpStatusDescription 枚举，支持 英文常量 和 h{状态码数值}的方式获取状态码对应的详细描述。比如 `HttpStatusDescription.OK` 或 `HttpStatusDescription.h200`。
+[x] HttpStatusCode 枚举，支持 英文常量 和 h{状态码数值}的方式获取状态码对应的数值。 比如 `HttpStatusCode.OK` 或 `HttpStatusCode.h200`。
+[x] 支持通过 `isCodeOrTextValid` 来校验 状态码、状态码原因短语 是否有效。比如 `isCodeOrTextValid(200)` 或 `isCodeOrTextValid('OK')` 都为 true。
+[x] 支持通过 `getStatusInfo` 来获取指定状态码 或 状态码原因短语 所对应的完整 信息，比如 状态码、原因短语和详细描述、 是否成功等信息。
+[x] 支持通过 `isStatusSuccessful` 直接获取 当前状态码是否正常。
+[x] 支持通过 `getSimpleStatusMessage` 方法获取简单的状态码信息，比如 `200 OK`。
+[x] 支持通过 `getStatusMessage` 方法获取指定状态码的简单信息，比如 `200 OK：The standard response for successful HTTP requests.`。
+[x] 支持通过 `getStatusCode` 方法获取指定状态码的简单信息，比如 `getStatusCode('OK') -> 200`。
+[x] 支持通过 `getStatusText` 方法获取指定状态码的原因短语，比如 `getStatusText(200) -> 'OK'`。
 
-```typescript
+### ⚔️ 为什么要做它？
+
+http-status-codes 库本身并不支持国际化（i18n）🌍，而我的项目中需要支持一下，问了 GPT 有哪些库可以满足我的需求，它胡说八道，告诉我有一个 @http-status-codes/i18n，但最终没有找到这个所谓的 @http-status-codes/i18n，于是我做了它～
+
+### 💉 参考灵感
+
+- https://github.com/nodejs/node/blob/main/lib/_http_server.js
+- https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#1xx_informational_response
+- https://kapeli.com/cheat_sheets/HTTP_Status_Codes.docset/Contents/Resources/Documents/index
+- https://datatracker.ietf.org/doc/html/rfc7231#section-6.2.1 
+
+### 🚀 技术选型
+
+1. 我想用 `nx` 快速开发，然后就用 nx 脚手架来快速生成项目工程
+2. 我想用 `ts-morph` 来生成代码
+3. 我想用 `飞书/多纬表格/字段捷径` 来进行 AI 翻译
+4. 我想用 XLSX 转 JSON，于是就用 翻译的表格来 生成 JSON 配置
+5. 我想用 JSON 转 Project，于是就用 JSON 配置来生成多语言的项目
+
+### 🔥 优点
+
+✂️ 轻量级： ES6、TS，扩展性好，兼容性好，多包支持，按需使用。
+
+⚡ 强：支持多国语言，最多支持 21 个国家，依赖包支持多种资源格式 `'cjs', 'esm', 'es', 'amd', 'iife', 'umd', 'system'` ，多次压缩，压缩效果好。
+
+⚙️ ️简单：有细粒度的api和粗粒度的api，使用起来非常方便。
+
+### 📚 快速使用
+
+只需要运行以下任意一条命令来正常安装，具体的安装命令以你当前项目中的依赖环境为准，默认使用 npm。
+
+```bash
+npm install @http-status-codes/i18n-template
+yarn add @http-status-codes/i18n-template
+pnpm i @http-status-codes/i18n-template
+```
+
+```javascript
 import {
   getSimpleStatusMessage,
   getStatusMessage,
   getStatusText,
-  getStatusInfo,
-  getStatusText,
-  getStatusCode,
-  isStatusSuccessful,
-  isCodeOrTextValid,
-  HttpStatusCode,
-  HttpStatusDescription,
-  HttpStatusText,
-} from "@http-status-codes/i18n-en";
+} from "@http-status-codes/i18n-template";
 
-// import {
-//   getSimpleStatusMessage
-//   getStatusMessage,
-//   getStatusText,
-//   getStatusInfo,
-//   getStatusText,
-//   getStatusCode,
-//   isStatusSuccessful,
-//   isCodeOrTextValid,
-//   HttpStatusCode,
-//   HttpStatusDescription,
-//   HttpStatusText,
-// } from "@http-status-codes/i18n-zh";
-
-
-console.log(HttpStatusCode.CONTINUE); // 100
-console.log(HttpStatusCode.OK); // 100
-
-console.log(HttpStatusText.CONTINUE); // 'Continue'
-console.log(HttpStatusText.OK); // 'OK'
-
-console.log(HttpStatusDescription.CONTINUE); // 'Continue：The server has received the request headers, and that the client should proceed to send the request body.'
-console.log(HttpStatusDescription.OK); // 'OK：The standard response for successful HTTP requests.'
-
-
-/**
- * getSimpleStatusMessage(200) -> 200 OK
- * getSimpleStatusMessage('OK') -> 200 OK
- */
-console.log(getSimpleStatusMessage(HttpStatusCode.OK));
-console.log(getSimpleStatusMessage(HttpStatusText.OK));
-
-
-/**
- * getStatusMessage(200) -> 200 OK：The standard response for successful HTTP requests.
- * getStatusMessage('OK') -> 200 OK：The standard response for successful HTTP requests.
- */
-console.log(getStatusMessage(HttpStatusCode.OK));
-console.log(getStatusMessage(HttpStatusText.OK));
-
-
-/**
- * getStatusInfo(200) -> { code: 200, message: 'OK：The standard response for successful HTTP requests.', success: true}
- * getStatusInfo('OK') -> { code: 200, message: 'OK：The standard response for successful HTTP requests.', success: true}
- */
-console.log(getStatusInfo(HttpStatusCode.OK));
-console.log(getStatusInfo(HttpStatusText.OK));
-
-
-/**
- * isStatusSuccessful(200) -> true
- * isStatusSuccessful('OK') -> true
- */
-console.log(isStatusSuccessful(HttpStatusCode.OK))
-console.log(isStatusSuccessful(HttpStatusText.OK))
-
-
-/**
-  * isCodeOrTextValid(200) -> true
-  * isCodeOrTextValid('OK') -> true
- */
-console.log(isCodeOrTextValid(0)) // false
-console.log(isCodeOrTextValid(true)) // false
-console.log(isCodeOrTextValid(100)) // true
-console.log(isCodeOrTextValid(HttpStatusCode.OK)) // true
-console.log(isCodeOrTextValid(HttpStatusText.OK)) // true
-
-
-/**
- * getStatusMessage(200) -> 200 OK：The standard response for successful HTTP requests.
- * getStatusMessage('OK') -> 200 OK：The standard response for successful HTTP requests.
- */
-console.log(getStatusMessage(HttpStatusCode.OK))
-console.log(getStatusMessage(HttpStatusText.OK))
-
-
-console.log(getStatusText(HttpStatusCode.OK)); // getStatusCode('200') -> OK
-console.log(getStatusCode('OK')) // getStatusCode('OK') -> 200
+getStatusText(HttpStatusCode.OK) // OK
+getSimpleStatusMessage(HttpStatusCode.OK) // 200 OK
+getStatusMessage(HttpStatusCode.OK) // 200 OK：The standard response for successful HTTP requests.
 
 ```
 
-### 📦 CommonJS
+### ⚡ 功能列表
 
-```javascript
-const {
-  getSimpleStatusMessage,
-  getStatusMessage,
-  getStatusText,
-  getStatusInfo,
-  getStatusText,
-  getStatusCode,
-  isStatusSuccessful,
-  isCodeOrTextValid,
-  HttpStatusCode,
-  HttpStatusDescription,
-  HttpStatusText } = require('@http-status-codes/i18n-en')
-
-// const {
-//   getSimpleStatusMessage,
-//   getStatusMessage,
-//   getStatusText,
-//   getStatusInfo,
-//   getStatusText,
-//   getStatusCode,
-//   isStatusSuccessful,
-//   isCodeOrTextValid,
-//   HttpStatusCode,
-//   HttpStatusDescription,
-//   HttpStatusText } = require('@http-status-codes/i18n-zh')
+API｜描述
 
 
-console.log(HttpStatusCode.CONTINUE); // 100
-console.log(HttpStatusCode.OK); // 100
+### ✨ 效果展示
 
-console.log(HttpStatusText.CONTINUE); // 'Continue'
-console.log(HttpStatusText.OK); // 'OK'
-
-console.log(HttpStatusDescription.CONTINUE); // 'Continue：The server has received the request headers, and that the client should proceed to send the request body.'
-console.log(HttpStatusDescription.OK); // 'OK：The standard response for successful HTTP requests.'
+我希望能够有一个简单的展示页面，可以展示当前的状态码信息，以及对应的详细描述，这样可以方便用户查看。\
+目前可以先看看代码：https://github1s.com/aiyoudiao/http-status-codes-i18n/blob/HEAD/packages/i18n-en/src/lib/helpers.ts
 
 
-/**
- * getSimpleStatusMessage(200) -> 200 OK
- * getSimpleStatusMessage('OK') -> 200 OK
- */
-console.log(getSimpleStatusMessage(HttpStatusCode.OK));
-console.log(getSimpleStatusMessage(HttpStatusText.OK));
+### 📦 All Packages
 
-
-/**
- * getStatusMessage(200) -> 200 OK：The standard response for successful HTTP requests.
- * getStatusMessage('OK') -> 200 OK：The standard response for successful HTTP requests.
- */
-console.log(getStatusMessage(HttpStatusCode.OK));
-console.log(getStatusMessage(HttpStatusText.OK));
-
-
-/**
- * getStatusInfo(200) -> { code: 200, message: 'OK：The standard response for successful HTTP requests.', success: true}
- * getStatusInfo('OK') -> { code: 200, message: 'OK：The standard response for successful HTTP requests.', success: true}
- */
-console.log(getStatusInfo(HttpStatusCode.OK));
-console.log(getStatusInfo(HttpStatusText.OK));
-
-
-/**
- * isStatusSuccessful(200) -> true
- * isStatusSuccessful('OK') -> true
- */
-console.log(isStatusSuccessful(HttpStatusCode.OK))
-console.log(isStatusSuccessful(HttpStatusText.OK))
-
-
-/**
-  * isCodeOrTextValid(200) -> true
-  * isCodeOrTextValid('OK') -> true
- */
-console.log(isCodeOrTextValid(0)) // false
-console.log(isCodeOrTextValid(true)) // false
-console.log(isCodeOrTextValid(100)) // true
-console.log(isCodeOrTextValid(HttpStatusCode.OK)) // true
-console.log(isCodeOrTextValid(HttpStatusText.OK)) // true
-
-
-/**
- * getStatusMessage(200) -> 200 OK：The standard response for successful HTTP requests.
- * getStatusMessage('OK') -> 200 OK：The standard response for successful HTTP requests.
- */
-console.log(getStatusMessage(HttpStatusCode.OK))
-console.log(getStatusMessage(HttpStatusText.OK))
-
-
-console.log(getStatusText(HttpStatusCode.OK)); // getStatusCode('200') -> OK
-console.log(getStatusCode('OK')) // getStatusCode('OK') -> 200
-```
-
-
-## 📦 Packages
-
-http://www.lingoes.net/zh/translator/langcode.htm
 
 | 标题    | 描述                 | 源码        | 包名                       |
 | ------- | -------------------- | ----------- | -------------------------- |
 | zh      | 中文                 | packages/i18n-zh | [@http-status-codes/i18n-zh](https://www.npmjs.com/package/@http-status-codes/i18n-zh) |
 | en      | 英文                 | packages/i18n-en | [@http-status-codes/i18n-en](https://www.npmjs.com/package/@http-status-codes/i18n-en) |
-| ja      | 日语                 | packages/i18n-ja | @http-status-codes/i18n-ja |
-| th      | 泰语                 | packages/i18n-th | @http-status-codes/i18n-th |
-| hi      | 印地语               | packages/i18n-hi | @http-status-codes/i18n-hi |
-| id      | 印度尼西亚语         | packages/i18n-id | @http-status-codes/i18n-id |
-| zh-Hant | 繁体中文             | packages/i18n-zh-Hant | @http-status-codes/i18n-zh-Hant |
-| fr      | 法语                 | packages/i18n-fr | @http-status-codes/i18n-fr |
-| es      | 西班牙语             | packages/i18n-es | @http-status-codes/i18n-es |
-| pt      | 葡萄牙语             | packages/i18n-pt | @http-status-codes/i18n-pt |
-| ko      | 韩语                 | packages/i18n-ko | @http-status-codes/i18n-ko |
-| vi      | 越南语               | packages/i18n-vi | @http-status-codes/i18n-vi |
-| ru      | 俄语                 | packages/i18n-ru | @http-status-codes/i18n-ru |
-| de      | 德语                 | packages/i18n-de | @http-status-codes/i18n-de |
-| it      | 意大利语             | packages/i18n-it | @http-status-codes/i18n-it |
-| ar      | 阿拉伯语             | packages/i18n-ar | @http-status-codes/i18n-ar |
-| pl      | 波兰语               | packages/i18n-pl | @http-status-codes/i18n-pl |
-| tl      | 塔加路语（菲律宾语） | packages/i18n-tl | @http-status-codes/i18n-tl |
-| ms      | 马来语               | packages/i18n-ms | @http-status-codes/i18n-ms |
-| tr      | 土耳其语             | packages/i18n-tr | @http-status-codes/i18n-tr |
-| hu      | 匈牙利语             | packages/i18n-hu | @http-status-codes/i18n-hu |
+| ja      | 日语                 | packages/i18n-ja | [@http-status-codes/i18n-ja](https://www.npmjs.com/package/@http-status-codes/i18n-ja) |
+| th      | 泰语                 | packages/i18n-th | [@http-status-codes/i18n-th](https://www.npmjs.com/package/@http-status-codes/i18n-th) |
+| hi      | 印地语               | packages/i18n-hi | [@http-status-codes/i18n-hi](https://www.npmjs.com/package/@http-status-codes/i18n-hi) |
+| id      | 印度尼西亚语         | packages/i18n-id | [@http-status-codes/i18n-id](https://www.npmjs.com/package/@http-status-codes/i18n-id) |
+| zh-Hant | 繁体中文             | packages/i18n-zh-Hant | [@http-status-codes/i18n-zh-Hant](https://www.npmjs.com/package/@http-status-codes/i18n-zh-Hant) |
+| fr      | 法语                 | packages/i18n-fr | [@http-status-codes/i18n-fr](https://www.npmjs.com/package/@http-status-codes/i18n-fr) |
+| es      | 西班牙语             | packages/i18n-es | [@http-status-codes/i18n-es](https://www.npmjs.com/package/@http-status-codes/i18n-es) |
+| pt      | 葡萄牙语             | packages/i18n-pt | [@http-status-codes/i18n-pt](https://www.npmjs.com/package/@http-status-codes/i18n-pt) |
+| ko      | 韩语                 | packages/i18n-ko | [@http-status-codes/i18n-ko](https://www.npmjs.com/package/@http-status-codes/i18n-ko) |
+| vi      | 越南语               | packages/i18n-vi | [@http-status-codes/i18n-vi](https://www.npmjs.com/package/@http-status-codes/i18n-vi) |
+| ru      | 俄语                 | packages/i18n-ru | [@http-status-codes/i18n-ru](https://www.npmjs.com/package/@http-status-codes/i18n-ru) |
+| de      | 德语                 | packages/i18n-de | [@http-status-codes/i18n-de](https://www.npmjs.com/package/@http-status-codes/i18n-de) |
+| it      | 意大利语             | packages/i18n-it | [@http-status-codes/i18n-it](https://www.npmjs.com/package/@http-status-codes/i18n-it) |
+| ar      | 阿拉伯语             | packages/i18n-ar | [@http-status-codes/i18n-ar](https://www.npmjs.com/package/@http-status-codes/i18n-ar) |
+| pl      | 波兰语               | packages/i18n-pl | [@http-status-codes/i18n-pl](https://www.npmjs.com/package/@http-status-codes/i18n-pl) |
+| tl      | 塔加路语（菲律宾语） | packages/i18n-tl | [@http-status-codes/i18n-tl](https://www.npmjs.com/package/@http-status-codes/i18n-tl) |
+| ms      | 马来语               | packages/i18n-ms | [@http-status-codes/i18n-ms](https://www.npmjs.com/package/@http-status-codes/i18n-ms) |
+| tr      | 土耳其语             | packages/i18n-tr | [@http-status-codes/i18n-tr](https://www.npmjs.com/package/@http-status-codes/i18n-tr) |
+| hu      | 匈牙利语             | packages/i18n-hu | [@http-status-codes/i18n-hu](https://www.npmjs.com/package/@http-status-codes/i18n-hu) |
 
 
-## 📜 Http codes
+### 📋 RFC Tables
 
-超文本传输协议的查看示例: https://datatracker.ietf.org/doc/html/rfc7231#section-6.2.1 \
-nodejs: https://github.com/nodejs/node/blob/main/lib/_http_server.js
-
-```javascript
-const STATUS_CODES = {
-  100: 'Continue',                   // RFC 7231 6.2.1 
-  101: 'Switching Protocols',        // RFC 7231 6.2.2 
-  102: 'Processing',                 // RFC 2518 10.1 (obsoleted by RFC 4918)
-  103: 'Early Hints',                // RFC 8297 2
-  200: 'OK',                         // RFC 7231 6.3.1
-  201: 'Created',                    // RFC 7231 6.3.2
-  202: 'Accepted',                   // RFC 7231 6.3.3
-  203: 'Non-Authoritative Information', // RFC 7231 6.3.4
-  204: 'No Content',                 // RFC 7231 6.3.5
-  205: 'Reset Content',              // RFC 7231 6.3.6
-  206: 'Partial Content',            // RFC 7233 4.1
-  207: 'Multi-Status',               // RFC 4918 11.1
-  208: 'Already Reported',           // RFC 5842 7.1
-  226: 'IM Used',                    // RFC 3229 10.4.1
-  300: 'Multiple Choices',           // RFC 7231 6.4.1
-  301: 'Moved Permanently',          // RFC 7231 6.4.2
-  302: 'Found',                      // RFC 7231 6.4.3
-  303: 'See Other',                  // RFC 7231 6.4.4
-  304: 'Not Modified',               // RFC 7232 4.1
-  305: 'Use Proxy',                  // RFC 7231 6.4.5
-  307: 'Temporary Redirect',         // RFC 7231 6.4.7
-  308: 'Permanent Redirect',         // RFC 7238 3
-  400: 'Bad Request',                // RFC 7231 6.5.1
-  401: 'Unauthorized',               // RFC 7235 3.1
-  402: 'Payment Required',           // RFC 7231 6.5.2
-  403: 'Forbidden',                  // RFC 7231 6.5.3
-  404: 'Not Found',                  // RFC 7231 6.5.4
-  405: 'Method Not Allowed',         // RFC 7231 6.5.5
-  406: 'Not Acceptable',             // RFC 7231 6.5.6
-  407: 'Proxy Authentication Required', // RFC 7235 3.2
-  408: 'Request Timeout',            // RFC 7231 6.5.7
-  409: 'Conflict',                   // RFC 7231 6.5.8
-  410: 'Gone',                       // RFC 7231 6.5.9
-  411: 'Length Required',            // RFC 7231 6.5.10
-  412: 'Precondition Failed',        // RFC 7232 4.2
-  413: 'Payload Too Large',          // RFC 7231 6.5.11
-  414: 'URI Too Long',               // RFC 7231 6.5.12
-  415: 'Unsupported Media Type',     // RFC 7231 6.5.13
-  416: 'Range Not Satisfiable',      // RFC 7233 4.4
-  417: 'Expectation Failed',         // RFC 7231 6.5.14
-  418: 'I\'m a Teapot',              // RFC 7168 2.3.3
-  421: 'Misdirected Request',        // RFC 7540 9.1.2
-  422: 'Unprocessable Entity',       // RFC 4918 11.2
-  423: 'Locked',                     // RFC 4918 11.3
-  424: 'Failed Dependency',          // RFC 4918 11.4
-  425: 'Too Early',                  // RFC 8470 5.2
-  426: 'Upgrade Required',           // RFC 2817 and RFC 7231 6.5.15
-  428: 'Precondition Required',      // RFC 6585 3
-  429: 'Too Many Requests',          // RFC 6585 4
-  431: 'Request Header Fields Too Large', // RFC 6585 5
-  451: 'Unavailable For Legal Reasons', // RFC 7725 3
-  500: 'Internal Server Error',      // RFC 7231 6.6.1
-  501: 'Not Implemented',            // RFC 7231 6.6.2
-  502: 'Bad Gateway',                // RFC 7231 6.6.3
-  503: 'Service Unavailable',        // RFC 7231 6.6.4
-  504: 'Gateway Timeout',            // RFC 7231 6.6.5
-  505: 'HTTP Version Not Supported', // RFC 7231 6.6.6
-  506: 'Variant Also Negotiates',    // RFC 2295 8.1
-  507: 'Insufficient Storage',       // RFC 4918 11.5
-  508: 'Loop Detected',              // RFC 5842 7.2
-  509: 'Bandwidth Limit Exceeded',
-  510: 'Not Extended',               // RFC 2774 7
-  511: 'Network Authentication Required', // RFC 6585 6
-};
-```
-
-## 📋 RFC Tables
 
 | Code | Text                                             | Enum                                           | Description                                                                                                                                                                                                                                                                                                                                                                        | Translation                                                                                                                                 | Comment                               | Link                                                                                                             |
 | ---- | ------------------------------------------------ | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
@@ -386,11 +191,3 @@ const STATUS_CODES = {
 | 525  | SSL Handshake Failed (CloudFlare)                | SSL_HANDSHAKE_FAILED_CLOUD_FLARE               | SSL Handshake Failed (CloudFlare)：CloudFlare could not negotiate a SSL/TLS handshake with the origin server.                                                                                                                                                                                                                                                                       | SSL 握手失败（CloudFlare）：CloudFlare 无法与源服务器完成 SSL/TLS 握手。                                                                                       |                                       | Empty                                                                                                            |
 | 526  | Invalid SSL Certificate (CloudFlare)             | INVALID_SSL_CERTIFICATE_CLOUD_FLARE            | Invalid SSL Certificate (CloudFlare)：CloudFlare could not validate the SSL/TLS certificate that the origin server presented.                                                                                                                                                                                                                                                       | 无效的 SSL 证书（CloudFlare）：CloudFlare 无法验证源服务器提供的 SSL/TLS 证书。                                                                                   |                                       | Empty                                                                                                            |
 | 527  | Railgun Error (CloudFlare)                       | RAILGUN_ERROR_CLOUD_FLARE                      | Railgun Error (CloudFlare)：The request timed out or failed after the WAN connection has been established.                                                                                                                                                                                                                                                                          | Railgun 错误（CloudFlare）：在建立 WAN 连接后，请求超时或失败。                                                                                                 |                                       | Empty                                                                                                            |
-
-## 📖 References
-
-https://github.com/nodejs/node/blob/main/lib/_http_server.js
-
-https://kapeli.com/cheat_sheets/HTTP_Status_Codes.docset/Contents/Resources/Documents/index
-
-https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#1xx_informational_response

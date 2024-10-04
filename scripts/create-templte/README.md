@@ -23,3 +23,12 @@ const searchReplaceList = [
   { searchStr: 'i18nEn', replaceStr: 'i18nJa' },
 ];
 ```
+
+
+## 批量创建模版
+
+运行 `chmod +x ./create.sh && create.sh latest` 即可。
+
+根据 configs/config.json 中的 generateTemplateProjectConfig 配置，批量生成多国家语言的 模版项目。
+
+

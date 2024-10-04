@@ -13,7 +13,6 @@
  *
  * Happy coding! Remember, code is poetry, and front-end is art. ツ
  */
-
 export enum HttpStatusCode {
   /**
    * CONTINUE: RFC 7231 6.2.1
@@ -24,7 +23,7 @@ export enum HttpStatusCode {
   /**
    * SWITCHING_PROTOCOLS: RFC 7231 6.2.2
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.2.2
-   * Switching protocols：The requester has asked the server to switch protocols and the server is acknowledging that it will do so.
+   * Switching protocols：The requester has asked the server to switch protocols and the server acknowledges that it will do so.
    */
   SWITCHING_PROTOCOLS = 101,
   /**
@@ -60,19 +59,19 @@ export enum HttpStatusCode {
   /**
    * NO_CONTENT: RFC 7231 6.3.5
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.3.5
-   * No content：The server accepted the request but is not returning any content. This is often used as a response to a DELETE request.
+   * No content: The server accepted the request but is not returning any content. This is often used as a response to a DELETE request.
    */
   NO_CONTENT = 204,
   /**
    * RESET_CONTENT: RFC 7231 6.3.6
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.3.6
-   * Reset content：Similar to a 204 No Content response but this response requires the requester to reset the document view.
+   * Reset content：Similar to a 204 No Content response, but this response requires the requester to reset the document view.
    */
   RESET_CONTENT = 205,
   /**
    * PARTIAL_CONTENT: RFC 7233 4.1
    * https://datatracker.ietf.org/doc/html/rfc7233#section-4.1
-   * Partial content：The server is delivering only a portion of the content, as requested by the client via a range header.
+   * Partial content：The server delivers only a portion of the content, as requested by the client via a range header.
    */
   PARTIAL_CONTENT = 206,
   /**
@@ -84,19 +83,19 @@ export enum HttpStatusCode {
   /**
    * ALREADY_REPORTED: RFC 5842 7.1
    * https://datatracker.ietf.org/doc/html/rfc5842#section-7.1
-   * Already reported：The members of a DAV binding have already been enumerated in a previous reply to this request, and are not being included again.
+   * Already reported: The members of a DAV binding have already been enumerated in a previous reply to this request, and are not being included again.
    */
   ALREADY_REPORTED = 208,
   /**
    * IM_USED: RFC 3229 10.4.1
    * https://datatracker.ietf.org/doc/html/rfc3229#section-10.4.1
-   * IM used：The server has fulfilled a GET request for the resource, and the response is a representation of the result of one or more instance-manipulations applied to the current instance.
+   * IM used: The server has fulfilled a GET request for the resource, and the response is a representation of the result of one or more instance-manipulations applied to the current instance.
    */
   IM_USED = 226,
   /**
    * MULTIPLE_CHOICES: RFC 7231 6.4.1
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.4.1
-   * Multiple choices：There are multiple options that the client may follow.
+   * Multiple choices: There are multiple options that the client may follow.
    */
   MULTIPLE_CHOICES = 300,
   /**
@@ -114,23 +113,24 @@ export enum HttpStatusCode {
   /**
    * SEE_OTHER: RFC 7231 6.4.4
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.4.4
-   * See other：The resource can be retrieved by following other URI using the GET method. When received in response to a POST, PUT, or DELETE, it can usually be assumed that the server processed the request successfully and is sending the client to an informational endpoint.
+   * See other: The resource can be retrieved by following other URI using the GET method. When received in response to a POST, PUT, or DELETE, it can usually be assumed that the server processed the request successfully and is sending the client to an informational endpoint.
    */
   SEE_OTHER = 303,
   /**
    * NOT_MODIFIED: RFC 7232 4.1
    * https://datatracker.ietf.org/doc/html/rfc7232#section-4.1
-   * Not modified：The resource has not been modified since the version specified in If-Modified-Since or If-Match headers. The resource will not be returned in response body.
+   * Not modified: The resource has not been modified since the version specified in If-Modified-Since or If-Match headers. The resource will not be returned in response body.
    */
   NOT_MODIFIED = 304,
   /**
    * USE_PROXY: RFC 7231 6.4.5
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.4.5
-   * Use proxy：HTTP 1.1. The resource is only available through a proxy and the address is provided in the response.
+   * Use proxy：HTTP 1.1. The resource is only available through a proxy and the address is provided in response.
    */
   USE_PROXY = 305,
   /**
    * SWITCH_PROXY: 
+   *
    * Empty
    * Switch proxy：Deprecated in HTTP 1.1. Used to mean that subsequent requests should be sent using the specified proxy.
    */
@@ -150,7 +150,7 @@ export enum HttpStatusCode {
   /**
    * BAD_REQUEST: RFC 7231 6.5.1
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.1
-   * Bad request：The request could not be fulfilled due to the incorrect syntax of the request.
+   * Bad request: The request could not be fulfilled due to the incorrect syntax of the request.
    */
   BAD_REQUEST = 400,
   /**
@@ -168,25 +168,25 @@ export enum HttpStatusCode {
   /**
    * FORBIDDEN: RFC 7231 6.5.3
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.3
-   * Forbidden：The request was formatted correctly but the server is refusing to supply the requested resource. Unlike 401, authenticating will not make a difference in the server's response.
+   * Forbidden: The request was formatted correctly but the server is refusing to supply the requested resource. Unlike 401, authenticating will not make a difference in the server's response.
    */
   FORBIDDEN = 403,
   /**
    * NOT_FOUND: RFC 7231 6.5.4
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.4
-   * Not found：The resource could not be found. This is often used as a catch-all for all invalid URIs requested of the server.
+   * Not found: The resource could not be found. This is often used as a catch-all for all invalid URIs requested by the server.
    */
   NOT_FOUND = 404,
   /**
    * METHOD_NOT_ALLOWED: RFC 7231 6.5.5
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.5
-   * Method not allowed：The resource was requested using a method that is not allowed. For example, requesting a resource via a POST method when the resource only supports the GET method.
+   * Method not allowed: The resource was requested using a method that is not allowed. For example, requesting a resource via a POST method when the resource only supports the GET method.
    */
   METHOD_NOT_ALLOWED = 405,
   /**
    * NOT_ACCEPTABLE: RFC 7231 6.5.6
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.6
-   * Not acceptable：The resource is valid, but cannot be provided in a format specified in the Accept headers in the request.
+   * Not acceptable: The resource is valid, but cannot be provided in a format specified in the Accept headers in the request.
    */
   NOT_ACCEPTABLE = 406,
   /**
@@ -210,7 +210,7 @@ export enum HttpStatusCode {
   /**
    * GONE: RFC 7231 6.5.9
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.9
-   * Gone：The resource is no longer available at the requested URI and no redirection will be given.
+   * Gone: The resource is no longer available at the requested URI and no redirection will be given.
    */
   GONE = 410,
   /**
@@ -222,19 +222,19 @@ export enum HttpStatusCode {
   /**
    * PRECONDITION_FAILED: RFC 7232 4.2
    * https://datatracker.ietf.org/doc/html/rfc7232#section-4.2
-   * Precondition failed：The server does not meet one of the preconditions specified by the client.
+   * Precondition failed: The server does not meet one of the preconditions specified by the client.
    */
   PRECONDITION_FAILED = 412,
   /**
    * PAYLOAD_TOO_LARGE: RFC 7231 6.5.11
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.11
-   * Request entity too large：The request is larger than what the server is able to process.
+   * Request entity too large: The request is larger than what the server is able to process.
    */
   PAYLOAD_TOO_LARGE = 413,
   /**
    * URI_TOO_LONG: RFC 7231 6.5.12
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.12
-   * Request-URI too long：The URI provided in the request is too long for the server to process. This is often used when too much data has been encoded into the URI of a GET request and a POST request should be used instead.
+   * Request-URI too long: The URI provided in the request is too long for the server to process. This is often used when too much data has been encoded into the URI of a GET request and a POST request should be used instead.
    */
   URI_TOO_LONG = 414,
   /**
@@ -246,7 +246,7 @@ export enum HttpStatusCode {
   /**
    * RANGE_NOT_SATISFIABLE: RFC 7233 4.4
    * https://datatracker.ietf.org/doc/html/rfc7233#section-4.4
-   * Requested range not satisfiable：The client has asked for a portion of the resource but the server cannot supply that portion.
+   * Requested range not satisfiable: The client has asked for a portion of the resource but the server cannot supply that portion.
    */
   RANGE_NOT_SATISFIABLE = 416,
   /**
@@ -257,20 +257,21 @@ export enum HttpStatusCode {
   EXPECTATION_FAILED = 417,
   /**
    * I_M_A_TEAPOT: 
+   *
    * Empty
-   * I'm a teapot：Any attempt to brew coffee with a teapot should result in the error code "418 I'm a teapot". The resulting entity body MAY be short and stout.
+   * I'm a teapot: Any attempt to brew coffee with a teapot should result in the error code "418 I'm a teapot". The resulting entity body MAY be short and stout.
    */
   I_M_A_TEAPOT = 418,
   /**
    * MISDIRECTED_REQUEST: RFC 7540 9.1.2
    * https://datatracker.ietf.org/doc/html/rfc7540#section-9.1.2
-   * Misdirected request：The request was directed at a server that is not able to produce a response. This can be sent by a server that is not configured to produce responses for the combination of scheme and authority that are included in the request URI.
+   * Misdirected request: The request was directed at a server that is not able to produce a response. This can be sent by a server that is not configured to produce responses for the combination of scheme and authority that are included in the request URI.
    */
   MISDIRECTED_REQUEST = 421,
   /**
    * UNPROCESSABLE_ENTITY: RFC 4918 11.2
    * https://datatracker.ietf.org/doc/html/rfc4918#section-11.2
-   * Unprocessable entity：The request was formatted correctly but cannot be processed in its current form. Often used when the specified parameters fail validation errors.
+   * Unprocessable entity: The request was formatted correctly but cannot be processed in its current form. Often used when the specified parameters fail validation errors.
    */
   UNPROCESSABLE_ENTITY = 422,
   /**
@@ -282,19 +283,19 @@ export enum HttpStatusCode {
   /**
    * FAILED_DEPENDENCY: RFC 4918 11.4
    * https://datatracker.ietf.org/doc/html/rfc4918#section-11.4
-   * Failed dependency：The request failed due to a failure of a previous request.
+   * Failed dependency: The request failed due to a failure of a previous request.
    */
   FAILED_DEPENDENCY = 424,
   /**
    * UPGRADE_REQUIRED: RFC 2817 and RFC 7231 6.5.15
-   * https://datatracker.ietf.org/doc/html/rfc2817  and  https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.15
-   * Upgrade required：The client should repeat the request using an upgraded protocol such as TLS 1.0.
+   * https://datatracker.ietf.org/doc/html/rfc2817
+   * Upgrade required: The client should repeat the request using an upgraded protocol such as TLS 1.0.
    */
   UPGRADE_REQUIRED = 426,
   /**
    * PRECONDITION_REQUIRED: RFC 6585 3
    * https://datatracker.ietf.org/doc/html/rfc6585#section-3
-   * Precondition required：The origin server requires the request to be conditional.
+   * Precondition required: The origin server requires the request to be conditional.
    */
   PRECONDITION_REQUIRED = 428,
   /**
@@ -306,29 +307,33 @@ export enum HttpStatusCode {
   /**
    * REQUEST_HEADER_FIELDS_TOO_LARGE: RFC 6585 5
    * https://datatracker.ietf.org/doc/html/rfc6585#section-5
-   * Request header fields too large：The server is unwilling to process the request because its header fields are too large.
+   * Request header fields too large: The server is unwilling to process the request because its header fields are too large.
    */
   REQUEST_HEADER_FIELDS_TOO_LARGE = 431,
   /**
    * LOGIN_TIMEOUT_MICROSOFT: 
+   *
    * Empty
    * Login Timeout (Microsoft)：A Microsoft extension. Indicates that your session has expired.
    */
   LOGIN_TIMEOUT_MICROSOFT = 440,
   /**
    * NO_RESPONSE_NGINX: 
+   *
    * Empty
    * No Response (Nginx)：Used in Nginx logs to indicate that the server has returned no information to the client and closed the connection (useful as a deterrent for malware).
    */
   NO_RESPONSE_NGINX = 444,
   /**
    * RETRY_WITH_MICROSOFT: 
+   *
    * Empty
    * Retry With (Microsoft)：A Microsoft extension. The request should be retried after performing the appropriate action.
    */
   RETRY_WITH_MICROSOFT = 449,
   /**
    * BLOCKED_BY_WINDOWS_PARENTAL_CONTROLS_MICROSOFT: 
+   *
    * Empty
    * Blocked by Windows Parental Controls (Microsoft)：A Microsoft extension. This error is given when Windows Parental Controls are turned on and are blocking access to the given webpage.
    */
@@ -341,36 +346,42 @@ export enum HttpStatusCode {
   UNAVAILABLE_FOR_LEGAL_REASONS = 451,
   /**
    * REQUEST_HEADER_TOO_LARGE_NGINX: 
+   *
    * Empty
    * Request Header Too Large (Nginx)：Nginx internal code similar to 431 but it was introduced earlier in version 0.9.4 (on January 21, 2011).
    */
   REQUEST_HEADER_TOO_LARGE_NGINX = 494,
   /**
    * CERT_ERROR_NGINX: 
+   *
    * Empty
    * Cert Error (Nginx)：Nginx internal code used when SSL client certificate error occurred to distinguish it from 4XX in a log and an error page redirection.
    */
   CERT_ERROR_NGINX = 495,
   /**
    * NO_CERT_NGINX: 
+   *
    * Empty
    * No Cert (Nginx)：Nginx internal code used when client didn't provide certificate to distinguish it from 4XX in a log and an error page redirection.
    */
   NO_CERT_NGINX = 496,
   /**
    * HTTP_TO_HTTPS_NGINX: 
+   *
    * Empty
    * HTTP to HTTPS (Nginx)：Nginx internal code used for the plain HTTP requests that are sent to HTTPS port to distinguish it from 4XX in a log and an error page redirection.
    */
   HTTP_TO_HTTPS_NGINX = 497,
   /**
    * TOKEN_EXPIRED_INVALID_ESRI: 
+   *
    * Empty
    * Token expired/invalid (Esri)：Returned by ArcGIS for Server. A code of 498 indicates an expired or otherwise invalid token.
    */
   TOKEN_EXPIRED_INVALID_ESRI = 498,
   /**
    * TOKEN_REQUIRED_ESRI: 
+   *
    * Empty
    * Token required (Esri)：Returned by ArcGIS for Server. A code of 499 indicates that a token is required (if no token was submitted).
    */
@@ -378,19 +389,19 @@ export enum HttpStatusCode {
   /**
    * INTERNAL_SERVER_ERROR: RFC 7231 6.6.1
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1
-   * Internal server error：A generic status for an error in the server itself.
+   * Internal server error: A generic status for an error in the server itself.
    */
   INTERNAL_SERVER_ERROR = 500,
   /**
    * NOT_IMPLEMENTED: RFC 7231 6.6.2
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.2
-   * Not implemented：The server cannot respond to the request. This usually implies that the server could possibly support the request in the future — otherwise a 4xx status may be more appropriate.
+   * Not implemented: The server cannot respond to the request. This usually implies that the server could possibly support the request in the future — otherwise a 4xx status may be more appropriate.
    */
   NOT_IMPLEMENTED = 501,
   /**
    * BAD_GATEWAY: RFC 7231 6.6.3
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.3
-   * Bad gateway：The server is acting as a proxy and did not receive an acceptable response from the upstream server.
+   * Bad gateway: The server is acting as a proxy and did not receive an acceptable response from the upstream server.
    */
   BAD_GATEWAY = 502,
   /**
@@ -420,7 +431,7 @@ export enum HttpStatusCode {
   /**
    * INSUFFICIENT_STORAGE: RFC 4918 11.5
    * https://datatracker.ietf.org/doc/html/rfc4918#section-11.5
-   * Insufficient storage：The user or server does not have sufficient storage quota to fulfill the request.
+   * Insufficient storage: The user or server does not have sufficient storage quota to fulfill the request.
    */
   INSUFFICIENT_STORAGE = 507,
   /**
@@ -431,6 +442,7 @@ export enum HttpStatusCode {
   LOOP_DETECTED = 508,
   /**
    * BANDWIDTH_LIMIT_EXCEEDED: 
+   *
    * Empty
    * Bandwidth Limit Exceeded (Apache bw/limited extension)：This status code is not specified in any RFCs. Its use is unknown.
    */
@@ -449,48 +461,56 @@ export enum HttpStatusCode {
   NETWORK_AUTHENTICATION_REQUIRED = 511,
   /**
    * UNKNOWN_ERROR_MICROSOFT_CLOUD_FLARE: 
+   *
    * Empty
    * Unknown Error (Microsoft / CloudFlare)：This status code is not specified in any RFC and is returned by certain services, for instance Microsoft Azure and CloudFlare servers: "The 520 error is essentially a "catch-all" response for when the origin server returns something unexpected or something that is not tolerated/interpreted (protocol violation or empty response)."
    */
   UNKNOWN_ERROR_MICROSOFT_CLOUD_FLARE = 520,
   /**
    * WEB_SERVER_IS_DOWN_CLOUD_FLARE: 
+   *
    * Empty
-   * Web Server Is Down (CloudFlare)：The origin server has refused the connection from CloudFlare.
+   * Web Server Is Down (CloudFlare)：The original server refused the connection from CloudFlare.
    */
   WEB_SERVER_IS_DOWN_CLOUD_FLARE = 521,
   /**
    * CONNECTION_TIMED_OUT_CLOUD_FLARE: 
+   *
    * Empty
    * Connection Timed Out (CloudFlare)：CloudFlare could not negotiate a TCP handshake with the origin server.
    */
   CONNECTION_TIMED_OUT_CLOUD_FLARE = 522,
   /**
    * ORIGIN_IS_UNREACHABLE_CLOUD_FLARE: 
+   *
    * Empty
    * Origin Is Unreachable (CloudFlare)：CloudFlare could not reach the origin server; for example, if the DNS records for the origin server are incorrect.
    */
   ORIGIN_IS_UNREACHABLE_CLOUD_FLARE = 523,
   /**
    * A_TIMEOUT_OCCURRED_CLOUD_FLARE: 
+   *
    * Empty
    * A Timeout Occurred (CloudFlare)：CloudFlare was able to complete a TCP connection to the origin server, but did not receive a timely HTTP response.
    */
   A_TIMEOUT_OCCURRED_CLOUD_FLARE = 524,
   /**
    * SSL_HANDSHAKE_FAILED_CLOUD_FLARE: 
+   *
    * Empty
-   * SSL Handshake Failed (CloudFlare)：CloudFlare could not negotiate a SSL/TLS handshake with the origin server.
+   * SSL Handshake Failed (CloudFlare)：CloudFlare could not negotiate an SSL/TLS handshake with the origin server.
    */
   SSL_HANDSHAKE_FAILED_CLOUD_FLARE = 525,
   /**
    * INVALID_SSL_CERTIFICATE_CLOUD_FLARE: 
+   *
    * Empty
    * Invalid SSL Certificate (CloudFlare)：CloudFlare could not validate the SSL/TLS certificate that the origin server presented.
    */
   INVALID_SSL_CERTIFICATE_CLOUD_FLARE = 526,
   /**
    * RAILGUN_ERROR_CLOUD_FLARE: 
+   *
    * Empty
    * Railgun Error (CloudFlare)：The request timed out or failed after the WAN connection has been established.
    */
@@ -507,7 +527,7 @@ export enum HttpStatusCodeByCode {
   /**
    * h101: RFC 7231 6.2.2
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.2.2
-   * Switching protocols：The requester has asked the server to switch protocols and the server is acknowledging that it will do so.
+   * Switching protocols：The requester has asked the server to switch protocols and the server acknowledges that it will do so.
    */
   h101 = 101,
   /**
@@ -543,19 +563,19 @@ export enum HttpStatusCodeByCode {
   /**
    * h204: RFC 7231 6.3.5
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.3.5
-   * No content：The server accepted the request but is not returning any content. This is often used as a response to a DELETE request.
+   * No content: The server accepted the request but is not returning any content. This is often used as a response to a DELETE request.
    */
   h204 = 204,
   /**
    * h205: RFC 7231 6.3.6
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.3.6
-   * Reset content：Similar to a 204 No Content response but this response requires the requester to reset the document view.
+   * Reset content：Similar to a 204 No Content response, but this response requires the requester to reset the document view.
    */
   h205 = 205,
   /**
    * h206: RFC 7233 4.1
    * https://datatracker.ietf.org/doc/html/rfc7233#section-4.1
-   * Partial content：The server is delivering only a portion of the content, as requested by the client via a range header.
+   * Partial content：The server delivers only a portion of the content, as requested by the client via a range header.
    */
   h206 = 206,
   /**
@@ -567,19 +587,19 @@ export enum HttpStatusCodeByCode {
   /**
    * h208: RFC 5842 7.1
    * https://datatracker.ietf.org/doc/html/rfc5842#section-7.1
-   * Already reported：The members of a DAV binding have already been enumerated in a previous reply to this request, and are not being included again.
+   * Already reported: The members of a DAV binding have already been enumerated in a previous reply to this request, and are not being included again.
    */
   h208 = 208,
   /**
    * h226: RFC 3229 10.4.1
    * https://datatracker.ietf.org/doc/html/rfc3229#section-10.4.1
-   * IM used：The server has fulfilled a GET request for the resource, and the response is a representation of the result of one or more instance-manipulations applied to the current instance.
+   * IM used: The server has fulfilled a GET request for the resource, and the response is a representation of the result of one or more instance-manipulations applied to the current instance.
    */
   h226 = 226,
   /**
    * h300: RFC 7231 6.4.1
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.4.1
-   * Multiple choices：There are multiple options that the client may follow.
+   * Multiple choices: There are multiple options that the client may follow.
    */
   h300 = 300,
   /**
@@ -597,23 +617,24 @@ export enum HttpStatusCodeByCode {
   /**
    * h303: RFC 7231 6.4.4
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.4.4
-   * See other：The resource can be retrieved by following other URI using the GET method. When received in response to a POST, PUT, or DELETE, it can usually be assumed that the server processed the request successfully and is sending the client to an informational endpoint.
+   * See other: The resource can be retrieved by following other URI using the GET method. When received in response to a POST, PUT, or DELETE, it can usually be assumed that the server processed the request successfully and is sending the client to an informational endpoint.
    */
   h303 = 303,
   /**
    * h304: RFC 7232 4.1
    * https://datatracker.ietf.org/doc/html/rfc7232#section-4.1
-   * Not modified：The resource has not been modified since the version specified in If-Modified-Since or If-Match headers. The resource will not be returned in response body.
+   * Not modified: The resource has not been modified since the version specified in If-Modified-Since or If-Match headers. The resource will not be returned in response body.
    */
   h304 = 304,
   /**
    * h305: RFC 7231 6.4.5
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.4.5
-   * Use proxy：HTTP 1.1. The resource is only available through a proxy and the address is provided in the response.
+   * Use proxy：HTTP 1.1. The resource is only available through a proxy and the address is provided in response.
    */
   h305 = 305,
   /**
    * h306: 
+   *
    * Empty
    * Switch proxy：Deprecated in HTTP 1.1. Used to mean that subsequent requests should be sent using the specified proxy.
    */
@@ -633,7 +654,7 @@ export enum HttpStatusCodeByCode {
   /**
    * h400: RFC 7231 6.5.1
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.1
-   * Bad request：The request could not be fulfilled due to the incorrect syntax of the request.
+   * Bad request: The request could not be fulfilled due to the incorrect syntax of the request.
    */
   h400 = 400,
   /**
@@ -651,25 +672,25 @@ export enum HttpStatusCodeByCode {
   /**
    * h403: RFC 7231 6.5.3
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.3
-   * Forbidden：The request was formatted correctly but the server is refusing to supply the requested resource. Unlike 401, authenticating will not make a difference in the server's response.
+   * Forbidden: The request was formatted correctly but the server is refusing to supply the requested resource. Unlike 401, authenticating will not make a difference in the server's response.
    */
   h403 = 403,
   /**
    * h404: RFC 7231 6.5.4
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.4
-   * Not found：The resource could not be found. This is often used as a catch-all for all invalid URIs requested of the server.
+   * Not found: The resource could not be found. This is often used as a catch-all for all invalid URIs requested by the server.
    */
   h404 = 404,
   /**
    * h405: RFC 7231 6.5.5
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.5
-   * Method not allowed：The resource was requested using a method that is not allowed. For example, requesting a resource via a POST method when the resource only supports the GET method.
+   * Method not allowed: The resource was requested using a method that is not allowed. For example, requesting a resource via a POST method when the resource only supports the GET method.
    */
   h405 = 405,
   /**
    * h406: RFC 7231 6.5.6
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.6
-   * Not acceptable：The resource is valid, but cannot be provided in a format specified in the Accept headers in the request.
+   * Not acceptable: The resource is valid, but cannot be provided in a format specified in the Accept headers in the request.
    */
   h406 = 406,
   /**
@@ -693,7 +714,7 @@ export enum HttpStatusCodeByCode {
   /**
    * h410: RFC 7231 6.5.9
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.9
-   * Gone：The resource is no longer available at the requested URI and no redirection will be given.
+   * Gone: The resource is no longer available at the requested URI and no redirection will be given.
    */
   h410 = 410,
   /**
@@ -705,19 +726,19 @@ export enum HttpStatusCodeByCode {
   /**
    * h412: RFC 7232 4.2
    * https://datatracker.ietf.org/doc/html/rfc7232#section-4.2
-   * Precondition failed：The server does not meet one of the preconditions specified by the client.
+   * Precondition failed: The server does not meet one of the preconditions specified by the client.
    */
   h412 = 412,
   /**
    * h413: RFC 7231 6.5.11
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.11
-   * Request entity too large：The request is larger than what the server is able to process.
+   * Request entity too large: The request is larger than what the server is able to process.
    */
   h413 = 413,
   /**
    * h414: RFC 7231 6.5.12
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.12
-   * Request-URI too long：The URI provided in the request is too long for the server to process. This is often used when too much data has been encoded into the URI of a GET request and a POST request should be used instead.
+   * Request-URI too long: The URI provided in the request is too long for the server to process. This is often used when too much data has been encoded into the URI of a GET request and a POST request should be used instead.
    */
   h414 = 414,
   /**
@@ -729,7 +750,7 @@ export enum HttpStatusCodeByCode {
   /**
    * h416: RFC 7233 4.4
    * https://datatracker.ietf.org/doc/html/rfc7233#section-4.4
-   * Requested range not satisfiable：The client has asked for a portion of the resource but the server cannot supply that portion.
+   * Requested range not satisfiable: The client has asked for a portion of the resource but the server cannot supply that portion.
    */
   h416 = 416,
   /**
@@ -740,20 +761,21 @@ export enum HttpStatusCodeByCode {
   h417 = 417,
   /**
    * h418: 
+   *
    * Empty
-   * I'm a teapot：Any attempt to brew coffee with a teapot should result in the error code "418 I'm a teapot". The resulting entity body MAY be short and stout.
+   * I'm a teapot: Any attempt to brew coffee with a teapot should result in the error code "418 I'm a teapot". The resulting entity body MAY be short and stout.
    */
   h418 = 418,
   /**
    * h421: RFC 7540 9.1.2
    * https://datatracker.ietf.org/doc/html/rfc7540#section-9.1.2
-   * Misdirected request：The request was directed at a server that is not able to produce a response. This can be sent by a server that is not configured to produce responses for the combination of scheme and authority that are included in the request URI.
+   * Misdirected request: The request was directed at a server that is not able to produce a response. This can be sent by a server that is not configured to produce responses for the combination of scheme and authority that are included in the request URI.
    */
   h421 = 421,
   /**
    * h422: RFC 4918 11.2
    * https://datatracker.ietf.org/doc/html/rfc4918#section-11.2
-   * Unprocessable entity：The request was formatted correctly but cannot be processed in its current form. Often used when the specified parameters fail validation errors.
+   * Unprocessable entity: The request was formatted correctly but cannot be processed in its current form. Often used when the specified parameters fail validation errors.
    */
   h422 = 422,
   /**
@@ -765,19 +787,19 @@ export enum HttpStatusCodeByCode {
   /**
    * h424: RFC 4918 11.4
    * https://datatracker.ietf.org/doc/html/rfc4918#section-11.4
-   * Failed dependency：The request failed due to a failure of a previous request.
+   * Failed dependency: The request failed due to a failure of a previous request.
    */
   h424 = 424,
   /**
    * h426: RFC 2817 and RFC 7231 6.5.15
-   * https://datatracker.ietf.org/doc/html/rfc2817  and  https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.15
-   * Upgrade required：The client should repeat the request using an upgraded protocol such as TLS 1.0.
+   * https://datatracker.ietf.org/doc/html/rfc2817
+   * Upgrade required: The client should repeat the request using an upgraded protocol such as TLS 1.0.
    */
   h426 = 426,
   /**
    * h428: RFC 6585 3
    * https://datatracker.ietf.org/doc/html/rfc6585#section-3
-   * Precondition required：The origin server requires the request to be conditional.
+   * Precondition required: The origin server requires the request to be conditional.
    */
   h428 = 428,
   /**
@@ -789,29 +811,33 @@ export enum HttpStatusCodeByCode {
   /**
    * h431: RFC 6585 5
    * https://datatracker.ietf.org/doc/html/rfc6585#section-5
-   * Request header fields too large：The server is unwilling to process the request because its header fields are too large.
+   * Request header fields too large: The server is unwilling to process the request because its header fields are too large.
    */
   h431 = 431,
   /**
    * h440: 
+   *
    * Empty
    * Login Timeout (Microsoft)：A Microsoft extension. Indicates that your session has expired.
    */
   h440 = 440,
   /**
    * h444: 
+   *
    * Empty
    * No Response (Nginx)：Used in Nginx logs to indicate that the server has returned no information to the client and closed the connection (useful as a deterrent for malware).
    */
   h444 = 444,
   /**
    * h449: 
+   *
    * Empty
    * Retry With (Microsoft)：A Microsoft extension. The request should be retried after performing the appropriate action.
    */
   h449 = 449,
   /**
    * h450: 
+   *
    * Empty
    * Blocked by Windows Parental Controls (Microsoft)：A Microsoft extension. This error is given when Windows Parental Controls are turned on and are blocking access to the given webpage.
    */
@@ -824,36 +850,42 @@ export enum HttpStatusCodeByCode {
   h451 = 451,
   /**
    * h494: 
+   *
    * Empty
    * Request Header Too Large (Nginx)：Nginx internal code similar to 431 but it was introduced earlier in version 0.9.4 (on January 21, 2011).
    */
   h494 = 494,
   /**
    * h495: 
+   *
    * Empty
    * Cert Error (Nginx)：Nginx internal code used when SSL client certificate error occurred to distinguish it from 4XX in a log and an error page redirection.
    */
   h495 = 495,
   /**
    * h496: 
+   *
    * Empty
    * No Cert (Nginx)：Nginx internal code used when client didn't provide certificate to distinguish it from 4XX in a log and an error page redirection.
    */
   h496 = 496,
   /**
    * h497: 
+   *
    * Empty
    * HTTP to HTTPS (Nginx)：Nginx internal code used for the plain HTTP requests that are sent to HTTPS port to distinguish it from 4XX in a log and an error page redirection.
    */
   h497 = 497,
   /**
    * h498: 
+   *
    * Empty
    * Token expired/invalid (Esri)：Returned by ArcGIS for Server. A code of 498 indicates an expired or otherwise invalid token.
    */
   h498 = 498,
   /**
    * h499: 
+   *
    * Empty
    * Token required (Esri)：Returned by ArcGIS for Server. A code of 499 indicates that a token is required (if no token was submitted).
    */
@@ -861,19 +893,19 @@ export enum HttpStatusCodeByCode {
   /**
    * h500: RFC 7231 6.6.1
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1
-   * Internal server error：A generic status for an error in the server itself.
+   * Internal server error: A generic status for an error in the server itself.
    */
   h500 = 500,
   /**
    * h501: RFC 7231 6.6.2
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.2
-   * Not implemented：The server cannot respond to the request. This usually implies that the server could possibly support the request in the future — otherwise a 4xx status may be more appropriate.
+   * Not implemented: The server cannot respond to the request. This usually implies that the server could possibly support the request in the future — otherwise a 4xx status may be more appropriate.
    */
   h501 = 501,
   /**
    * h502: RFC 7231 6.6.3
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.3
-   * Bad gateway：The server is acting as a proxy and did not receive an acceptable response from the upstream server.
+   * Bad gateway: The server is acting as a proxy and did not receive an acceptable response from the upstream server.
    */
   h502 = 502,
   /**
@@ -903,7 +935,7 @@ export enum HttpStatusCodeByCode {
   /**
    * h507: RFC 4918 11.5
    * https://datatracker.ietf.org/doc/html/rfc4918#section-11.5
-   * Insufficient storage：The user or server does not have sufficient storage quota to fulfill the request.
+   * Insufficient storage: The user or server does not have sufficient storage quota to fulfill the request.
    */
   h507 = 507,
   /**
@@ -914,6 +946,7 @@ export enum HttpStatusCodeByCode {
   h508 = 508,
   /**
    * h509: 
+   *
    * Empty
    * Bandwidth Limit Exceeded (Apache bw/limited extension)：This status code is not specified in any RFCs. Its use is unknown.
    */
@@ -932,48 +965,56 @@ export enum HttpStatusCodeByCode {
   h511 = 511,
   /**
    * h520: 
+   *
    * Empty
    * Unknown Error (Microsoft / CloudFlare)：This status code is not specified in any RFC and is returned by certain services, for instance Microsoft Azure and CloudFlare servers: "The 520 error is essentially a "catch-all" response for when the origin server returns something unexpected or something that is not tolerated/interpreted (protocol violation or empty response)."
    */
   h520 = 520,
   /**
    * h521: 
+   *
    * Empty
-   * Web Server Is Down (CloudFlare)：The origin server has refused the connection from CloudFlare.
+   * Web Server Is Down (CloudFlare)：The original server refused the connection from CloudFlare.
    */
   h521 = 521,
   /**
    * h522: 
+   *
    * Empty
    * Connection Timed Out (CloudFlare)：CloudFlare could not negotiate a TCP handshake with the origin server.
    */
   h522 = 522,
   /**
    * h523: 
+   *
    * Empty
    * Origin Is Unreachable (CloudFlare)：CloudFlare could not reach the origin server; for example, if the DNS records for the origin server are incorrect.
    */
   h523 = 523,
   /**
    * h524: 
+   *
    * Empty
    * A Timeout Occurred (CloudFlare)：CloudFlare was able to complete a TCP connection to the origin server, but did not receive a timely HTTP response.
    */
   h524 = 524,
   /**
    * h525: 
+   *
    * Empty
-   * SSL Handshake Failed (CloudFlare)：CloudFlare could not negotiate a SSL/TLS handshake with the origin server.
+   * SSL Handshake Failed (CloudFlare)：CloudFlare could not negotiate an SSL/TLS handshake with the origin server.
    */
   h525 = 525,
   /**
    * h526: 
+   *
    * Empty
    * Invalid SSL Certificate (CloudFlare)：CloudFlare could not validate the SSL/TLS certificate that the origin server presented.
    */
   h526 = 526,
   /**
    * h527: 
+   *
    * Empty
    * Railgun Error (CloudFlare)：The request timed out or failed after the WAN connection has been established.
    */

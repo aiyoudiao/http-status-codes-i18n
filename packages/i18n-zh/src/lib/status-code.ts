@@ -13,7 +13,6 @@
 *
 * 祝你编程愉快！记住，代码是诗歌，前端是艺术。 ツ
 */
-
 export enum HttpStatusCode {
   /**
    * CONTINUE: RFC 7231 6.2.1
@@ -28,7 +27,7 @@ export enum HttpStatusCode {
    */
   SWITCHING_PROTOCOLS = 101,
   /**
-   * PROCESSING: RFC 2518 10.1 (已被 RFC 4918 废弃)
+   * PROCESSING: RFC 2518 10.1 (obsoleted by RFC 4918)
    * https://datatracker.ietf.org/doc/html/rfc2518#section-10.1
    * 处理中：服务器已收到请求并正在处理，但尚无可用的响应。
    */
@@ -132,6 +131,7 @@ export enum HttpStatusCode {
   /**
    * SWITCH_PROXY: 
    *
+   * Empty
    * 切换代理：在 HTTP 1.1 中已废弃。曾用于表示后续请求应使用指定的代理发送。
    */
   SWITCH_PROXY = 306,
@@ -142,8 +142,8 @@ export enum HttpStatusCode {
    */
   TEMPORARY_REDIRECT = 307,
   /**
-   * PERMANENT_REDIRECT: RFC 7538 3
-   * https://datatracker.ietf.org/doc/html/rfc7538#section-3
+   * PERMANENT_REDIRECT: RFC 7238 3
+   * https://datatracker.ietf.org/doc/html/rfc7238#section-3
    * 永久重定向：请求和所有未来的请求应使用响应中提供的 URI 重新发送。
    */
   PERMANENT_REDIRECT = 308,
@@ -257,6 +257,7 @@ export enum HttpStatusCode {
   EXPECTATION_FAILED = 417,
   /**
    * I_M_A_TEAPOT: 
+   *
    * Empty
    * 我是茶壶：任何尝试用茶壶煮咖啡的行为都应该导致错误代码 "418 我是茶壶"。生成的实体内容可能会又短又粗。
    */
@@ -287,7 +288,7 @@ export enum HttpStatusCode {
   FAILED_DEPENDENCY = 424,
   /**
    * UPGRADE_REQUIRED: RFC 2817 and RFC 7231 6.5.15
-   * https://datatracker.ietf.org/doc/html/rfc2817  and  https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.15
+   * https://datatracker.ietf.org/doc/html/rfc2817
    * 需要升级：客户端应切换到升级后的协议（如 TLS/1.0），然后再发送请求。
    */
   UPGRADE_REQUIRED = 426,
@@ -310,71 +311,81 @@ export enum HttpStatusCode {
    */
   REQUEST_HEADER_FIELDS_TOO_LARGE = 431,
   /**
-   * LOGIN_TIME_OUT: 
+   * LOGIN_TIMEOUT_MICROSOFT: 
+   *
    * Empty
    * 登录超时：Microsoft 扩展。表示由于用户登录超时而导致的失败。
    */
-  LOGIN_TIME_OUT = 440,
+  LOGIN_TIMEOUT_MICROSOFT = 440,
   /**
-   * NO_RESPONSE: 
+   * NO_RESPONSE_NGINX: 
+   *
    * Empty
    * 无响应：Nginx 内部状态码，用于指示服务器未返回任何信息并关闭连接。
    */
-  NO_RESPONSE = 444,
+  NO_RESPONSE_NGINX = 444,
   /**
-   * RETRY_WITH: 
+   * RETRY_WITH_MICROSOFT: 
+   *
    * Empty
    * 重试：Microsoft 扩展。用于指示客户端应在执行适当操作后重新发送请求。
    */
-  RETRY_WITH = 449,
+  RETRY_WITH_MICROSOFT = 449,
   /**
-   * BLOCKED_BY_WINDOWS_PARENTAL_CONTROLS: 
+   * BLOCKED_BY_WINDOWS_PARENTAL_CONTROLS_MICROSOFT: 
+   *
    * Empty
    * 被 Windows 家长控制阻止：Microsoft 扩展。当 Windows 家长控制阻止访问特定网页时出现。
    */
-  BLOCKED_BY_WINDOWS_PARENTAL_CONTROLS = 450,
+  BLOCKED_BY_WINDOWS_PARENTAL_CONTROLS_MICROSOFT = 450,
   /**
-   * UNAVAILABLE_FOR_LEGAL_REASONS: RFC 7725
-   * https://datatracker.ietf.org/doc/html/rfc7725
+   * UNAVAILABLE_FOR_LEGAL_REASONS: RFC 7725 3
+   * https://datatracker.ietf.org/doc/html/rfc7725#section-3
    * 因法律原因不可用：服务器由于接到法律约束请求而无法操作。
    */
   UNAVAILABLE_FOR_LEGAL_REASONS = 451,
   /**
-   * REQUEST_HEADER_TOO_LARGE: 
+   * REQUEST_HEADER_TOO_LARGE_NGINX: 
+   *
    * Empty
    * 请求头字段过大：Nginx 内部代码，类似于 431，但在更早版本中实现。
    */
-  REQUEST_HEADER_TOO_LARGE = 494,
+  REQUEST_HEADER_TOO_LARGE_NGINX = 494,
   /**
-   * CERT_ERROR: 
+   * CERT_ERROR_NGINX: 
+   *
    * Empty
    * 证书错误：Nginx 内部代码，用于 SSL 客户端证书错误，以将其与日志中的 4XX 区分开来，并进行错误页面重定向。
    */
-  CERT_ERROR = 495,
+  CERT_ERROR_NGINX = 495,
   /**
-   * NO_CERT: 
+   * NO_CERT_NGINX: 
+   *
    * Empty
    * 无证书：Nginx 内部代码，当客户端未提供证书时使用，以将其与日志中的 4XX 区分开来，并进行错误页面重定向。
    */
-  NO_CERT = 496,
+  NO_CERT_NGINX = 496,
   /**
-   * HTTP_TO_HTTPS: 
+   * HTTP_TO_HTTPS_NGINX: 
+   *
    * Empty
    * HTTP 到 HTTPS：Nginx 内部代码，用于发送到 HTTPS 端口的纯 HTTP 请求，以将其与日志中的 4XX 区分开来，并进行错误页面重定向。
    */
-  HTTP_TO_HTTPS = 497,
+  HTTP_TO_HTTPS_NGINX = 497,
   /**
-   * TOKEN_EXPIRED_INVALID: 
+   * TOKEN_EXPIRED_INVALID_ESRI: 
+   *
    * Empty
    * 令牌过期/无效：由 ArcGIS for Server 返回。代码 498 表示令牌已过期或无效。
    */
-  TOKEN_EXPIRED_INVALID = 498,
+  TOKEN_EXPIRED_INVALID_ESRI = 498,
   /**
-   * TOKEN_REQUIRED: 
+   * TOKEN_REQUIRED_ESRI: 
+   *
    * Empty
    * 需要令牌：由 ArcGIS for Server 返回。代码 499 表示需要令牌（如果未提交令牌）。
    */
-  TOKEN_REQUIRED = 499,
+  TOKEN_REQUIRED_ESRI = 499,
   /**
    * INTERNAL_SERVER_ERROR: RFC 7231 6.6.1
    * https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1
@@ -431,6 +442,7 @@ export enum HttpStatusCode {
   LOOP_DETECTED = 508,
   /**
    * BANDWIDTH_LIMIT_EXCEEDED: 
+   *
    * Empty
    * 超出带宽限制（Apache bw/limited 扩展）：此状态码未在任何 RFC 中规定，其使用方式未知。
    */
@@ -449,48 +461,56 @@ export enum HttpStatusCode {
   NETWORK_AUTHENTICATION_REQUIRED = 511,
   /**
    * UNKNOWN_ERROR_MICROSOFT_CLOUD_FLARE: 
+   *
    * Empty
    * 未知错误（Microsoft / CloudFlare）：此状态码未在任何 RFC 中规定，由某些服务返回，如 Microsoft Azure 和 CloudFlare 服务器：520 错误本质上是对源服务器返回意外响应或不可解释/不允许（协议违规或空响应）的 "兜底" 响应。
    */
   UNKNOWN_ERROR_MICROSOFT_CLOUD_FLARE = 520,
   /**
    * WEB_SERVER_IS_DOWN_CLOUD_FLARE: 
+   *
    * Empty
    * Web 服务器宕机（CloudFlare）：源服务器拒绝了来自 CloudFlare 的连接。
    */
   WEB_SERVER_IS_DOWN_CLOUD_FLARE = 521,
   /**
    * CONNECTION_TIMED_OUT_CLOUD_FLARE: 
+   *
    * Empty
    * 连接超时（CloudFlare）：CloudFlare 无法与源服务器完成 TCP 握手。
    */
   CONNECTION_TIMED_OUT_CLOUD_FLARE = 522,
   /**
    * ORIGIN_IS_UNREACHABLE_CLOUD_FLARE: 
+   *
    * Empty
    * 源不可达（CloudFlare）：CloudFlare 无法到达源服务器；例如，源服务器的 DNS 记录不正确。
    */
   ORIGIN_IS_UNREACHABLE_CLOUD_FLARE = 523,
   /**
    * A_TIMEOUT_OCCURRED_CLOUD_FLARE: 
+   *
    * Empty
    * 发生超时（CloudFlare）：CloudFlare 能够与源服务器建立 TCP 连接，但未能及时收到 HTTP 响应。
    */
   A_TIMEOUT_OCCURRED_CLOUD_FLARE = 524,
   /**
    * SSL_HANDSHAKE_FAILED_CLOUD_FLARE: 
+   *
    * Empty
    * SSL 握手失败（CloudFlare）：CloudFlare 无法与源服务器完成 SSL/TLS 握手。
    */
   SSL_HANDSHAKE_FAILED_CLOUD_FLARE = 525,
   /**
    * INVALID_SSL_CERTIFICATE_CLOUD_FLARE: 
+   *
    * Empty
    * 无效的 SSL 证书（CloudFlare）：CloudFlare 无法验证源服务器提供的 SSL/TLS 证书。
    */
   INVALID_SSL_CERTIFICATE_CLOUD_FLARE = 526,
   /**
    * RAILGUN_ERROR_CLOUD_FLARE: 
+   *
    * Empty
    * Railgun 错误（CloudFlare）：在建立 WAN 连接后，请求超时或失败。
    */
@@ -511,7 +531,7 @@ export enum HttpStatusCodeByCode {
    */
   h101 = 101,
   /**
-   * h102: RFC 2518 10.1 (已被 RFC 4918 废弃)
+   * h102: RFC 2518 10.1 (obsoleted by RFC 4918)
    * https://datatracker.ietf.org/doc/html/rfc2518#section-10.1
    * 处理中：服务器已收到请求并正在处理，但尚无可用的响应。
    */
@@ -615,6 +635,7 @@ export enum HttpStatusCodeByCode {
   /**
    * h306: 
    *
+   * Empty
    * 切换代理：在 HTTP 1.1 中已废弃。曾用于表示后续请求应使用指定的代理发送。
    */
   h306 = 306,
@@ -625,8 +646,8 @@ export enum HttpStatusCodeByCode {
    */
   h307 = 307,
   /**
-   * h308: RFC 7538 3
-   * https://datatracker.ietf.org/doc/html/rfc7538#section-3
+   * h308: RFC 7238 3
+   * https://datatracker.ietf.org/doc/html/rfc7238#section-3
    * 永久重定向：请求和所有未来的请求应使用响应中提供的 URI 重新发送。
    */
   h308 = 308,
@@ -740,6 +761,7 @@ export enum HttpStatusCodeByCode {
   h417 = 417,
   /**
    * h418: 
+   *
    * Empty
    * 我是茶壶：任何尝试用茶壶煮咖啡的行为都应该导致错误代码 "418 我是茶壶"。生成的实体内容可能会又短又粗。
    */
@@ -770,7 +792,7 @@ export enum HttpStatusCodeByCode {
   h424 = 424,
   /**
    * h426: RFC 2817 and RFC 7231 6.5.15
-   * https://datatracker.ietf.org/doc/html/rfc2817  and  https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.15
+   * https://datatracker.ietf.org/doc/html/rfc2817
    * 需要升级：客户端应切换到升级后的协议（如 TLS/1.0），然后再发送请求。
    */
   h426 = 426,
@@ -794,66 +816,76 @@ export enum HttpStatusCodeByCode {
   h431 = 431,
   /**
    * h440: 
+   *
    * Empty
    * 登录超时：Microsoft 扩展。表示由于用户登录超时而导致的失败。
    */
   h440 = 440,
   /**
    * h444: 
+   *
    * Empty
    * 无响应：Nginx 内部状态码，用于指示服务器未返回任何信息并关闭连接。
    */
   h444 = 444,
   /**
    * h449: 
+   *
    * Empty
    * 重试：Microsoft 扩展。用于指示客户端应在执行适当操作后重新发送请求。
    */
   h449 = 449,
   /**
    * h450: 
+   *
    * Empty
    * 被 Windows 家长控制阻止：Microsoft 扩展。当 Windows 家长控制阻止访问特定网页时出现。
    */
   h450 = 450,
   /**
-   * h451: RFC 7725
-   * https://datatracker.ietf.org/doc/html/rfc7725
+   * h451: RFC 7725 3
+   * https://datatracker.ietf.org/doc/html/rfc7725#section-3
    * 因法律原因不可用：服务器由于接到法律约束请求而无法操作。
    */
   h451 = 451,
   /**
    * h494: 
+   *
    * Empty
    * 请求头字段过大：Nginx 内部代码，类似于 431，但在更早版本中实现。
    */
   h494 = 494,
   /**
    * h495: 
+   *
    * Empty
    * 证书错误：Nginx 内部代码，用于 SSL 客户端证书错误，以将其与日志中的 4XX 区分开来，并进行错误页面重定向。
    */
   h495 = 495,
   /**
    * h496: 
+   *
    * Empty
    * 无证书：Nginx 内部代码，当客户端未提供证书时使用，以将其与日志中的 4XX 区分开来，并进行错误页面重定向。
    */
   h496 = 496,
   /**
    * h497: 
+   *
    * Empty
    * HTTP 到 HTTPS：Nginx 内部代码，用于发送到 HTTPS 端口的纯 HTTP 请求，以将其与日志中的 4XX 区分开来，并进行错误页面重定向。
    */
   h497 = 497,
   /**
    * h498: 
+   *
    * Empty
    * 令牌过期/无效：由 ArcGIS for Server 返回。代码 498 表示令牌已过期或无效。
    */
   h498 = 498,
   /**
    * h499: 
+   *
    * Empty
    * 需要令牌：由 ArcGIS for Server 返回。代码 499 表示需要令牌（如果未提交令牌）。
    */
@@ -914,6 +946,7 @@ export enum HttpStatusCodeByCode {
   h508 = 508,
   /**
    * h509: 
+   *
    * Empty
    * 超出带宽限制（Apache bw/limited 扩展）：此状态码未在任何 RFC 中规定，其使用方式未知。
    */
@@ -932,48 +965,56 @@ export enum HttpStatusCodeByCode {
   h511 = 511,
   /**
    * h520: 
+   *
    * Empty
    * 未知错误（Microsoft / CloudFlare）：此状态码未在任何 RFC 中规定，由某些服务返回，如 Microsoft Azure 和 CloudFlare 服务器：520 错误本质上是对源服务器返回意外响应或不可解释/不允许（协议违规或空响应）的 "兜底" 响应。
    */
   h520 = 520,
   /**
    * h521: 
+   *
    * Empty
    * Web 服务器宕机（CloudFlare）：源服务器拒绝了来自 CloudFlare 的连接。
    */
   h521 = 521,
   /**
    * h522: 
+   *
    * Empty
    * 连接超时（CloudFlare）：CloudFlare 无法与源服务器完成 TCP 握手。
    */
   h522 = 522,
   /**
    * h523: 
+   *
    * Empty
    * 源不可达（CloudFlare）：CloudFlare 无法到达源服务器；例如，源服务器的 DNS 记录不正确。
    */
   h523 = 523,
   /**
    * h524: 
+   *
    * Empty
    * 发生超时（CloudFlare）：CloudFlare 能够与源服务器建立 TCP 连接，但未能及时收到 HTTP 响应。
    */
   h524 = 524,
   /**
    * h525: 
+   *
    * Empty
    * SSL 握手失败（CloudFlare）：CloudFlare 无法与源服务器完成 SSL/TLS 握手。
    */
   h525 = 525,
   /**
    * h526: 
+   *
    * Empty
    * 无效的 SSL 证书（CloudFlare）：CloudFlare 无法验证源服务器提供的 SSL/TLS 证书。
    */
   h526 = 526,
   /**
    * h527: 
+   *
    * Empty
    * Railgun 错误（CloudFlare）：在建立 WAN 连接后，请求超时或失败。
    */

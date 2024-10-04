@@ -1,0 +1,45 @@
+{
+  "name": "@http-status-codes/i18n-ms",
+  "version": "1.3.2",
+  "main": "./index.cjs",
+  "module": "./index.esm.js",
+  "description": "HTTP status codes i18n",
+  "author": "哎哟迪奥",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aiyoudiao/http-status-codes-i18n.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aiyoudiao/http-status-codes-i18n/issues"
+  },
+  "homepage": "https://github.com/aiyoudiao/http-status-codes-i18n#readme",
+  "keywords": [
+    "node",
+    "http",
+    "status",
+    "codes",
+    "descriptions",
+    "status codes",
+    "HTTP status",
+    "HTTP codes",
+    "HTTP status codes",
+    "apache",
+    "HttpStatus",
+    "client",
+    "map",
+    "code",
+    "constants",
+    "javascript",
+    "typescript",
+    "developer tools",
+    "web development",
+    "API",
+    "error handling",
+    "API response",
+    "methods",
+    "headers",
+    "data",
+    "JSON"
+  ]
+}

@@ -5,10 +5,10 @@ module.exports = withNx(
   {
     main: './src/index.ts',
     outputPath: '../../dist/packages/i18n-zh',
-    tsConfig: './tsconfig.lib.json',
+    tsConfig: '../../tsconfig.lib.json',
     compiler: 'swc',
-    // format: ['cjs', 'esm', 'es', 'amd', 'iife', 'umd', 'system'],
-    format: ['cjs', 'esm'],
+    format: ['cjs', 'esm', 'es', 'amd', 'iife', 'umd', 'system'],
+    // format: ['cjs', 'esm'],
     assets: [{ input: '.', output: '.', glob: 'packages/i18n-zh/*.md' }],
   },
   {

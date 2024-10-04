@@ -13,7 +13,6 @@
  *
  * Happy coding! Remember, code is poetry, and front-end is art. ツ
  */
-
 import { HttpStatusCode, HttpStatusCodeByCode } from './status-code';
 import { HttpStatusText, HttpStatusTextByCode } from './status-text';
 import { HttpStatusDescriptionByCode } from './status-description';
