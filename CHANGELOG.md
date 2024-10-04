@@ -1,8 +1,24 @@
+# 1.4.0 (2024-10-04)
+
+
+### ✨ Features | 新功能
+
+* **package:** 完善工程化和自动化，添加21个国家的 i18n 包 。| [Review:(75e9076)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/75e9076aee9f4c5eacb8a6c8ad949258b2f36aa7?view=parallel)
+
+
+### 📝 Documentation | 文档
+
+* 完善 @http-status-codes/i18n-zh 文档 。| [Review:(9f2f03e)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/9f2f03ed58f7a270add5af3da9bbedbe4954e7e4?view=parallel)
+* 完善 package.json 下所有 文档 。| [Review:(c29c56b)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/c29c56ba2d03ceca628c441699b9cd14782b0154?view=parallel)
+
+
+
 ## 1.3.2 (2024-10-02)
 
 
 ### 🎫 Chores | 其他更新
 
+* release 1.3.2 。| [Review:(b9809fe)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/b9809fe3138adc1563dabe4f955449d577eed0d2?view=parallel)
 * **scripts:** 添加逻辑代码，自动根据模版创建 i18n 系列的项目 。| [Review:(779defd)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/779defd8dd10e546ffb09e3e0da949270230ab8f?view=parallel)
 
 
