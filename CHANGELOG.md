@@ -1,9 +1,23 @@
+## 1.5.1 (2024-10-04)
+
+
+### 📝 Documentation | 文档
+
+* 更新文档，重构sh命令 。| [Review:(03936e0)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/03936e0d75cd5ef87d8ea1860b1ec7549686e2fd?view=parallel)
+
+
+
 # 1.5.0 (2024-10-04)
 
 
 ### ✨ Features | 新功能
 
 * **package:** 完善工程化和自动化，添加21个国家的 i18n 包 。| [Review:(75e9076)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/75e9076aee9f4c5eacb8a6c8ad949258b2f36aa7?view=parallel)
+
+
+### 🎫 Chores | 其他更新
+
+* release 1.5.0 。| [Review:(1b5bf8c)](https://github.com/aiyoudiao/http-status-codes-i18n/commit/1b5bf8c522fc816a4292b9702a51d2d4cb568454?view=parallel)
 
 
 ### 👷‍ Build System | 构建
