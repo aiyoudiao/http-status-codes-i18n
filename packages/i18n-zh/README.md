@@ -146,7 +146,6 @@ getStatusMessage(HttpStatusCode.OK) // 200 OK：The standard response for succes
 ### 📦 所有的安装包
 
 
-
 | 标题    | 描述                 | 源码        | 包名                       |
 | ------- | -------------------- | ----------- | -------------------------- |
 | zh      | 中文                 | packages/i18n-zh | [@http-status-codes/i18n-zh](https://www.npmjs.com/package/@http-status-codes/i18n-zh) |
