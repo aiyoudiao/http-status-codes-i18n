@@ -4,7 +4,7 @@ import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 
 export default defineConfig({
   root: __dirname,
-  cacheDir: '../../node_modules/.vite/packages/i18n-zh-Hant',
+  cacheDir: '../../node_modules/.vite/packages/i18n-zh-hant',
 
   plugins: [nxViteTsPaths()],
 
@@ -19,7 +19,7 @@ export default defineConfig({
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
     reporters: ['default'],
     coverage: {
-      reportsDirectory: '../../coverage/packages/i18n-zh-Hant',
+      reportsDirectory: '../../coverage/packages/i18n-zh-hant',
       provider: 'v8',
     },
   },

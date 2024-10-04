@@ -4,12 +4,12 @@ const terser = require('@rollup/plugin-terser');
 module.exports = withNx(
   {
     main: './src/index.ts',
-    outputPath: '../../dist/packages/i18n-zh-Hant',
+    outputPath: '../../dist/packages/i18n-zh-hant',
     tsConfig: '../../tsconfig.lib.json',
     compiler: 'swc',
     format: ['cjs', 'esm', 'es', 'amd', 'iife', 'umd', 'system'],
     // format: ['cjs', 'esm'],
-    assets: [{ input: '.', output: '.', glob: 'packages/i18n-zh-Hant/*.md' }],
+    assets: [{ input: '.', output: '.', glob: 'packages/i18n-zh-hant/*.md' }],
   },
   {
     // Provide additional rollup configuration here. See: https://rollupjs.org/configuration-options

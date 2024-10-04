@@ -7,7 +7,7 @@ chmod +x "$0"
 # npm login
 
 # 指定要发布的项目名称列表
-projects=("i18n-ar" "i18n-fr" "i18n-id" "i18n-ko" "i18n-pt" "i18n-tl" "i18n-zh""i18n-de" "i18n-hi" "i18n-it" "i18n-ms" "i18n-ru" "i18n-tr" "i18n-zh" "i18n-es-Hant" "i18n-hu" "i18n-ja" "i18n-pl" "i18n-th" "i18n-vi")
+projects=("i18n-ar" "i18n-en" "i18n-fr" "i18n-hu" "i18n-it" "i18n-ko" "i18n-pl" "i18n-ru" "i18n-th" "i18n-tr" "i18n-zh" "i18n-de" "i18n-es" "i18n-hi" "i18n-id" "i18n-ja" "i18n-ms" "i18n-pt" "i18n-tl" "i18n-vi" "i18n-zh-hant")
 
 # 获取当前脚本所在目录
 SCRIPT_DIR=$(cd $(dirname $0); pwd)
