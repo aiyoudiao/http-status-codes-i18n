@@ -1,8 +1,8 @@
 
-## 🌐 @http-status-codes/i18n-zh-Hant
+## 🌐 @http-status-codes/i18n-zh-hant
 
 
-### @http-status-codes/i18n-zh-Hant 是什麼？ 
+### @http-status-codes/i18n-zh-hant 是什麼？ 
 
 
 它提供了 21 種國家語言的 HTTP 狀態碼消息相關的資訊📜，當您需要處理 HTTP 狀態碼相關事項的時候，可以試試它，非常簡單。 
@@ -68,9 +68,9 @@ http-status-codes 庫本身並不支援國際化（i18n）🌍，而我的專案
 
 
 ```bash
-npm install @http-status-codes/i18n-zh-Hant
-yarn add @http-status-codes/i18n-zh-Hant
-pnpm i @http-status-codes/i18n-zh-Hant
+npm install @http-status-codes/i18n-zh-hant
+yarn add @http-status-codes/i18n-zh-hant
+pnpm i @http-status-codes/i18n-zh-hant
 ```
 
 
@@ -79,7 +79,7 @@ import {
   取得簡單狀態訊息,
   取得狀態訊息,
   取得狀態文字,
-} 從 "@http-status-codes/i18n-zh-Hant";
+} 從 "@http-status-codes/i18n-zh-hant";
 
 取得狀態文字(HttpStatusCode.OK) // OK
 取得簡單狀態訊息(HttpStatusCode.OK) // 200 OK
@@ -154,7 +154,7 @@ import {
 | th      | 泰語                 | packages/i18n-th | [@http-status-codes/i18n-th](https://www.npmjs.com/package/@http-status-codes/i18n-th) |
 | hi      | 印地語               | packages/i18n-hi | [@http-status-codes/i18n-hi](https://www.npmjs.com/package/@http-status-codes/i18n-hi) |
 | id      | 印度尼西亞語         | packages/i18n-id | [@http-status-codes/i18n-id](https://www.npmjs.com/package/@http-status-codes/i18n-id) |
-| zh-Hant | 繁體中文             | packages/i18n-zh-Hant | [@http-status-codes/i18n-zh-Hant](https://www.npmjs.com/package/@http-status-codes/i18n-zh-Hant) |
+| zh-Hant | 繁體中文             | packages/i18n-zh-hant | [@http-status-codes/i18n-zh-hant](https://www.npmjs.com/package/@http-status-codes/i18n-zh-hant) |
 | fr      | 法語   | packages/i18n-fr | [@http-status-codes/i18n-fr](https://www.npmjs.com/package/@http-status-codes/i18n-fr) |
 | es      | 西班牙語   | packages/i18n-es | [@http-status-codes/i18n-es](https://www.npmjs.com/package/@http-status-codes/i18n-es) |
 | pt      | 葡萄牙語   | packages/i18n-pt | [@http-status-codes/i18n-pt](https://www.npmjs.com/package/@http-status-codes/i18n-pt) |
