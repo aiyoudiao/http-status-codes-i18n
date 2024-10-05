@@ -29,7 +29,7 @@
 
 ### @http-status-codes/i18n-template 是什么？
 
-它提供了23种国家语言的 HTTP 状态码消息相关的信息📜，当你需要处理 HTTP 状态码相关事项的时候，可以试试它，非常简单。
+它提供了21种国家语言的 HTTP 状态码消息相关的信息📜，当你需要处理 HTTP 状态码相关事项的时候，可以试试它，非常简单。
 
 **🚀 支持：**
 - [x] HttpStatusText 枚举，支持 英文常量 和 h{状态码数值}的方式获取状态码对应的原因短语。比如 `HttpStatusText.OK` 或 `HttpStatusText.h200`。
